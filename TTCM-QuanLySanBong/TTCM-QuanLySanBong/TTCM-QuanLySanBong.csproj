@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED766CDD-B079-4B69-88C7-37998C7B6307}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TTCM_QuanLySanBong</RootNamespace>
+    <AssemblyName>TTCM-QuanLySanBong</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>E:\Install\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBangGia.Designer.cs">
+      <DependentUpon>frmBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatSan.Designer.cs">
+      <DependentUpon>frmDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSan.Designer.cs">
+      <DependentUpon>frmSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDatSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDatSan.Designer.cs">
+      <DependentUpon>UserDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHangHoa.Designer.cs">
+      <DependentUpon>UserHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMain.Designer.cs">
+      <DependentUpon>UserMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTinhTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTinhTien.Designer.cs">
+      <DependentUpon>UserTinhTien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBangGia.resx">
+      <DependentUpon>frmBangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatSan.resx">
+      <DependentUpon>frmDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmSan.resx">
+      <DependentUpon>frmSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDatSan.resx">
+      <DependentUpon>UserDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHangHoa.resx">
+      <DependentUpon>UserHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMain.resx">
+      <DependentUpon>UserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTinhTien.resx">
+      <DependentUpon>UserTinhTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Ecommerce-Cash-Register.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webalys-Kameleon.pics-Cashier-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stadium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bill-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trolley-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-increase-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cash-register-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-performance-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Man_Utd_FC_.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-play-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pos-terminal-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-direction-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-direction-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stadium1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stadium-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inscription-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-delete-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-delete-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stadium-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-pound-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-support-400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-support-100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
