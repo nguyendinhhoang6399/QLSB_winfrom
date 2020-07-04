@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.btnThemSan = new Guna.UI.WinForms.GunaImageButton();
             this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
             this.MaDatSan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +79,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.gunaVSeparator1);
             this.panel1.Controls.Add(this.btnThemSan);
             this.panel1.Controls.Add(this.gunaDataGridView1);
             this.panel1.Controls.Add(this.panel2);
@@ -95,13 +97,23 @@
             this.panel1.Size = new System.Drawing.Size(1211, 614);
             this.panel1.TabIndex = 1;
             // 
+            // gunaVSeparator1
+            // 
+            this.gunaVSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gunaVSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaVSeparator1.Location = new System.Drawing.Point(996, -3);
+            this.gunaVSeparator1.Name = "gunaVSeparator1";
+            this.gunaVSeparator1.Size = new System.Drawing.Size(21, 617);
+            this.gunaVSeparator1.TabIndex = 15;
+            this.gunaVSeparator1.Thickness = 5;
+            // 
             // btnThemSan
             // 
             this.btnThemSan.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
             this.btnThemSan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThemSan.Image = null;
             this.btnThemSan.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThemSan.Location = new System.Drawing.Point(643, 50);
+            this.btnThemSan.Location = new System.Drawing.Point(619, 50);
             this.btnThemSan.Name = "btnThemSan";
             this.btnThemSan.OnHoverImage = null;
             this.btnThemSan.OnHoverImageOffset = new System.Drawing.Point(0, 0);
@@ -151,7 +163,7 @@
             this.gunaDataGridView1.RowHeadersWidth = 51;
             this.gunaDataGridView1.RowTemplate.Height = 24;
             this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(1011, 507);
+            this.gunaDataGridView1.Size = new System.Drawing.Size(981, 507);
             this.gunaDataGridView1.TabIndex = 13;
             this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -228,9 +240,9 @@
             this.panel2.Controls.Add(this.btnHuySan);
             this.panel2.Controls.Add(this.btnSuaLich);
             this.panel2.Controls.Add(this.btnTaoMoi);
-            this.panel2.Location = new System.Drawing.Point(1032, 49);
+            this.panel2.Location = new System.Drawing.Point(1023, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(176, 562);
+            this.panel2.Size = new System.Drawing.Size(185, 562);
             this.panel2.TabIndex = 12;
             // 
             // btnThoat
@@ -239,7 +251,7 @@
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_exit_641;
             this.btnThoat.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnThoat.Location = new System.Drawing.Point(52, 487);
+            this.btnThoat.Location = new System.Drawing.Point(35, 487);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.OnHoverImage = null;
             this.btnThoat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
@@ -258,7 +270,7 @@
             this.btnLichCD.ForeColor = System.Drawing.Color.Black;
             this.btnLichCD.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_calendar_1001;
             this.btnLichCD.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLichCD.Location = new System.Drawing.Point(27, 79);
+            this.btnLichCD.Location = new System.Drawing.Point(10, 79);
             this.btnLichCD.Name = "btnLichCD";
             this.btnLichCD.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLichCD.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -266,7 +278,7 @@
             this.btnLichCD.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLichCD.OnHoverImage = null;
             this.btnLichCD.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLichCD.Size = new System.Drawing.Size(131, 50);
+            this.btnLichCD.Size = new System.Drawing.Size(146, 50);
             this.btnLichCD.TabIndex = 11;
             this.btnLichCD.Text = "LỊCH CỨNG";
             this.btnLichCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -283,7 +295,7 @@
             this.btnLichSan.ForeColor = System.Drawing.Color.Black;
             this.btnLichSan.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_48;
             this.btnLichSan.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLichSan.Location = new System.Drawing.Point(27, 12);
+            this.btnLichSan.Location = new System.Drawing.Point(10, 13);
             this.btnLichSan.Name = "btnLichSan";
             this.btnLichSan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLichSan.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -291,7 +303,7 @@
             this.btnLichSan.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLichSan.OnHoverImage = null;
             this.btnLichSan.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLichSan.Size = new System.Drawing.Size(131, 50);
+            this.btnLichSan.Size = new System.Drawing.Size(146, 50);
             this.btnLichSan.TabIndex = 11;
             this.btnLichSan.Text = "LỊCH SÂN";
             this.btnLichSan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -308,7 +320,7 @@
             this.btnXoaLich.ForeColor = System.Drawing.Color.Black;
             this.btnXoaLich.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_delete_100;
             this.btnXoaLich.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoaLich.Location = new System.Drawing.Point(27, 419);
+            this.btnXoaLich.Location = new System.Drawing.Point(10, 418);
             this.btnXoaLich.Name = "btnXoaLich";
             this.btnXoaLich.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnXoaLich.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -316,7 +328,7 @@
             this.btnXoaLich.OnHoverForeColor = System.Drawing.Color.White;
             this.btnXoaLich.OnHoverImage = null;
             this.btnXoaLich.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXoaLich.Size = new System.Drawing.Size(131, 50);
+            this.btnXoaLich.Size = new System.Drawing.Size(146, 50);
             this.btnXoaLich.TabIndex = 11;
             this.btnXoaLich.Text = "XÓA LỊCH";
             this.btnXoaLich.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -333,7 +345,7 @@
             this.btnBoHuy.ForeColor = System.Drawing.Color.Black;
             this.btnBoHuy.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_file_144;
             this.btnBoHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBoHuy.Location = new System.Drawing.Point(27, 351);
+            this.btnBoHuy.Location = new System.Drawing.Point(10, 351);
             this.btnBoHuy.Name = "btnBoHuy";
             this.btnBoHuy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnBoHuy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -341,7 +353,7 @@
             this.btnBoHuy.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBoHuy.OnHoverImage = null;
             this.btnBoHuy.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBoHuy.Size = new System.Drawing.Size(131, 50);
+            this.btnBoHuy.Size = new System.Drawing.Size(146, 50);
             this.btnBoHuy.TabIndex = 11;
             this.btnBoHuy.Text = "BỎ HỦY";
             this.btnBoHuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -358,7 +370,7 @@
             this.btnHuySan.ForeColor = System.Drawing.Color.Black;
             this.btnHuySan.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_file_delete_96;
             this.btnHuySan.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuySan.Location = new System.Drawing.Point(27, 283);
+            this.btnHuySan.Location = new System.Drawing.Point(10, 282);
             this.btnHuySan.Name = "btnHuySan";
             this.btnHuySan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnHuySan.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -366,7 +378,7 @@
             this.btnHuySan.OnHoverForeColor = System.Drawing.Color.White;
             this.btnHuySan.OnHoverImage = null;
             this.btnHuySan.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHuySan.Size = new System.Drawing.Size(131, 50);
+            this.btnHuySan.Size = new System.Drawing.Size(146, 50);
             this.btnHuySan.TabIndex = 11;
             this.btnHuySan.Text = "HỦY SÂN";
             this.btnHuySan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -383,7 +395,7 @@
             this.btnSuaLich.ForeColor = System.Drawing.Color.Black;
             this.btnSuaLich.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_inscription_96;
             this.btnSuaLich.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSuaLich.Location = new System.Drawing.Point(27, 216);
+            this.btnSuaLich.Location = new System.Drawing.Point(10, 215);
             this.btnSuaLich.Name = "btnSuaLich";
             this.btnSuaLich.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnSuaLich.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -391,7 +403,7 @@
             this.btnSuaLich.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSuaLich.OnHoverImage = null;
             this.btnSuaLich.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSuaLich.Size = new System.Drawing.Size(131, 50);
+            this.btnSuaLich.Size = new System.Drawing.Size(146, 50);
             this.btnSuaLich.TabIndex = 11;
             this.btnSuaLich.Text = "SỬA LỊCH";
             this.btnSuaLich.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -408,7 +420,7 @@
             this.btnTaoMoi.ForeColor = System.Drawing.Color.Black;
             this.btnTaoMoi.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_80;
             this.btnTaoMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTaoMoi.Location = new System.Drawing.Point(27, 147);
+            this.btnTaoMoi.Location = new System.Drawing.Point(10, 144);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnTaoMoi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -416,7 +428,7 @@
             this.btnTaoMoi.OnHoverForeColor = System.Drawing.Color.White;
             this.btnTaoMoi.OnHoverImage = null;
             this.btnTaoMoi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTaoMoi.Size = new System.Drawing.Size(131, 50);
+            this.btnTaoMoi.Size = new System.Drawing.Size(146, 50);
             this.btnTaoMoi.TabIndex = 11;
             this.btnTaoMoi.Text = "TẠO MỚI";
             this.btnTaoMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -441,7 +453,7 @@
             this.dtpDenNgay.CustomFormat = "dd/mm/yyyy";
             this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenNgay.Location = new System.Drawing.Point(857, 53);
+            this.dtpDenNgay.Location = new System.Drawing.Point(827, 53);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(163, 34);
             this.dtpDenNgay.TabIndex = 3;
@@ -451,7 +463,7 @@
             this.dtpTuNgay.CustomFormat = "dd/mm/yyyy";
             this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay.Location = new System.Drawing.Point(696, 53);
+            this.dtpTuNgay.Location = new System.Drawing.Point(663, 53);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(149, 34);
             this.dtpTuNgay.TabIndex = 3;
@@ -462,7 +474,7 @@
             this.cboxTenSan.FormattingEnabled = true;
             this.cboxTenSan.Location = new System.Drawing.Point(378, 50);
             this.cboxTenSan.Name = "cboxTenSan";
-            this.cboxTenSan.Size = new System.Drawing.Size(250, 37);
+            this.cboxTenSan.Size = new System.Drawing.Size(222, 37);
             this.cboxTenSan.TabIndex = 2;
             // 
             // cboxKhachHang
@@ -478,7 +490,7 @@
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("UVN Thanh Pho", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(851, 11);
+            this.gunaLabel2.Location = new System.Drawing.Point(821, 9);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(116, 37);
             this.gunaLabel2.TabIndex = 1;
@@ -488,7 +500,7 @@
             // 
             this.gunaLabel1.Font = new System.Drawing.Font("UVN Thanh Pho", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(690, 10);
+            this.gunaLabel1.Location = new System.Drawing.Point(657, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(102, 37);
             this.gunaLabel1.TabIndex = 1;
@@ -572,5 +584,6 @@
         private Guna.UI.WinForms.GunaGradientButton btnLichCD;
         private Guna.UI.WinForms.GunaImageButton btnThoat;
         private Guna.UI.WinForms.GunaImageButton btnThemSan;
+        private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
     }
 }

@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ckboxCN = new System.Windows.Forms.CheckBox();
+            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.ckboxT7 = new System.Windows.Forms.CheckBox();
             this.ckboxT6 = new System.Windows.Forms.CheckBox();
             this.ckboxT5 = new System.Windows.Forms.CheckBox();
@@ -62,9 +65,6 @@
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,15 @@
             this.panel1.Size = new System.Drawing.Size(803, 39);
             this.panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 38);
+            this.panel2.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -90,6 +99,19 @@
             this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Đặt Sân";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnClose.Location = new System.Drawing.Point(758, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnClose.Size = new System.Drawing.Size(45, 39);
+            this.btnClose.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -150,6 +172,20 @@
             this.ckboxCN.TabIndex = 7;
             this.ckboxCN.Text = "Chủ Nhật";
             this.ckboxCN.UseVisualStyleBackColor = true;
+            // 
+            // gunaImageButton1
+            // 
+            this.gunaImageButton1.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
+            this.gunaImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaImageButton1.Image = null;
+            this.gunaImageButton1.ImageSize = new System.Drawing.Size(64, 64);
+            this.gunaImageButton1.Location = new System.Drawing.Point(755, 74);
+            this.gunaImageButton1.Name = "gunaImageButton1";
+            this.gunaImageButton1.OnHoverImage = null;
+            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.gunaImageButton1.Size = new System.Drawing.Size(33, 29);
+            this.gunaImageButton1.TabIndex = 1;
+            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
             // 
             // ckboxT7
             // 
@@ -441,6 +477,7 @@
             this.btnThoat.TabIndex = 12;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLuu
             // 
@@ -491,42 +528,6 @@
             this.btnThemMoi.TabIndex = 12;
             this.btnThemMoi.Text = "Thêm Mới";
             this.btnThemMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
-            this.gunaImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaImageButton1.Image = null;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(64, 64);
-            this.gunaImageButton1.Location = new System.Drawing.Point(755, 74);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(33, 29);
-            this.gunaImageButton1.TabIndex = 1;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 38);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Image = null;
-            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.Location = new System.Drawing.Point(758, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.OnHoverImage = null;
-            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClose.Size = new System.Drawing.Size(45, 39);
-            this.btnClose.TabIndex = 1;
             // 
             // frmDatSan
             // 

@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TTCM_QuanLySanBong
 {
-    public partial class frmDatSan : Form
+    public partial class frmPhieuNhap : Form
     {
-        public frmDatSan()
+        public frmPhieuNhap()
         {
             InitializeComponent();
-        }
-
-        private void gunaImageButton1_Click(object sender, EventArgs e)
-        {
-            frmKhachHang fm = new frmKhachHang();
-            this.Hide();
-            fm.ShowDialog();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

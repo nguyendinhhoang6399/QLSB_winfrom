@@ -23,5 +23,14 @@ namespace TTCM_QuanLySanBong
             this.Hide();
             frmNha.ShowDialog();
         }
+
+        private void btnBangGia_Click(object sender, EventArgs e)
+        {
+            frmNhapHang nhapHang = new frmNhapHang();
+            this.Hide();
+            nhapHang.ShowDialog();
+        }
+
+        
     }
 }
