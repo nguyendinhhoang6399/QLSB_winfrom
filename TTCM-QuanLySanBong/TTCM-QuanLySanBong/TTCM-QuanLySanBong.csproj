@@ -62,6 +62,12 @@
     <Compile Include="frmDatSan.Designer.cs">
       <DependentUpon>frmDatSan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHDBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHDBan.Designer.cs">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,7 @@
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="KetNoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmSan.cs">
@@ -99,6 +106,17 @@
     </Compile>
     <Compile Include="frmSan.Designer.cs">
       <DependentUpon>frmSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySanBongDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserBaoCao.Designer.cs">
+      <DependentUpon>UserBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="UserDatSan.cs">
       <SubType>UserControl</SubType>
@@ -112,11 +130,41 @@
     <Compile Include="UserHangHoa.Designer.cs">
       <DependentUpon>UserHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserHDBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHDBanHang.Designer.cs">
+      <DependentUpon>UserHDBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHDBG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHDBG.Designer.cs">
+      <DependentUpon>UserHDBG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHDNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHDNhapHang.Designer.cs">
+      <DependentUpon>UserHDNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHoaDon.Designer.cs">
+      <DependentUpon>UserHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserMain.Designer.cs">
       <DependentUpon>UserMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserNhanSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserNhanSu.Designer.cs">
+      <DependentUpon>UserNhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="UserTinhTien.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatSan.resx">
       <DependentUpon>frmDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHDBan.resx">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
@@ -158,14 +209,32 @@
     <EmbeddedResource Include="frmSan.resx">
       <DependentUpon>frmSan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserBaoCao.resx">
+      <DependentUpon>UserBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserDatSan.resx">
       <DependentUpon>UserDatSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserHangHoa.resx">
       <DependentUpon>UserHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserHDBanHang.resx">
+      <DependentUpon>UserHDBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHDBG.resx">
+      <DependentUpon>UserHDBG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHDNhapHang.resx">
+      <DependentUpon>UserHDNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHoaDon.resx">
+      <DependentUpon>UserHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserMain.resx">
       <DependentUpon>UserMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserNhanSu.resx">
+      <DependentUpon>UserNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserTinhTien.resx">
       <DependentUpon>UserTinhTien.cs</DependentUpon>
@@ -184,6 +253,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLySanBongDataSet.xsc">
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLySanBongDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLySanBongDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLySanBongDataSet.xss">
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\pay.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -359,6 +439,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-print-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-more-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gender-neutral-employee-group-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unavailable-144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unavailable-240.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,5 +21,11 @@ namespace TTCM_QuanLySanBong
         {
             this.Close();
         }
+
+        private void gunaImageButton1_Click(object sender, EventArgs e)
+        {
+            frmNhaCungCap frmNhaCungCap = new frmNhaCungCap();
+            frmNhaCungCap.ShowDialog();
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace TTCM_QuanLySanBong
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            //frmBangGia bangGia = new frmBangGia();
+            
             this.Close();
         }
     }

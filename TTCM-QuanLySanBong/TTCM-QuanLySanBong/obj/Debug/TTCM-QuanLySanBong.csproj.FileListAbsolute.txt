@@ -41,3 +41,11 @@ C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM-QuanLySanBong.csproj.CopyComplete
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM-QuanLySanBong.exe
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM-QuanLySanBong.pdb
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserHoaDon.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserHDBanHang.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserHDNhapHang.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserHDBG.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.frmHDBan.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserBaoCao.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserNhanSu.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM-QuanLySanBong.csprojAssemblyReference.cache

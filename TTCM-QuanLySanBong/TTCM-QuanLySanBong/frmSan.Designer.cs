@@ -32,28 +32,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDsSanBong = new Guna.UI.WinForms.GunaDataGridView();
             this.tenSan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenLoaiSan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBangGia = new Guna.UI.WinForms.GunaGradientButton();
             this.cboxLoaiSan = new Guna.UI.WinForms.GunaComboBox();
             this.cboxTrangThai = new Guna.UI.WinForms.GunaComboBox();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
-            this.txtTenSan = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnBangGia = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
+            this.txtTenSan = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).BeginInit();
@@ -72,6 +72,15 @@
             this.panel1.Size = new System.Drawing.Size(879, 39);
             this.panel1.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 38);
+            this.panel2.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -81,6 +90,19 @@
             this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sân Bóng";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnClose.Location = new System.Drawing.Point(834, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnClose.Size = new System.Drawing.Size(45, 39);
+            this.btnClose.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -199,6 +221,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sân";
             // 
+            // btnBangGia
+            // 
+            this.btnBangGia.AnimationHoverSpeed = 0.07F;
+            this.btnBangGia.AnimationSpeed = 0.03F;
+            this.btnBangGia.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnBangGia.BaseColor2 = System.Drawing.Color.DarkOrange;
+            this.btnBangGia.BorderColor = System.Drawing.Color.Black;
+            this.btnBangGia.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBangGia.Font = new System.Drawing.Font("UVN Thanh Pho", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBangGia.ForeColor = System.Drawing.Color.Black;
+            this.btnBangGia.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_money_pound_80;
+            this.btnBangGia.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBangGia.Location = new System.Drawing.Point(192, 161);
+            this.btnBangGia.Name = "btnBangGia";
+            this.btnBangGia.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnBangGia.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnBangGia.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBangGia.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBangGia.OnHoverImage = null;
+            this.btnBangGia.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBangGia.Size = new System.Drawing.Size(230, 52);
+            this.btnBangGia.TabIndex = 17;
+            this.btnBangGia.Text = "BẢNG GIÁ";
+            this.btnBangGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBangGia.Click += new System.EventHandler(this.btnBangGia_Click);
+            // 
             // cboxLoaiSan
             // 
             this.cboxLoaiSan.BackColor = System.Drawing.Color.Transparent;
@@ -210,7 +258,7 @@
             this.cboxLoaiSan.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboxLoaiSan.ForeColor = System.Drawing.Color.Black;
             this.cboxLoaiSan.FormattingEnabled = true;
-            this.cboxLoaiSan.Location = new System.Drawing.Point(174, 71);
+            this.cboxLoaiSan.Location = new System.Drawing.Point(192, 71);
             this.cboxLoaiSan.Name = "cboxLoaiSan";
             this.cboxLoaiSan.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cboxLoaiSan.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -228,7 +276,7 @@
             this.cboxTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboxTrangThai.ForeColor = System.Drawing.Color.Black;
             this.cboxTrangThai.FormattingEnabled = true;
-            this.cboxTrangThai.Location = new System.Drawing.Point(174, 113);
+            this.cboxTrangThai.Location = new System.Drawing.Point(192, 113);
             this.cboxTrangThai.Name = "cboxTrangThai";
             this.cboxTrangThai.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cboxTrangThai.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -244,78 +292,6 @@
             this.gunaVSeparator1.Size = new System.Drawing.Size(10, 507);
             this.gunaVSeparator1.TabIndex = 3;
             this.gunaVSeparator1.Thickness = 5;
-            // 
-            // txtTenSan
-            // 
-            this.txtTenSan.BackColor = System.Drawing.Color.White;
-            this.txtTenSan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSan.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtTenSan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenSan.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtTenSan.Location = new System.Drawing.Point(174, 31);
-            this.txtTenSan.Name = "txtTenSan";
-            this.txtTenSan.PasswordChar = '\0';
-            this.txtTenSan.Size = new System.Drawing.Size(230, 30);
-            this.txtTenSan.TabIndex = 4;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(30, 102);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(126, 37);
-            this.gunaLabel3.TabIndex = 3;
-            this.gunaLabel3.Text = "Trạng thái";
-            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(30, 65);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(126, 37);
-            this.gunaLabel2.TabIndex = 3;
-            this.gunaLabel2.Text = "Tên Loại sân";
-            this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(16, 28);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(140, 37);
-            this.gunaLabel1.TabIndex = 3;
-            this.gunaLabel1.Text = "Tên sân";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnBangGia
-            // 
-            this.btnBangGia.AnimationHoverSpeed = 0.07F;
-            this.btnBangGia.AnimationSpeed = 0.03F;
-            this.btnBangGia.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnBangGia.BaseColor2 = System.Drawing.Color.DarkOrange;
-            this.btnBangGia.BorderColor = System.Drawing.Color.Black;
-            this.btnBangGia.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBangGia.Font = new System.Drawing.Font("UVN Thanh Pho", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBangGia.ForeColor = System.Drawing.Color.Black;
-            this.btnBangGia.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_money_pound_80;
-            this.btnBangGia.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBangGia.Location = new System.Drawing.Point(174, 161);
-            this.btnBangGia.Name = "btnBangGia";
-            this.btnBangGia.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnBangGia.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnBangGia.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBangGia.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBangGia.OnHoverImage = null;
-            this.btnBangGia.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBangGia.Size = new System.Drawing.Size(230, 52);
-            this.btnBangGia.TabIndex = 17;
-            this.btnBangGia.Text = "BẢNG GIÁ";
-            this.btnBangGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnBangGia.Click += new System.EventHandler(this.btnBangGia_Click);
             // 
             // btnThoat
             // 
@@ -443,27 +419,51 @@
             this.btnThemMoi.Text = "Thêm Mới";
             this.btnThemMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // panel2
+            // txtTenSan
             // 
-            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 38);
-            this.panel2.TabIndex = 1;
+            this.txtTenSan.BackColor = System.Drawing.Color.White;
+            this.txtTenSan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenSan.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtTenSan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenSan.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtTenSan.Location = new System.Drawing.Point(192, 31);
+            this.txtTenSan.Name = "txtTenSan";
+            this.txtTenSan.PasswordChar = '\0';
+            this.txtTenSan.Size = new System.Drawing.Size(230, 30);
+            this.txtTenSan.TabIndex = 4;
             // 
-            // btnClose
+            // gunaLabel3
             // 
-            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Image = null;
-            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.Location = new System.Drawing.Point(834, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.OnHoverImage = null;
-            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClose.Size = new System.Drawing.Size(45, 39);
-            this.btnClose.TabIndex = 1;
+            this.gunaLabel3.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel3.Location = new System.Drawing.Point(44, 113);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(126, 37);
+            this.gunaLabel3.TabIndex = 3;
+            this.gunaLabel3.Text = "Trạng thái";
+            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel2.Location = new System.Drawing.Point(16, 71);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(154, 37);
+            this.gunaLabel2.TabIndex = 3;
+            this.gunaLabel2.Text = "Tên Loại sân";
+            this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(30, 28);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(140, 37);
+            this.gunaLabel1.TabIndex = 3;
+            this.gunaLabel1.Text = "Tên sân";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmSan
             // 

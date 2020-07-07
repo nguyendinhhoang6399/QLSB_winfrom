@@ -123,6 +123,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bill-64", resourceCulture);
@@ -333,6 +343,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gender_neutral_employee_group_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gender-neutral-employee-group-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_increase_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-increase-64", resourceCulture);
@@ -503,6 +523,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_more_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-more-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shutdown_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shutdown-64", resourceCulture);
@@ -586,6 +616,26 @@ namespace TTCM_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap icons8_trolley_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-trolley-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_unavailable_144 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-unavailable-144", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_unavailable_240 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-unavailable-240", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

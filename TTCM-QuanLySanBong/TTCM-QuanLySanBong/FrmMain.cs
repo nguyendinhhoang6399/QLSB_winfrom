@@ -20,6 +20,9 @@ namespace TTCM_QuanLySanBong
             userDatSan1.Hide();
             userTinhTien1.Hide();
             userHangHoa1.Hide();
+            userBaoCao1.Hide();
+            userHoaDon1.Hide();
+            userNhanSu1.Hide();
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
@@ -27,6 +30,9 @@ namespace TTCM_QuanLySanBong
             userMain1.Hide();
             userDatSan1.Hide();
             userHangHoa1.Hide();
+            userHoaDon1.Hide();
+            userBaoCao1.Hide();
+            userNhanSu1.Hide();
             gunaTransition1.Show(userTinhTien1);
         }
 
@@ -35,6 +41,9 @@ namespace TTCM_QuanLySanBong
             userMain1.Hide();
             userTinhTien1.Hide();
             userHangHoa1.Hide();
+            userHoaDon1.Hide();
+            userBaoCao1.Hide();
+            userNhanSu1.Hide();
             gunaTransition1.Show(userDatSan1);
         }
 
@@ -43,7 +52,48 @@ namespace TTCM_QuanLySanBong
             userMain1.Hide();
             userTinhTien1.Hide();
             userDatSan1.Hide();
+            userHoaDon1.Hide();
+            userBaoCao1.Hide();
+            userNhanSu1.Hide();
             gunaTransition1.Show(userHangHoa1);
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            userMain1.Hide();
+            userTinhTien1.Hide();
+            userDatSan1.Hide();
+            userHangHoa1.Hide();
+            userBaoCao1.Hide();
+            userNhanSu1.Hide();
+            gunaTransition1.Show(userHoaDon1);
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            userMain1.Hide();
+            userTinhTien1.Hide();
+            userDatSan1.Hide();
+            userHangHoa1.Hide();
+            userHoaDon1.Hide();
+            userNhanSu1.Hide();
+            gunaTransition1.Show(userBaoCao1);
+        }
+
+        private void gunaImageButton1_Click(object sender, EventArgs e)
+        {
+            userMain1.Hide();
+            userTinhTien1.Hide();
+            userDatSan1.Hide();
+            userHangHoa1.Hide();
+            userHoaDon1.Hide();
+            userBaoCao1.Hide();
+            gunaTransition1.Show(userNhanSu1);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
