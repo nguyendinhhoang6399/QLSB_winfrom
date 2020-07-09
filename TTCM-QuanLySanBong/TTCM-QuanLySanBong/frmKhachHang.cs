@@ -48,6 +48,7 @@ namespace TTCM_QuanLySanBong
             txtDiaChi.Text = "";
             txtSDT.Text = "";
             txtEmail.Text = "";
+
         }
 
         int dem;
@@ -58,6 +59,7 @@ namespace TTCM_QuanLySanBong
             loadNull();
             dgvKhachHang.Enabled = false;
             btnSua.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void btnSua_Click_1(object sender, EventArgs e)
@@ -69,6 +71,8 @@ namespace TTCM_QuanLySanBong
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             btnThemMoi.Enabled = false;
+            btnXoa.Enabled = false;
+            
         }
 
         Boolean kiemTra(string tenkh)
@@ -99,6 +103,7 @@ namespace TTCM_QuanLySanBong
             dgvKhachHang.Enabled = true;
             btnThemMoi.Enabled = true;
             btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
@@ -141,6 +146,9 @@ namespace TTCM_QuanLySanBong
                             MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadNull();
                             LoadKH();
+                            btnSua.Enabled = true;
+                            btnXoa.Enabled = true;
+                            dgvKhachHang.Enabled = true;
                         }
                         catch
                         {
@@ -183,6 +191,9 @@ namespace TTCM_QuanLySanBong
                             MessageBox.Show("Sửa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadNull();
                             LoadKH();
+                            btnThemMoi.Enabled = true;
+                            btnXoa.Enabled = true;
+                            
                         }
                         catch
                         {

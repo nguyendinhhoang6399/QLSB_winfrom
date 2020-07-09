@@ -153,6 +153,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_box_480 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-box-480", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_calendar_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-calendar-100", resourceCulture);

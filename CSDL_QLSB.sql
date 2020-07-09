@@ -38,6 +38,7 @@ create table NhaCungCap(
 	SoDienThoai nvarchar(50),
 	primary key(MaNcc)
 )
+drop table NhaCungCap
 
 insert into NhaCungCap(TenNcc,DiaChi,SoDienThoai) values(N'Tân Hiệp Phát',N'65 Tân Quy','0909164165')
 insert into NhaCungCap(TenNcc,DiaChi,SoDienThoai) values(N'Suntory Pepsico',N'37 Tân Kiểng','0908119911')
@@ -88,23 +89,21 @@ create table San(
 	MaSan int identity(1,1),
 	TenSan nvarchar(50),
 	TrangThai nvarchar(50),
-	MaNv nvarchar(50),
 	MaLs int,
 	primary key(MaSan),
-	foreign key(MaNv) references NhanVien(MaNv),
 	foreign key(MaLs) references LoaiSan(MaLs)
 )
 
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 5-A',N'Trống',null,'1')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 5-B',N'Trống',null,'1')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 5-C',N'Trống',null,'1')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 5-D',N'Trống',null,'1')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 5-E',N'Trống',null,'1')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 7-A',N'Trống',null,'2')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 7-B',N'Trống',null,'2')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 7-C',N'Trống',null,'2')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 7-D',N'Trống',null,'2')
-insert into San(TenSan,TrangThai,MaNv,MaLs) values(N'Sân 7-E',N'Trống',null,'2')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-A',N'Trống','1')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-B',N'Trống','1')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-C',N'Trống','1')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-D',N'Trống','1')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-E',N'Trống','1')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-A',N'Trống','2')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-B',N'Trống','2')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-C',N'Trống','2')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-D',N'Trống','2')
+insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-E',N'Trống','2')
 
 select * from San
 --drop table San
@@ -124,7 +123,7 @@ create table HoaDon(
 	foreign key(MaKh) references KhachHang(MaKh),
 	foreign key(MaSan) references San(MaSan),
 )
-
+drop table HoaDon
 create table HangHoa(
 	MaHh int identity(1,1),
 	TenHh nvarchar(50),
@@ -133,7 +132,7 @@ create table HangHoa(
 	DonGia money,
 	primary key(MaHh)
 ) 
-
+drop table HangHoa
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Revive',N'Chai','10','12000')
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Revive Chanh Muối',N'Chai','10','12000')
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Pepsi',N'Chai','10','12000')
@@ -145,6 +144,7 @@ insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Mirinda',N'Lon','10','
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Lavie',N'Chai','10','7000')
 
 create table CTHoaDon(
+	TenHh nvarchar(50),
 	SoLuongBan int,
 	donGia money,
 	ThanhTien money,
@@ -154,11 +154,14 @@ create table CTHoaDon(
 	foreign key (MaHh) references HangHoa(MaHh),
 	foreign key (MaHd) references HoaDon(MaHd)
 )
-alter table CTHoaDon drop column TenHh
+
+drop table CTHoaDon
+
 create table PhieuNhap(
 	MaPhieu int identity(1,1),
 	NgayNhap date,
 	MaNcc int,
+	TenNcc nvarchar(50),
 	ThanhTien money,
 	MaNv nvarchar(50),
 	primary key(MaPhieu),
@@ -166,20 +169,24 @@ create table PhieuNhap(
 	foreign key(MaNcc) references NhaCungCap(MaNcc)
 )
 --drop table PhieuNhap
-
+insert into PhieuNhap
 create table CTPhieuNhap(
 	MaPhieu int,
+	TenHh nvarchar(50),
+	DVT nvarchar(50),
 	SoLuongNhap int,
 	GiaNhap money,
-	MaNv nvarchar(50),
 	MaHh int ,
+	MaNcc int,
+	TenNcc nvarchar(50),
 	primary key(MaPhieu,MaHh),
 	foreign key (MaPhieu) references PhieuNhap(MaPhieu),
 	foreign key (MaHh) references HangHoa(MaHh),
-	foreign key (MaHh) references HangHoa(MaHh),
-	foreign key (MaNv) references NhanVien(MaNv)
+	foreign key (MaNcc) references NhaCungCap(MaNcc),
 )
 
+--drop table CTPhieuNhap
+select * from CTPhieuNhap
 create table DatSan(
 	MaDatSan int identity(1,1),
 	MaSan int,
@@ -194,18 +201,7 @@ create table DatSan(
 )
 drop table DatSan
 
-create table DatSanCD(
-	MaDatSan int,
-	ThuHai bit,
-	ThuBa bit,
-	ThuTu bit,
-	ThuNam bit,
-	ThuSau bit, 
-	ThuBay bit, 
-	ChuNhat bit,
-	primary key(MaDatSan),
-	foreign key(MaDatSan) references DatSan(MaDatSan)
-)
+	
 --drop table DatSanCD
 
 select * from San where mals = 1
@@ -218,3 +214,5 @@ select * from NhaCungCap
 delete from KhachHang where TenKh = N'Võ A'
 update KhachHang set TenKh = N'Võ A', DiaChi = N'24 Cô Bắc',SoDienThoai='123',Email=N'huyhuyhoihoi@xyz' where 
 delete khachHang where tenkh = N'Lê Văn A'
+
+select * from HoaDONNhapThuoc

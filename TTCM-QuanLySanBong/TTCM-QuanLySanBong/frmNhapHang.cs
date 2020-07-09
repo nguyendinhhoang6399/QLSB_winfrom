@@ -21,10 +21,12 @@ namespace TTCM_QuanLySanBong
         {
             frmPhieuNhap phieuNhap = new frmPhieuNhap();
             this.Hide();
-            phieuNhap.ShowDialog();
+            phieuNhap.Show();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
