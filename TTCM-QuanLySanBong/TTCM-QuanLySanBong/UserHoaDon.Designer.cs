@@ -45,14 +45,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtnHDNhap = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
-            this.btnThoat = new Guna.UI.WinForms.GunaImageButton();
-            this.btnXem = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.userHDNhapHang1 = new TTCM_QuanLySanBong.UserHDNhapHang();
             this.userHDBanHang1 = new TTCM_QuanLySanBong.UserHDBanHang();
             this.userHDBG1 = new TTCM_QuanLySanBong.UserHDBG();
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.btnThoat = new Guna.UI.WinForms.GunaImageButton();
+            this.btnXem = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -241,121 +239,6 @@
             this.panel2.Size = new System.Drawing.Size(784, 606);
             this.panel2.TabIndex = 31;
             // 
-            // gunaTransition1
-            // 
-            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
-            this.gunaTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation1;
-            this.gunaTransition1.Interval = 4;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.Lime;
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnThoat, Guna.UI.Animation.DecorationType.None);
-            this.btnThoat.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_exit_641;
-            this.btnThoat.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnThoat.Location = new System.Drawing.Point(167, 303);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.OnHoverImage = null;
-            this.btnThoat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnThoat.Size = new System.Drawing.Size(93, 61);
-            this.btnThoat.TabIndex = 27;
-            // 
-            // btnXem
-            // 
-            this.btnXem.AnimationHoverSpeed = 0.07F;
-            this.btnXem.AnimationSpeed = 0.03F;
-            this.btnXem.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnXem.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnXem.BorderColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.btnXem, Guna.UI.Animation.DecorationType.None);
-            this.btnXem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnXem.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.ForeColor = System.Drawing.Color.Black;
-            this.btnXem.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_search_more_100;
-            this.btnXem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXem.Location = new System.Drawing.Point(10, 228);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnXem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnXem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnXem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnXem.OnHoverImage = null;
-            this.btnXem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXem.Size = new System.Drawing.Size(131, 50);
-            this.btnXem.TabIndex = 23;
-            this.btnXem.Text = "Xem";
-            this.btnXem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AnimationHoverSpeed = 0.07F;
-            this.btnXoa.AnimationSpeed = 0.03F;
-            this.btnXoa.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnXoa.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnXoa.BorderColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.btnXoa, Guna.UI.Animation.DecorationType.None);
-            this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
-            this.btnXoa.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_delete_1001;
-            this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(284, 228);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnXoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnXoa.OnHoverImage = null;
-            this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(131, 50);
-            this.btnXoa.TabIndex = 23;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnThem
-            // 
-            this.btnThem.AnimationHoverSpeed = 0.07F;
-            this.btnThem.AnimationSpeed = 0.03F;
-            this.btnThem.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnThem.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnThem.BorderColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.btnThem, Guna.UI.Animation.DecorationType.None);
-            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThem.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_801;
-            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(147, 228);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThem.OnHoverImage = null;
-            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(131, 50);
-            this.btnThem.TabIndex = 25;
-            this.btnThem.Text = "Thêm Mới";
-            this.btnThem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // userHDNhapHang1
             // 
             this.gunaTransition1.SetDecoration(this.userHDNhapHang1, Guna.UI.Animation.DecorationType.None);
@@ -385,6 +268,69 @@
             this.userHDBG1.Size = new System.Drawing.Size(784, 606);
             this.userHDBG1.TabIndex = 0;
             // 
+            // gunaTransition1
+            // 
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
+            this.gunaTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation1;
+            this.gunaTransition1.Interval = 4;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Lime;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnThoat, Guna.UI.Animation.DecorationType.None);
+            this.btnThoat.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_exit_641;
+            this.btnThoat.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnThoat.Location = new System.Drawing.Point(245, 230);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.OnHoverImage = null;
+            this.btnThoat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThoat.Size = new System.Drawing.Size(117, 50);
+            this.btnThoat.TabIndex = 27;
+            // 
+            // btnXem
+            // 
+            this.btnXem.AnimationHoverSpeed = 0.07F;
+            this.btnXem.AnimationSpeed = 0.03F;
+            this.btnXem.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnXem.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnXem.BorderColor = System.Drawing.Color.Black;
+            this.btnXem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnXem, Guna.UI.Animation.DecorationType.None);
+            this.btnXem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXem.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.ForeColor = System.Drawing.Color.Black;
+            this.btnXem.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_search_more_100;
+            this.btnXem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXem.Location = new System.Drawing.Point(95, 230);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnXem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnXem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXem.OnHoverImage = null;
+            this.btnXem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXem.Size = new System.Drawing.Size(131, 50);
+            this.btnXem.TabIndex = 23;
+            this.btnXem.Text = "Xem";
+            this.btnXem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // UserHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -393,8 +339,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXem);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.gunaSeparator2);
             this.Controls.Add(this.gunaVSeparator5);
             this.Controls.Add(this.gunaLabel5);
@@ -428,8 +372,6 @@
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator5;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator2;
         private Guna.UI.WinForms.GunaImageButton btnThoat;
-        private Guna.UI.WinForms.GunaGradientButton btnXoa;
-        private Guna.UI.WinForms.GunaGradientButton btnThem;
         private Guna.UI.WinForms.GunaGradientButton btnXem;
         private System.Windows.Forms.RadioButton rbtnHDBan;
         private System.Windows.Forms.Panel panel1;

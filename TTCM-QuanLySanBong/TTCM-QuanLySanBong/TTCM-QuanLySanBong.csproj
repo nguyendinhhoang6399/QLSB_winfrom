@@ -56,6 +56,18 @@
     <Compile Include="frmBangGia.Designer.cs">
       <DependentUpon>frmBangGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </Compile>
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuenMK.Designer.cs">
+      <DependentUpon>frmQuenMK.cs</DependentUpon>
     </Compile>
     <Compile Include="KetNoi.cs" />
     <Compile Include="Program.cs" />
@@ -175,6 +193,12 @@
     <EmbeddedResource Include="frmBangGia.resx">
       <DependentUpon>frmBangGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDatSan.resx">
       <DependentUpon>frmDatSan.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuenMK.resx">
+      <DependentUpon>frmQuenMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -457,6 +484,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-box-480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-available-updates-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comic_560_AczIziss2HpKRB6YW_5NRlf5sHIz2vinJlY2at1OyfEPFl-7dX4FsNrSQuUx4q9J.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71645d4afa6ff297eb32868d0010c6be.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7a6dbab27f826f6640906fe47ad74da.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_n5j2s4qrXm1rg4c00o1_1280.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_n5j2s4qrXm1rg4c00o1_12801.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REACH-Header-Blue-Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WG8O.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-uefa-champions-league-trophy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZBO9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-support-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-802.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

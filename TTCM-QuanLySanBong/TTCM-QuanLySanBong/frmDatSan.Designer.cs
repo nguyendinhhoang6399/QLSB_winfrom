@@ -32,41 +32,32 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI.WinForms.GunaImageButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ckboxCN = new System.Windows.Forms.CheckBox();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.ckboxT7 = new System.Windows.Forms.CheckBox();
-            this.ckboxT6 = new System.Windows.Forms.CheckBox();
-            this.ckboxT5 = new System.Windows.Forms.CheckBox();
-            this.ckboxT4 = new System.Windows.Forms.CheckBox();
-            this.ckboxT3 = new System.Windows.Forms.CheckBox();
-            this.ckboxHuySan = new System.Windows.Forms.CheckBox();
-            this.ckboxHoatDong = new System.Windows.Forms.CheckBox();
-            this.ckboxT2 = new System.Windows.Forms.CheckBox();
-            this.ckboxDatCD = new System.Windows.Forms.CheckBox();
+            this.gbDatSan = new System.Windows.Forms.GroupBox();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.cboxtrangThai = new System.Windows.Forms.ComboBox();
+            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.dtpDenGio = new System.Windows.Forms.DateTimePicker();
             this.dtpTuGio = new System.Windows.Forms.DateTimePicker();
-            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.btnThemKH = new Guna.UI.WinForms.GunaImageButton();
+            this.cboxMaDatSan = new System.Windows.Forms.ComboBox();
             this.cboxTenSan = new System.Windows.Forms.ComboBox();
             this.cboxKhachHang = new System.Windows.Forms.ComboBox();
-            this.txtMaDatSan = new System.Windows.Forms.TextBox();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnReset = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbDatSan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,6 +95,7 @@
             // 
             this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = null;
             this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
             this.btnClose.Location = new System.Drawing.Point(758, 0);
@@ -112,210 +104,129 @@
             this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnClose.Size = new System.Drawing.Size(45, 39);
             this.btnClose.TabIndex = 1;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // groupBox1
+            // gbDatSan
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.ckboxCN);
-            this.groupBox1.Controls.Add(this.gunaImageButton1);
-            this.groupBox1.Controls.Add(this.ckboxT7);
-            this.groupBox1.Controls.Add(this.ckboxT6);
-            this.groupBox1.Controls.Add(this.ckboxT5);
-            this.groupBox1.Controls.Add(this.ckboxT4);
-            this.groupBox1.Controls.Add(this.ckboxT3);
-            this.groupBox1.Controls.Add(this.ckboxHuySan);
-            this.groupBox1.Controls.Add(this.ckboxHoatDong);
-            this.groupBox1.Controls.Add(this.ckboxT2);
-            this.groupBox1.Controls.Add(this.ckboxDatCD);
-            this.groupBox1.Controls.Add(this.dtpDenNgay);
-            this.groupBox1.Controls.Add(this.dtpDenGio);
-            this.groupBox1.Controls.Add(this.dtpTuGio);
-            this.groupBox1.Controls.Add(this.dtpTuNgay);
-            this.groupBox1.Controls.Add(this.cboxTenSan);
-            this.groupBox1.Controls.Add(this.cboxKhachHang);
-            this.groupBox1.Controls.Add(this.txtMaDatSan);
-            this.groupBox1.Controls.Add(this.gunaLabel8);
-            this.groupBox1.Controls.Add(this.gunaLabel7);
-            this.groupBox1.Controls.Add(this.gunaLabel5);
-            this.groupBox1.Controls.Add(this.gunaLabel10);
-            this.groupBox1.Controls.Add(this.gunaLabel9);
-            this.groupBox1.Controls.Add(this.gunaLabel6);
-            this.groupBox1.Controls.Add(this.gunaLabel4);
-            this.groupBox1.Controls.Add(this.gunaLabel2);
-            this.groupBox1.Controls.Add(this.gunaLabel1);
-            this.groupBox1.Controls.Add(this.gunaLabel3);
-            this.groupBox1.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 390);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin đặt sân";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.CustomFormat = "hh:mm";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(702, 213);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 34);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // ckboxCN
-            // 
-            this.ckboxCN.AutoSize = true;
-            this.ckboxCN.Location = new System.Drawing.Point(638, 297);
-            this.ckboxCN.Name = "ckboxCN";
-            this.ckboxCN.Size = new System.Drawing.Size(100, 29);
-            this.ckboxCN.TabIndex = 7;
-            this.ckboxCN.Text = "Chủ Nhật";
-            this.ckboxCN.UseVisualStyleBackColor = true;
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
-            this.gunaImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaImageButton1.Image = null;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(64, 64);
-            this.gunaImageButton1.Location = new System.Drawing.Point(755, 74);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(33, 29);
-            this.gunaImageButton1.TabIndex = 1;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
-            // 
-            // ckboxT7
-            // 
-            this.ckboxT7.AutoSize = true;
-            this.ckboxT7.Location = new System.Drawing.Point(557, 297);
-            this.ckboxT7.Name = "ckboxT7";
-            this.ckboxT7.Size = new System.Drawing.Size(74, 29);
-            this.ckboxT7.TabIndex = 7;
-            this.ckboxT7.Text = "Thứ 7";
-            this.ckboxT7.UseVisualStyleBackColor = true;
-            // 
-            // ckboxT6
-            // 
-            this.ckboxT6.AutoSize = true;
-            this.ckboxT6.Location = new System.Drawing.Point(476, 297);
-            this.ckboxT6.Name = "ckboxT6";
-            this.ckboxT6.Size = new System.Drawing.Size(75, 29);
-            this.ckboxT6.TabIndex = 7;
-            this.ckboxT6.Text = "Thứ 6";
-            this.ckboxT6.UseVisualStyleBackColor = true;
-            // 
-            // ckboxT5
-            // 
-            this.ckboxT5.AutoSize = true;
-            this.ckboxT5.Location = new System.Drawing.Point(395, 297);
-            this.ckboxT5.Name = "ckboxT5";
-            this.ckboxT5.Size = new System.Drawing.Size(75, 29);
-            this.ckboxT5.TabIndex = 7;
-            this.ckboxT5.Text = "Thứ 5";
-            this.ckboxT5.UseVisualStyleBackColor = true;
-            // 
-            // ckboxT4
-            // 
-            this.ckboxT4.AutoSize = true;
-            this.ckboxT4.Location = new System.Drawing.Point(314, 297);
-            this.ckboxT4.Name = "ckboxT4";
-            this.ckboxT4.Size = new System.Drawing.Size(74, 29);
-            this.ckboxT4.TabIndex = 7;
-            this.ckboxT4.Text = "Thứ 4";
-            this.ckboxT4.UseVisualStyleBackColor = true;
-            // 
-            // ckboxT3
-            // 
-            this.ckboxT3.AutoSize = true;
-            this.ckboxT3.Location = new System.Drawing.Point(233, 297);
-            this.ckboxT3.Name = "ckboxT3";
-            this.ckboxT3.Size = new System.Drawing.Size(75, 29);
-            this.ckboxT3.TabIndex = 7;
-            this.ckboxT3.Text = "Thứ 3";
-            this.ckboxT3.UseVisualStyleBackColor = true;
-            // 
-            // ckboxHuySan
-            // 
-            this.ckboxHuySan.AutoSize = true;
-            this.ckboxHuySan.Location = new System.Drawing.Point(278, 341);
-            this.ckboxHuySan.Name = "ckboxHuySan";
-            this.ckboxHuySan.Size = new System.Drawing.Size(94, 29);
-            this.ckboxHuySan.TabIndex = 7;
-            this.ckboxHuySan.Text = "Hủy Sân";
-            this.ckboxHuySan.UseVisualStyleBackColor = true;
-            // 
-            // ckboxHoatDong
-            // 
-            this.ckboxHoatDong.AutoSize = true;
-            this.ckboxHoatDong.Location = new System.Drawing.Point(152, 341);
-            this.ckboxHoatDong.Name = "ckboxHoatDong";
-            this.ckboxHoatDong.Size = new System.Drawing.Size(109, 29);
-            this.ckboxHoatDong.TabIndex = 7;
-            this.ckboxHoatDong.Text = "Hoạt Động";
-            this.ckboxHoatDong.UseVisualStyleBackColor = true;
-            // 
-            // ckboxT2
-            // 
-            this.ckboxT2.AutoSize = true;
-            this.ckboxT2.Location = new System.Drawing.Point(152, 297);
-            this.ckboxT2.Name = "ckboxT2";
-            this.ckboxT2.Size = new System.Drawing.Size(75, 29);
-            this.ckboxT2.TabIndex = 7;
-            this.ckboxT2.Text = "Thứ 2";
-            this.ckboxT2.UseVisualStyleBackColor = true;
-            // 
-            // ckboxDatCD
-            // 
-            this.ckboxDatCD.AutoSize = true;
-            this.ckboxDatCD.Location = new System.Drawing.Point(152, 262);
-            this.ckboxDatCD.Name = "ckboxDatCD";
-            this.ckboxDatCD.Size = new System.Drawing.Size(143, 29);
-            this.ckboxDatCD.TabIndex = 7;
-            this.ckboxDatCD.Text = "đặt sân cố định";
-            this.ckboxDatCD.UseVisualStyleBackColor = true;
+            this.gbDatSan.Controls.Add(this.dtpDenNgay);
+            this.gbDatSan.Controls.Add(this.dtpTuNgay);
+            this.gbDatSan.Controls.Add(this.cboxtrangThai);
+            this.gbDatSan.Controls.Add(this.dtpThoiGian);
+            this.gbDatSan.Controls.Add(this.dtpDenGio);
+            this.gbDatSan.Controls.Add(this.dtpTuGio);
+            this.gbDatSan.Controls.Add(this.btnThemKH);
+            this.gbDatSan.Controls.Add(this.cboxMaDatSan);
+            this.gbDatSan.Controls.Add(this.cboxTenSan);
+            this.gbDatSan.Controls.Add(this.cboxKhachHang);
+            this.gbDatSan.Controls.Add(this.gunaLabel8);
+            this.gbDatSan.Controls.Add(this.gunaLabel7);
+            this.gbDatSan.Controls.Add(this.gunaLabel5);
+            this.gbDatSan.Controls.Add(this.gunaLabel10);
+            this.gbDatSan.Controls.Add(this.gunaLabel6);
+            this.gbDatSan.Controls.Add(this.gunaLabel4);
+            this.gbDatSan.Controls.Add(this.gunaLabel2);
+            this.gbDatSan.Controls.Add(this.gunaLabel1);
+            this.gbDatSan.Controls.Add(this.gunaLabel3);
+            this.gbDatSan.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatSan.Location = new System.Drawing.Point(3, 45);
+            this.gbDatSan.Name = "gbDatSan";
+            this.gbDatSan.Size = new System.Drawing.Size(800, 331);
+            this.gbDatSan.TabIndex = 1;
+            this.gbDatSan.TabStop = false;
+            this.gbDatSan.Text = "Thông tin đặt sân";
             // 
             // dtpDenNgay
             // 
-            this.dtpDenNgay.CustomFormat = "dd/mm/yyyy";
-            this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDenNgay.CustomFormat = "yyyy-MM-dd";
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenNgay.Location = new System.Drawing.Point(432, 170);
+            this.dtpDenNgay.Location = new System.Drawing.Point(455, 170);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(169, 34);
+            this.dtpDenNgay.Size = new System.Drawing.Size(183, 32);
             this.dtpDenNgay.TabIndex = 5;
-            // 
-            // dtpDenGio
-            // 
-            this.dtpDenGio.CustomFormat = "hh:mm";
-            this.dtpDenGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDenGio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenGio.Location = new System.Drawing.Point(432, 213);
-            this.dtpDenGio.Name = "dtpDenGio";
-            this.dtpDenGio.Size = new System.Drawing.Size(169, 34);
-            this.dtpDenGio.TabIndex = 5;
-            // 
-            // dtpTuGio
-            // 
-            this.dtpTuGio.CustomFormat = "hh:mm";
-            this.dtpTuGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTuGio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuGio.Location = new System.Drawing.Point(152, 213);
-            this.dtpTuGio.Name = "dtpTuGio";
-            this.dtpTuGio.Size = new System.Drawing.Size(169, 34);
-            this.dtpTuGio.TabIndex = 5;
             // 
             // dtpTuNgay
             // 
-            this.dtpTuNgay.CustomFormat = "dd/mm/yyyy";
-            this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTuNgay.CustomFormat = "yyyy-MM-dd";
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay.Location = new System.Drawing.Point(152, 170);
+            this.dtpTuNgay.Location = new System.Drawing.Point(150, 170);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(169, 34);
-            this.dtpTuNgay.TabIndex = 5;
+            this.dtpTuNgay.Size = new System.Drawing.Size(196, 32);
+            this.dtpTuNgay.TabIndex = 4;
+            // 
+            // cboxtrangThai
+            // 
+            this.cboxtrangThai.FormattingEnabled = true;
+            this.cboxtrangThai.Items.AddRange(new object[] {
+            "Đang Đặt",
+            "Đã Hủy"});
+            this.cboxtrangThai.Location = new System.Drawing.Point(152, 275);
+            this.cboxtrangThai.Name = "cboxtrangThai";
+            this.cboxtrangThai.Size = new System.Drawing.Size(171, 33);
+            this.cboxtrangThai.TabIndex = 9;
+            // 
+            // dtpThoiGian
+            // 
+            this.dtpThoiGian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpThoiGian.CustomFormat = "HH:mm";
+            this.dtpThoiGian.Font = new System.Drawing.Font("UVN Thay Giao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThoiGian.Location = new System.Drawing.Point(682, 207);
+            this.dtpThoiGian.Name = "dtpThoiGian";
+            this.dtpThoiGian.ShowUpDown = true;
+            this.dtpThoiGian.Size = new System.Drawing.Size(98, 35);
+            this.dtpThoiGian.TabIndex = 8;
+            this.dtpThoiGian.Value = new System.DateTime(2020, 7, 8, 0, 0, 0, 0);
+            // 
+            // dtpDenGio
+            // 
+            this.dtpDenGio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpDenGio.CustomFormat = "HH:mm";
+            this.dtpDenGio.Font = new System.Drawing.Font("UVN Thay Giao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDenGio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDenGio.Location = new System.Drawing.Point(455, 211);
+            this.dtpDenGio.Name = "dtpDenGio";
+            this.dtpDenGio.ShowUpDown = true;
+            this.dtpDenGio.Size = new System.Drawing.Size(183, 35);
+            this.dtpDenGio.TabIndex = 7;
+            this.dtpDenGio.Value = new System.DateTime(2020, 7, 8, 0, 0, 0, 0);
+            // 
+            // dtpTuGio
+            // 
+            this.dtpTuGio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpTuGio.CustomFormat = "HH:mm";
+            this.dtpTuGio.Font = new System.Drawing.Font("UVN Thay Giao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTuGio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTuGio.Location = new System.Drawing.Point(150, 213);
+            this.dtpTuGio.Name = "dtpTuGio";
+            this.dtpTuGio.ShowUpDown = true;
+            this.dtpTuGio.Size = new System.Drawing.Size(196, 35);
+            this.dtpTuGio.TabIndex = 6;
+            this.dtpTuGio.Value = new System.DateTime(2020, 7, 8, 0, 0, 0, 0);
+            // 
+            // btnThemKH
+            // 
+            this.btnThemKH.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
+            this.btnThemKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemKH.Image = null;
+            this.btnThemKH.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemKH.Location = new System.Drawing.Point(755, 74);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.OnHoverImage = null;
+            this.btnThemKH.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThemKH.Size = new System.Drawing.Size(33, 29);
+            this.btnThemKH.TabIndex = 1;
+            this.btnThemKH.Click += new System.EventHandler(this.gunaImageButton1_Click);
+            // 
+            // cboxMaDatSan
+            // 
+            this.cboxMaDatSan.Font = new System.Drawing.Font("UVN Thanh Pho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxMaDatSan.FormattingEnabled = true;
+            this.cboxMaDatSan.Location = new System.Drawing.Point(150, 31);
+            this.cboxMaDatSan.Name = "cboxMaDatSan";
+            this.cboxMaDatSan.Size = new System.Drawing.Size(636, 29);
+            this.cboxMaDatSan.TabIndex = 1;
+            this.cboxMaDatSan.SelectedIndexChanged += new System.EventHandler(this.cboxMaDatSan_SelectedIndexChanged);
             // 
             // cboxTenSan
             // 
@@ -324,7 +235,7 @@
             this.cboxTenSan.Location = new System.Drawing.Point(152, 123);
             this.cboxTenSan.Name = "cboxTenSan";
             this.cboxTenSan.Size = new System.Drawing.Size(636, 29);
-            this.cboxTenSan.TabIndex = 4;
+            this.cboxTenSan.TabIndex = 3;
             // 
             // cboxKhachHang
             // 
@@ -333,23 +244,15 @@
             this.cboxKhachHang.Location = new System.Drawing.Point(152, 74);
             this.cboxKhachHang.Name = "cboxKhachHang";
             this.cboxKhachHang.Size = new System.Drawing.Size(602, 29);
-            this.cboxKhachHang.TabIndex = 4;
-            // 
-            // txtMaDatSan
-            // 
-            this.txtMaDatSan.Font = new System.Drawing.Font("UVN Thanh Pho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDatSan.Location = new System.Drawing.Point(152, 27);
-            this.txtMaDatSan.Name = "txtMaDatSan";
-            this.txtMaDatSan.Size = new System.Drawing.Size(636, 29);
-            this.txtMaDatSan.TabIndex = 3;
+            this.cboxKhachHang.TabIndex = 2;
             // 
             // gunaLabel8
             // 
             this.gunaLabel8.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel8.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel8.Location = new System.Drawing.Point(607, 213);
+            this.gunaLabel8.Location = new System.Drawing.Point(666, 170);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(94, 34);
+            this.gunaLabel8.Size = new System.Drawing.Size(128, 34);
             this.gunaLabel8.TabIndex = 2;
             this.gunaLabel8.Text = "Thời gian";
             this.gunaLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,7 +261,7 @@
             // 
             this.gunaLabel7.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel7.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel7.Location = new System.Drawing.Point(329, 213);
+            this.gunaLabel7.Location = new System.Drawing.Point(352, 213);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(82, 34);
             this.gunaLabel7.TabIndex = 2;
@@ -369,7 +272,7 @@
             // 
             this.gunaLabel5.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel5.Location = new System.Drawing.Point(329, 170);
+            this.gunaLabel5.Location = new System.Drawing.Point(352, 170);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(97, 34);
             this.gunaLabel5.TabIndex = 2;
@@ -380,23 +283,12 @@
             // 
             this.gunaLabel10.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel10.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel10.Location = new System.Drawing.Point(9, 336);
+            this.gunaLabel10.Location = new System.Drawing.Point(11, 272);
             this.gunaLabel10.Name = "gunaLabel10";
             this.gunaLabel10.Size = new System.Drawing.Size(117, 34);
             this.gunaLabel10.TabIndex = 2;
             this.gunaLabel10.Text = "Hiện Trạng";
             this.gunaLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel9.Location = new System.Drawing.Point(9, 257);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(117, 34);
-            this.gunaLabel9.TabIndex = 2;
-            this.gunaLabel9.Text = "Hình thức";
-            this.gunaLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // gunaLabel6
             // 
@@ -453,31 +345,57 @@
             this.gunaLabel3.Text = "Mã đặt sân";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnThoat
+            // btnThem
             // 
-            this.btnThoat.AnimationHoverSpeed = 0.07F;
-            this.btnThoat.AnimationSpeed = 0.03F;
-            this.btnThoat.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnThoat.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnThoat.BorderColor = System.Drawing.Color.Black;
-            this.btnThoat.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThoat.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.Black;
-            this.btnThoat.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_shutdown_642;
-            this.btnThoat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThoat.Location = new System.Drawing.Point(518, 452);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThoat.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThoat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThoat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThoat.OnHoverImage = null;
-            this.btnThoat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThoat.Size = new System.Drawing.Size(131, 50);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThem.AnimationHoverSpeed = 0.07F;
+            this.btnThem.AnimationSpeed = 0.03F;
+            this.btnThem.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnThem.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnThem.BorderColor = System.Drawing.Color.Black;
+            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThem.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_802;
+            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThem.Location = new System.Drawing.Point(273, 393);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThem.OnHoverImage = null;
+            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThem.Size = new System.Drawing.Size(153, 50);
+            this.btnThem.TabIndex = 13;
+            this.btnThem.Text = "Thêm Mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.AnimationHoverSpeed = 0.07F;
+            this.btnSua.AnimationSpeed = 0.03F;
+            this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.Black;
+            this.btnSua.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_support_1001;
+            this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSua.Location = new System.Drawing.Point(458, 393);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnSua.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSua.OnHoverImage = null;
+            this.btnSua.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSua.Size = new System.Drawing.Size(131, 50);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -486,12 +404,13 @@
             this.btnLuu.BaseColor1 = System.Drawing.Color.Snow;
             this.btnLuu.BaseColor2 = System.Drawing.Color.Lime;
             this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
             this.btnLuu.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_save_64;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(356, 452);
+            this.btnLuu.Location = new System.Drawing.Point(611, 393);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLuu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -503,41 +422,45 @@
             this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnThemMoi
+            // btnReset
             // 
-            this.btnThemMoi.AnimationHoverSpeed = 0.07F;
-            this.btnThemMoi.AnimationSpeed = 0.03F;
-            this.btnThemMoi.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnThemMoi.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnThemMoi.BorderColor = System.Drawing.Color.Black;
-            this.btnThemMoi.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThemMoi.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnThemMoi.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_801;
-            this.btnThemMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThemMoi.Location = new System.Drawing.Point(194, 452);
-            this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThemMoi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThemMoi.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThemMoi.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThemMoi.OnHoverImage = null;
-            this.btnThemMoi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThemMoi.Size = new System.Drawing.Size(131, 50);
-            this.btnThemMoi.TabIndex = 12;
-            this.btnThemMoi.Text = "Thêm Mới";
-            this.btnThemMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnReset.AnimationHoverSpeed = 0.07F;
+            this.btnReset.AnimationSpeed = 0.03F;
+            this.btnReset.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnReset.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnReset.BorderColor = System.Drawing.Color.Black;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReset.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_100;
+            this.btnReset.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnReset.Location = new System.Drawing.Point(119, 393);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnReset.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnReset.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReset.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReset.OnHoverImage = null;
+            this.btnReset.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReset.Size = new System.Drawing.Size(131, 50);
+            this.btnReset.TabIndex = 10;
+            this.btnReset.Text = "Làm Mới";
+            this.btnReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmDatSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 514);
-            this.Controls.Add(this.btnThoat);
+            this.ClientSize = new System.Drawing.Size(803, 472);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnThemMoi);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.gbDatSan);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -545,10 +468,10 @@
             this.Name = "frmDatSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt Sân";
+            this.Load += new System.EventHandler(this.frmDatSan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbDatSan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -559,10 +482,9 @@
         private Guna.UI.WinForms.GunaImageButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbDatSan;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.ComboBox cboxKhachHang;
-        private System.Windows.Forms.TextBox txtMaDatSan;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
@@ -571,26 +493,18 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ComboBox cboxTenSan;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox ckboxCN;
-        private System.Windows.Forms.CheckBox ckboxT7;
-        private System.Windows.Forms.CheckBox ckboxT6;
-        private System.Windows.Forms.CheckBox ckboxT5;
-        private System.Windows.Forms.CheckBox ckboxT4;
-        private System.Windows.Forms.CheckBox ckboxT3;
-        private System.Windows.Forms.CheckBox ckboxHuySan;
-        private System.Windows.Forms.CheckBox ckboxHoatDong;
-        private System.Windows.Forms.CheckBox ckboxT2;
-        private System.Windows.Forms.CheckBox ckboxDatCD;
-        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private Guna.UI.WinForms.GunaLabel gunaLabel10;
+        private Guna.UI.WinForms.GunaImageButton btnThemKH;
+        private Guna.UI.WinForms.GunaGradientButton btnReset;
+        private Guna.UI.WinForms.GunaGradientButton btnLuu;
         private System.Windows.Forms.DateTimePicker dtpDenGio;
         private System.Windows.Forms.DateTimePicker dtpTuGio;
+        private System.Windows.Forms.DateTimePicker dtpThoiGian;
+        private System.Windows.Forms.ComboBox cboxtrangThai;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
-        private Guna.UI.WinForms.GunaLabel gunaLabel10;
-        private Guna.UI.WinForms.GunaLabel gunaLabel9;
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
-        private Guna.UI.WinForms.GunaGradientButton btnThemMoi;
-        private Guna.UI.WinForms.GunaGradientButton btnLuu;
-        private Guna.UI.WinForms.GunaGradientButton btnThoat;
+        private System.Windows.Forms.ComboBox cboxMaDatSan;
+        private Guna.UI.WinForms.GunaGradientButton btnSua;
+        private Guna.UI.WinForms.GunaGradientButton btnThem;
     }
 }

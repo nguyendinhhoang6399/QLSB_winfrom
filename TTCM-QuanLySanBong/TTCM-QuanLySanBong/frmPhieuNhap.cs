@@ -16,11 +16,17 @@ namespace TTCM_QuanLySanBong
         {
             InitializeComponent();
             LoadPhieuN();
+            LoadHangHoa();
+            LoadNcc();
+            LoadMaPhieu();
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(btnThemNcc, "Thêm");
         }
 
         void LoadPhieuN()
         {
-            string querry = "select * from CTPhieuNhap";
+            string querry = "select PN.maphieu, HH.tenhh, ctPN.dvt, ctPN.soluongnhap, ctPN.gianhap, NCC.tenncc from phieuNhap PN, hanghoa HH, CTphieuNhap ctPN, nhacungcap NCC where PN.maphieu = ctPN.maphieu and ctPN.mahh = HH.mahh and ctPN.mancc = NCC.mancc";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvNhapHang.DataSource = data;
             gbPhieuNhap.Enabled = false;
@@ -44,25 +50,51 @@ namespace TTCM_QuanLySanBong
                 return;
             else
             {
-                txtMaPhieu.Text = dgvNhapHang.Rows[numrow].Cells[0].Value.ToString();
-                txtTenHangHoa.Text = dgvNhapHang.Rows[numrow].Cells[1].Value.ToString();
+                cboxMaPhieu.Text = dgvNhapHang.Rows[numrow].Cells[0].Value.ToString();
+                cboxTenHang.Text = dgvNhapHang.Rows[numrow].Cells[1].Value.ToString();
                 txtDvt.Text = dgvNhapHang.Rows[numrow].Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvNhapHang.Rows[numrow].Cells[3].Value.ToString();
                 txtGiaNhap.Text = dgvNhapHang.Rows[numrow].Cells[4].Value.ToString();
-                cboxNcc.Text = dgvNhapHang.Rows[numrow].Cells[7].Value.ToString();
+                cboxNcc.Text = dgvNhapHang.Rows[numrow].Cells[5].Value.ToString();
             }
         }
         void loadNull()
         {
-            txtMaPhieu.Text = "";
-            txtTenHangHoa.Text = "";
+            cboxMaPhieu.Text = "";
+            cboxTenHang.Text = "";
             txtDvt.Text = "";
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
             cboxNcc.Text = "";
         }
         int dem;
-
+        void LoadNcc()
+        {
+            string querry = "select * from Nhacungcap";
+            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+            cboxNcc.DataSource = data;
+            cboxNcc.DisplayMember = "tenncc";
+            cboxNcc.ValueMember = "mancc";
+            cboxNcc.SelectedIndex = -1;
+        }
+        void LoadHangHoa()
+        {
+            string querry = "select * from HangHoa";
+            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+            cboxTenHang.DataSource = data;
+            cboxTenHang.DisplayMember = "tenhh";
+            cboxTenHang.ValueMember = "mahh";
+            cboxTenHang.SelectedIndex = -1;
+        }
+        void LoadMaPhieu()
+        {
+            string querry = "select * from PhieuNhap";
+            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+            cboxMaPhieu.DataSource = data;
+            cboxMaPhieu.DisplayMember = "maphieu";
+            cboxMaPhieu.ValueMember = "maphieu";
+            cboxMaPhieu.SelectedIndex = -1;
+        }
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
             dem = 1;
@@ -70,17 +102,19 @@ namespace TTCM_QuanLySanBong
             loadNull();
             dgvNhapHang.Enabled = false;
             btnSua.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             dem = 2;
             gbPhieuNhap.Enabled = true;
-            if (txtMaPhieu.Text == "")
+            if (cboxMaPhieu.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             btnThemMoi.Enabled = false;
+            btnXoa.Enabled = false;
         }
         Boolean kiemTra(string maphieu)
         {
@@ -103,6 +137,7 @@ namespace TTCM_QuanLySanBong
             dgvNhapHang.Enabled = true;
             btnThemMoi.Enabled = true;
             btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -111,18 +146,18 @@ namespace TTCM_QuanLySanBong
             {
                 if (dem == 1)
                 {
-                    string maPhieu = txtMaPhieu.Text;
-                    string tenhh = txtTenHangHoa.Text;
+                    string maPhieu = cboxMaPhieu.Text;
+                    string tenhh = cboxTenHang.Text;
                     string dvt = txtDvt.Text;
                     string tenNcc = cboxNcc.Text;
                     decimal soLuong, gia = 0;
-                    if (txtTenHangHoa.Text == "" || txtDvt.Text == "" || txtSoLuong.Text == "" || txtGiaNhap.Text == "" || cboxNcc.Text == "")
+                    if (cboxTenHang.Text == "" || txtDvt.Text == "" || txtSoLuong.Text == "" || txtGiaNhap.Text == "" || cboxNcc.Text == "")
                     {
                         MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else if (kiemTra(maPhieu) == true)
                     {
-                        MessageBox.Show("Khách hàng đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Phiếu nhập đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -140,9 +175,10 @@ namespace TTCM_QuanLySanBong
 
                         try
                         {
-                            string querry = "insert into CTPhieuNhap(tenHh,dvt,soluongnhap,gianhap,tenNcc) values(N'" + txtTenHangHoa.Text + "',N'" + txtDvt.Text + "'," +
-                                            "N'" + txtSoLuong.Text + "',N'" + txtGiaNhap.Text + "',N'" + cboxNcc.Text + "')";
+                            string querry = "insert into CTPhieuNhap values(N'" + cboxMaPhieu.Text + "',N'" + txtDvt.Text + "'," +
+                                            "N'" + txtSoLuong.Text + "',N'" + txtGiaNhap.Text + "',N'" + cboxTenHang.SelectedValue + "',N'" + cboxNcc.SelectedValue + "')";
                             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                            //string querry1 = "update PhieuNhap "
                             MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadNull();
                             LoadPhieuN();
@@ -155,16 +191,16 @@ namespace TTCM_QuanLySanBong
                 }
                 else if (dem == 2)
                 {
-                    string maPhieu = txtMaPhieu.Text;
-                    string tenhh = txtTenHangHoa.Text;
+                    string maPhieu = cboxMaPhieu.Text;
+                    string tenhh = cboxTenHang.Text;
                     string dvt = txtDvt.Text;
                     string tenNcc = cboxNcc.Text;
                     decimal soLuong, gia = 0;
-                    if (txtMaPhieu.Text == "")
+                    if (cboxMaPhieu.Text == "")
                     {
                         MessageBox.Show("Vui lòng chọn đối tượng muốn sửa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (txtTenHangHoa.Text == "" || txtDvt.Text == "" || txtSoLuong.Text == "" || txtGiaNhap.Text == "" || cboxNcc.Text =="")
+                    else if (cboxTenHang.Text == "" || txtDvt.Text == "" || txtSoLuong.Text == "" || txtGiaNhap.Text == "" || cboxNcc.Text =="")
                     {
                         MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -184,7 +220,7 @@ namespace TTCM_QuanLySanBong
 
                         try
                         {
-                            string querry = "update CTPhieuNhap set tenhh = N'" + tenhh + "',dvt =N'" + dvt + "',soluongnhap='" + soLuong + "',gianhap=N'" + gia + "' where maPhieu ='" + maPhieu + "'";
+                            string querry = "update CTPhieuNhap set dvt =N'" + dvt + "',soluongnhap='" + soLuong + "',gianhap=N'" + gia + "',mahh=N'"+cboxTenHang.SelectedValue+"',mancc = N'"+cboxNcc.SelectedValue+"' where maPhieu ='" + maPhieu + "'";
                             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
                             MessageBox.Show("Sửa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadNull();
@@ -206,7 +242,7 @@ namespace TTCM_QuanLySanBong
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string maPhieu = txtMaPhieu.Text;
+            string maPhieu = cboxMaPhieu.Text;
             if (maPhieu == "")
             {
                 MessageBox.Show("Vui lòng chọn đối tượng muốn xóa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

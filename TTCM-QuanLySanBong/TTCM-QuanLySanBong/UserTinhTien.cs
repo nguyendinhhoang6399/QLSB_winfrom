@@ -180,5 +180,10 @@ namespace TTCM_QuanLySanBong
             frmKhachHang frmKhachHang = new frmKhachHang();
             frmKhachHang.ShowDialog();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

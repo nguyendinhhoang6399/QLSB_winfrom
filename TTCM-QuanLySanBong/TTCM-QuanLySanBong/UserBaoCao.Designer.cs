@@ -34,7 +34,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.report1;
-            this.panel1.Location = new System.Drawing.Point(319, 74);
+            this.panel1.Location = new System.Drawing.Point(270, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(593, 494);
             this.panel1.TabIndex = 0;

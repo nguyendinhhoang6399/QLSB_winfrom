@@ -32,8 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.dgvKhachHang = new Guna.UI.WinForms.GunaDataGridView();
+            this.maKh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbKhachHang = new System.Windows.Forms.GroupBox();
             this.txtEmail = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtSDT = new Guna.UI.WinForms.GunaLineTextBox();
@@ -46,18 +53,11 @@
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtMaKh = new Guna.UI.WinForms.GunaLineTextBox();
-            this.maKh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.gbKhachHang.SuspendLayout();
@@ -76,6 +76,15 @@
             this.panel1.Size = new System.Drawing.Size(879, 39);
             this.panel1.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 38);
+            this.panel2.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -85,6 +94,21 @@
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Khách Hàng";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnClose.Location = new System.Drawing.Point(834, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnClose.Size = new System.Drawing.Size(45, 39);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvKhachHang
             // 
@@ -151,6 +175,51 @@
             this.dgvKhachHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvKhachHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
+            // 
+            // maKh
+            // 
+            this.maKh.DataPropertyName = "makh";
+            this.maKh.FillWeight = 80.2139F;
+            this.maKh.HeaderText = "Mã KH";
+            this.maKh.MinimumWidth = 4;
+            this.maKh.Name = "maKh";
+            this.maKh.ReadOnly = true;
+            // 
+            // tenKhachHang
+            // 
+            this.tenKhachHang.DataPropertyName = "tenKh";
+            this.tenKhachHang.FillWeight = 104.9465F;
+            this.tenKhachHang.HeaderText = "Tên Khách Hàng";
+            this.tenKhachHang.MinimumWidth = 6;
+            this.tenKhachHang.Name = "tenKhachHang";
+            this.tenKhachHang.ReadOnly = true;
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "diachi";
+            this.diaChi.FillWeight = 104.9465F;
+            this.diaChi.HeaderText = "Địa Chỉ";
+            this.diaChi.MinimumWidth = 6;
+            this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
+            // 
+            // soDienThoai
+            // 
+            this.soDienThoai.DataPropertyName = "soDienThoai";
+            this.soDienThoai.FillWeight = 104.9465F;
+            this.soDienThoai.HeaderText = "Số điện thoại";
+            this.soDienThoai.MinimumWidth = 6;
+            this.soDienThoai.Name = "soDienThoai";
+            this.soDienThoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.FillWeight = 104.9465F;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // gbKhachHang
             // 
@@ -301,51 +370,6 @@
             this.txtMaKh.TabIndex = 16;
             this.txtMaKh.Visible = false;
             // 
-            // maKh
-            // 
-            this.maKh.DataPropertyName = "makh";
-            this.maKh.FillWeight = 80.2139F;
-            this.maKh.HeaderText = "Mã KH";
-            this.maKh.MinimumWidth = 4;
-            this.maKh.Name = "maKh";
-            this.maKh.ReadOnly = true;
-            // 
-            // tenKhachHang
-            // 
-            this.tenKhachHang.DataPropertyName = "tenKh";
-            this.tenKhachHang.FillWeight = 104.9465F;
-            this.tenKhachHang.HeaderText = "Tên Khách Hàng";
-            this.tenKhachHang.MinimumWidth = 6;
-            this.tenKhachHang.Name = "tenKhachHang";
-            this.tenKhachHang.ReadOnly = true;
-            // 
-            // diaChi
-            // 
-            this.diaChi.DataPropertyName = "diachi";
-            this.diaChi.FillWeight = 104.9465F;
-            this.diaChi.HeaderText = "Địa Chỉ";
-            this.diaChi.MinimumWidth = 6;
-            this.diaChi.Name = "diaChi";
-            this.diaChi.ReadOnly = true;
-            // 
-            // soDienThoai
-            // 
-            this.soDienThoai.DataPropertyName = "soDienThoai";
-            this.soDienThoai.FillWeight = 104.9465F;
-            this.soDienThoai.HeaderText = "Số điện thoại";
-            this.soDienThoai.MinimumWidth = 6;
-            this.soDienThoai.Name = "soDienThoai";
-            this.soDienThoai.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.FillWeight = 104.9465F;
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
             // btnHuy
             // 
             this.btnHuy.AnimationHoverSpeed = 0.07F;
@@ -353,6 +377,7 @@
             this.btnHuy.BaseColor1 = System.Drawing.Color.Snow;
             this.btnHuy.BaseColor2 = System.Drawing.Color.Lime;
             this.btnHuy.BorderColor = System.Drawing.Color.Black;
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
             this.btnHuy.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
@@ -379,6 +404,7 @@
             this.btnXoa.BaseColor1 = System.Drawing.Color.Snow;
             this.btnXoa.BaseColor2 = System.Drawing.Color.Lime;
             this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
             this.btnXoa.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
@@ -405,6 +431,7 @@
             this.btnThemMoi.BaseColor1 = System.Drawing.Color.Snow;
             this.btnThemMoi.BaseColor2 = System.Drawing.Color.Lime;
             this.btnThemMoi.BorderColor = System.Drawing.Color.Black;
+            this.btnThemMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemMoi.FocusedColor = System.Drawing.Color.Empty;
             this.btnThemMoi.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.Color.Black;
@@ -431,6 +458,7 @@
             this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
             this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
             this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FocusedColor = System.Drawing.Color.Empty;
             this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Black;
@@ -457,6 +485,7 @@
             this.btnLuu.BaseColor1 = System.Drawing.Color.Snow;
             this.btnLuu.BaseColor2 = System.Drawing.Color.Lime;
             this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
             this.btnLuu.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
@@ -475,29 +504,6 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 38);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Image = null;
-            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.Location = new System.Drawing.Point(834, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.OnHoverImage = null;
-            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClose.Size = new System.Drawing.Size(45, 39);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmKhachHang
             // 

@@ -49,3 +49,6 @@ C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserBaoCao.resources
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.UserNhanSu.resources
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM-QuanLySanBong.csprojAssemblyReference.cache
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.frmDangNhap.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.frmDangKy.resources
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Debug\TTCM_QuanLySanBong.frmQuenMK.resources

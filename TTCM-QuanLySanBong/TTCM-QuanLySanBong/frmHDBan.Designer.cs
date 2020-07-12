@@ -36,11 +36,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvDsSanBong = new Guna.UI.WinForms.GunaDataGridView();
+            this.maHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboxKhachHang = new System.Windows.Forms.ComboBox();
-            this.btnThem = new Guna.UI.WinForms.GunaImageButton();
+            this.btnThemKH = new Guna.UI.WinForms.GunaImageButton();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
-            this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
@@ -56,18 +63,10 @@
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.thanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenHh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenKh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDsSanBong = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,14 +104,16 @@
             // 
             this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = null;
             this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.Location = new System.Drawing.Point(1172, 3);
+            this.btnClose.Location = new System.Drawing.Point(1172, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverImage = null;
             this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnClose.Size = new System.Drawing.Size(45, 39);
             this.btnClose.TabIndex = 1;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // groupBox2
             // 
@@ -126,12 +127,119 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bán hàng";
             // 
+            // dgvDsSanBong
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDsSanBong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDsSanBong.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDsSanBong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDsSanBong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDsSanBong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDsSanBong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHoaDon,
+            this.tenKh,
+            this.tenHh,
+            this.dvt,
+            this.soLuong,
+            this.donGia,
+            this.thanhTien});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDsSanBong.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDsSanBong.EnableHeadersVisualStyles = false;
+            this.dgvDsSanBong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvDsSanBong.Location = new System.Drawing.Point(3, 28);
+            this.dgvDsSanBong.Name = "dgvDsSanBong";
+            this.dgvDsSanBong.RowHeadersVisible = false;
+            this.dgvDsSanBong.RowHeadersWidth = 51;
+            this.dgvDsSanBong.RowTemplate.Height = 24;
+            this.dgvDsSanBong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDsSanBong.Size = new System.Drawing.Size(769, 592);
+            this.dgvDsSanBong.TabIndex = 2;
+            this.dgvDsSanBong.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvDsSanBong.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvDsSanBong.ThemeStyle.HeaderStyle.Height = 23;
+            this.dgvDsSanBong.ThemeStyle.ReadOnly = false;
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvDsSanBong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // maHoaDon
+            // 
+            this.maHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.maHoaDon.MinimumWidth = 6;
+            this.maHoaDon.Name = "maHoaDon";
+            // 
+            // tenKh
+            // 
+            this.tenKh.HeaderText = "Tên KH";
+            this.tenKh.MinimumWidth = 6;
+            this.tenKh.Name = "tenKh";
+            // 
+            // tenHh
+            // 
+            this.tenHh.HeaderText = "Tên Hàng hóa";
+            this.tenHh.MinimumWidth = 6;
+            this.tenHh.Name = "tenHh";
+            // 
+            // dvt
+            // 
+            this.dvt.HeaderText = "Đơn Vị Tính";
+            this.dvt.MinimumWidth = 6;
+            this.dvt.Name = "dvt";
+            // 
+            // soLuong
+            // 
+            this.soLuong.HeaderText = "Số Lượng";
+            this.soLuong.MinimumWidth = 6;
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.HeaderText = "Đơn Giá";
+            this.donGia.MinimumWidth = 6;
+            this.donGia.Name = "donGia";
+            // 
+            // thanhTien
+            // 
+            this.thanhTien.HeaderText = "Thành Tiền";
+            this.thanhTien.MinimumWidth = 6;
+            this.thanhTien.Name = "thanhTien";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboxKhachHang);
-            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.btnThemKH);
             this.groupBox1.Controls.Add(this.gunaVSeparator1);
-            this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnLuu);
@@ -164,19 +272,20 @@
             this.cboxKhachHang.Size = new System.Drawing.Size(191, 33);
             this.cboxKhachHang.TabIndex = 17;
             // 
-            // btnThem
+            // btnThemKH
             // 
-            this.btnThem.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThem.Image = null;
-            this.btnThem.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThem.Location = new System.Drawing.Point(371, 71);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.OnHoverImage = null;
-            this.btnThem.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnThem.Size = new System.Drawing.Size(33, 29);
-            this.btnThem.TabIndex = 16;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemKH.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_64;
+            this.btnThemKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemKH.Image = null;
+            this.btnThemKH.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemKH.Location = new System.Drawing.Point(371, 71);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.OnHoverImage = null;
+            this.btnThemKH.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThemKH.Size = new System.Drawing.Size(33, 29);
+            this.btnThemKH.TabIndex = 16;
+            this.btnThemKH.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // gunaVSeparator1
             // 
@@ -188,32 +297,6 @@
             this.gunaVSeparator1.TabIndex = 3;
             this.gunaVSeparator1.Thickness = 5;
             // 
-            // btnThoat
-            // 
-            this.btnThoat.AnimationHoverSpeed = 0.07F;
-            this.btnThoat.AnimationSpeed = 0.03F;
-            this.btnThoat.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnThoat.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnThoat.BorderColor = System.Drawing.Color.Black;
-            this.btnThoat.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThoat.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.Black;
-            this.btnThoat.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_shutdown_642;
-            this.btnThoat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThoat.Location = new System.Drawing.Point(247, 364);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThoat.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThoat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThoat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThoat.OnHoverImage = null;
-            this.btnThoat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThoat.Size = new System.Drawing.Size(131, 50);
-            this.btnThoat.TabIndex = 13;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // btnXoa
             // 
             this.btnXoa.AnimationHoverSpeed = 0.07F;
@@ -221,6 +304,7 @@
             this.btnXoa.BaseColor1 = System.Drawing.Color.Snow;
             this.btnXoa.BaseColor2 = System.Drawing.Color.Lime;
             this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
             this.btnXoa.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
@@ -246,6 +330,7 @@
             this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
             this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
             this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FocusedColor = System.Drawing.Color.Empty;
             this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Black;
@@ -271,12 +356,13 @@
             this.btnLuu.BaseColor1 = System.Drawing.Color.Snow;
             this.btnLuu.BaseColor2 = System.Drawing.Color.Lime;
             this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
             this.btnLuu.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_save_64;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(84, 364);
+            this.btnLuu.Location = new System.Drawing.Point(165, 361);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLuu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -296,6 +382,7 @@
             this.btnThemMoi.BaseColor1 = System.Drawing.Color.Snow;
             this.btnThemMoi.BaseColor2 = System.Drawing.Color.Lime;
             this.btnThemMoi.BorderColor = System.Drawing.Color.Black;
+            this.btnThemMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemMoi.FocusedColor = System.Drawing.Color.Empty;
             this.btnThemMoi.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.Color.Black;
@@ -445,114 +532,6 @@
             this.gunaLabel1.Text = "Tên hàng hóa";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // thanhTien
-            // 
-            this.thanhTien.HeaderText = "Thành Tiền";
-            this.thanhTien.MinimumWidth = 6;
-            this.thanhTien.Name = "thanhTien";
-            // 
-            // donGia
-            // 
-            this.donGia.HeaderText = "Đơn Giá";
-            this.donGia.MinimumWidth = 6;
-            this.donGia.Name = "donGia";
-            // 
-            // soLuong
-            // 
-            this.soLuong.HeaderText = "Số Lượng";
-            this.soLuong.MinimumWidth = 6;
-            this.soLuong.Name = "soLuong";
-            // 
-            // dvt
-            // 
-            this.dvt.HeaderText = "Đơn Vị Tính";
-            this.dvt.MinimumWidth = 6;
-            this.dvt.Name = "dvt";
-            // 
-            // tenHh
-            // 
-            this.tenHh.HeaderText = "Tên Hàng hóa";
-            this.tenHh.MinimumWidth = 6;
-            this.tenHh.Name = "tenHh";
-            // 
-            // tenKh
-            // 
-            this.tenKh.HeaderText = "Tên KH";
-            this.tenKh.MinimumWidth = 6;
-            this.tenKh.Name = "tenKh";
-            // 
-            // maHoaDon
-            // 
-            this.maHoaDon.HeaderText = "Mã Hóa Đơn";
-            this.maHoaDon.MinimumWidth = 6;
-            this.maHoaDon.Name = "maHoaDon";
-            // 
-            // dgvDsSanBong
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDsSanBong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDsSanBong.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDsSanBong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDsSanBong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDsSanBong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDsSanBong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maHoaDon,
-            this.tenKh,
-            this.tenHh,
-            this.dvt,
-            this.soLuong,
-            this.donGia,
-            this.thanhTien});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDsSanBong.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDsSanBong.EnableHeadersVisualStyles = false;
-            this.dgvDsSanBong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDsSanBong.Location = new System.Drawing.Point(3, 28);
-            this.dgvDsSanBong.Name = "dgvDsSanBong";
-            this.dgvDsSanBong.RowHeadersVisible = false;
-            this.dgvDsSanBong.RowHeadersWidth = 51;
-            this.dgvDsSanBong.RowTemplate.Height = 24;
-            this.dgvDsSanBong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDsSanBong.Size = new System.Drawing.Size(769, 592);
-            this.dgvDsSanBong.TabIndex = 2;
-            this.dgvDsSanBong.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvDsSanBong.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvDsSanBong.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvDsSanBong.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvDsSanBong.ThemeStyle.ReadOnly = false;
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDsSanBong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // frmHDBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -568,8 +547,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,9 +562,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cboxKhachHang;
-        private Guna.UI.WinForms.GunaImageButton btnThem;
+        private Guna.UI.WinForms.GunaImageButton btnThemKH;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
-        private Guna.UI.WinForms.GunaGradientButton btnThoat;
         private Guna.UI.WinForms.GunaGradientButton btnXoa;
         private Guna.UI.WinForms.GunaGradientButton btnSua;
         private Guna.UI.WinForms.GunaGradientButton btnLuu;

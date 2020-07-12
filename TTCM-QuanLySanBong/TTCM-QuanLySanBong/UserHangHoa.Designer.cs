@@ -413,6 +413,7 @@
             this.btnNhapHang.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNhapHang.BaseColor2 = System.Drawing.Color.DarkOrange;
             this.btnNhapHang.BorderColor = System.Drawing.Color.Black;
+            this.btnNhapHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaTransition1.SetDecoration(this.btnNhapHang, Guna.UI.Animation.DecorationType.None);
             this.btnNhapHang.FocusedColor = System.Drawing.Color.Empty;
             this.btnNhapHang.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -440,6 +441,7 @@
             this.btnHuy.BaseColor1 = System.Drawing.Color.Snow;
             this.btnHuy.BaseColor2 = System.Drawing.Color.Lime;
             this.btnHuy.BorderColor = System.Drawing.Color.Black;
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaTransition1.SetDecoration(this.btnHuy, Guna.UI.Animation.DecorationType.None);
             this.btnHuy.FocusedColor = System.Drawing.Color.Empty;
             this.btnHuy.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,6 +469,7 @@
             this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
             this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
             this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaTransition1.SetDecoration(this.btnSua, Guna.UI.Animation.DecorationType.None);
             this.btnSua.FocusedColor = System.Drawing.Color.Empty;
             this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,6 +497,7 @@
             this.btnXoa.BaseColor1 = System.Drawing.Color.Snow;
             this.btnXoa.BaseColor2 = System.Drawing.Color.Lime;
             this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaTransition1.SetDecoration(this.btnXoa, Guna.UI.Animation.DecorationType.None);
             this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
             this.btnXoa.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -521,6 +525,7 @@
             this.btnLuu.BaseColor1 = System.Drawing.Color.Snow;
             this.btnLuu.BaseColor2 = System.Drawing.Color.Lime;
             this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaTransition1.SetDecoration(this.btnLuu, Guna.UI.Animation.DecorationType.None);
             this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
             this.btnLuu.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

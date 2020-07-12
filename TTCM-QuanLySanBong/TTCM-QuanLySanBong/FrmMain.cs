@@ -16,7 +16,15 @@ namespace TTCM_QuanLySanBong
         public FrmMain()
         {
             InitializeComponent();
-
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(btnTinhTien, "Tính Tiền");
+            toolTip1.SetToolTip(btnSan, "Đặt Sân");
+            toolTip1.SetToolTip(btnHoaDon, "Hóa Đơn");
+            toolTip1.SetToolTip(btnBaoCao, "Báo Cáo");
+            toolTip1.SetToolTip(btnHangHoa, "Hàng Hóa ");
+            toolTip1.SetToolTip(btnQLNV, "Nhân Sự");
+            toolTip1.SetToolTip(btnThoat, "Đăng Xuất");
             userDatSan1.Hide();
             userTinhTien1.Hide();
             userHangHoa1.Hide();
@@ -93,7 +101,9 @@ namespace TTCM_QuanLySanBong
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            this.Hide();
+            frmDangNhap.ShowDialog();
         }
     }
 }

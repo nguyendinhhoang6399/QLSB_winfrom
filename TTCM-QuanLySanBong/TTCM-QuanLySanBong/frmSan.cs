@@ -17,16 +17,17 @@ namespace TTCM_QuanLySanBong
             InitializeComponent();
             LoadSan();
             LoadTLs();
+            LoadMas();
         }
 
        
 
         void LoadSan()
         {
-            string querry = "select S.TenSan, LS.tenls, S.TrangThai from loaisan LS, San S where LS.mals = S.mals";
+            string querry = "select S.masan, S.TenSan, LS.tenls, S.TrangThai from loaisan LS, San S where LS.mals = S.mals";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvDsSanBong.DataSource = data;
-            panTTSan.Enabled = false;
+            gbSan.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -41,9 +42,10 @@ namespace TTCM_QuanLySanBong
                 return;
             else
             {
-                txtTenSan.Text = dgvDsSanBong.Rows[numrow].Cells[0].Value.ToString();
-                cboxTenLs.Text = dgvDsSanBong.Rows[numrow].Cells[1].Value.ToString();
-                cboxTrangThai.Text = dgvDsSanBong.Rows[numrow].Cells[2].Value.ToString();
+                cboxMaSan.Text = dgvDsSanBong.Rows[numrow].Cells[0].Value.ToString();
+                txtTenSan.Text = dgvDsSanBong.Rows[numrow].Cells[1].Value.ToString();
+                cboxTenLs.Text = dgvDsSanBong.Rows[numrow].Cells[2].Value.ToString();
+                cboxTrangThai.Text = dgvDsSanBong.Rows[numrow].Cells[3].Value.ToString();
             }
         }
         void LoadTLs()
@@ -53,8 +55,17 @@ namespace TTCM_QuanLySanBong
             cboxTenLs.DataSource = data;
             cboxTenLs.DisplayMember = "tenls";
             cboxTenLs.ValueMember = "mals";
+            cboxTenLs.SelectedIndex = -1;
         }
-
+        void LoadMas()
+        {
+            string querry = "select * from san";
+            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+            cboxMaSan.DataSource = data;
+            cboxMaSan.DisplayMember = "masan";
+            cboxMaSan.ValueMember = "masan";
+            cboxMaSan.SelectedIndex = -1;
+        }
         private void btnBangGia_Click_1(object sender, EventArgs e)
         {
             frmBangGia bangGia = new frmBangGia();
@@ -64,7 +75,7 @@ namespace TTCM_QuanLySanBong
         void loadNull()
         {
             txtTenSan.Text = "";
-            
+            cboxMaSan.Text = "";
             cboxTenLs.Text = "";
             cboxTrangThai.Text = "";
 
@@ -74,17 +85,19 @@ namespace TTCM_QuanLySanBong
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
             dem = 1;
-            panTTSan.Enabled = true;
+            gbSan.Enabled = true;
             loadNull();
             dgvDsSanBong.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            cboxMaSan.Enabled = false;
+            txtTenSan.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             dem = 2;
-            panTTSan.Enabled = true;
+            gbSan.Enabled = true;
             if (txtTenSan.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,21 +107,17 @@ namespace TTCM_QuanLySanBong
         }
         Boolean kiemTra(string tensan)
         {
-            string querry = "select tensan from San";
+            string querry = "select tensan from San where tenSan =N'"+tensan+"'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-            int dem = 0;
-            foreach (DataRow item in data.Rows)
-            {
-                dem++;
-            }
-            if (dem > 0)
+            
+             if(data.Rows.Count>0)
                 return true;
             return false;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            panTTSan.Enabled = false;
+            gbSan.Enabled = false;
             loadNull();
             dgvDsSanBong.Enabled = true;
             btnThemMoi.Enabled = true;
@@ -122,7 +131,7 @@ namespace TTCM_QuanLySanBong
             {
                 if (dem == 1)
                 {
-
+                    string masan = cboxMaSan.Text;
                     string tensan = txtTenSan.Text;
                     string loaisan = cboxTenLs.Text;
                     string trangthai = cboxTrangThai.Text;
@@ -140,8 +149,8 @@ namespace TTCM_QuanLySanBong
 
                         try
                         {
-                            string querry = "insert into San values(N'" + txtTenSan.Text + "',N'" +
-                                            "N'" + cboxTrangThai.Text + "',N'"+cboxTenLs.SelectedValue+"')";
+                            string querry = "insert into San(tensan,trangthai,mals) values(N'" + txtTenSan.Text + "',N'" + cboxTrangThai.Text + "',N'" + cboxTenLs.SelectedValue + "')";
+
                             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
                             MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -159,6 +168,7 @@ namespace TTCM_QuanLySanBong
                 }
                 else if (dem == 2)
                 {
+                    string masan = cboxMaSan.Text;
                     string tensan = txtTenSan.Text;
                     string loaisan = cboxTenLs.Text;
                     string trangthai = cboxTrangThai.Text;
@@ -175,7 +185,7 @@ namespace TTCM_QuanLySanBong
 
                         try
                         {
-                            string querry = "update San set tensan=N'" + tensan + "',trangthai = N'"+trangthai+"',mals = N'"+cboxTenLs.SelectedValue+"' ";
+                            string querry = "update San set tensan=N'" + tensan + "',trangthai = N'"+trangthai+"',mals = N'"+cboxTenLs.SelectedValue+"' where masan =N'"+masan+"' ";
                             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
                             MessageBox.Show("Sửa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             loadNull();

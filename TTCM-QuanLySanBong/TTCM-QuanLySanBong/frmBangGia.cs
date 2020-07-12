@@ -65,6 +65,7 @@ namespace TTCM_QuanLySanBong
             cboxTenLs.DataSource = data;
             cboxTenLs.DisplayMember = "tenls";
             cboxTenLs.ValueMember = "maLs";
+            cboxTenLs.SelectedIndex = -1;
             
         }
         int dem;
@@ -77,6 +78,7 @@ namespace TTCM_QuanLySanBong
             dgvBangGia.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            cboxTenLs.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)

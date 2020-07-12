@@ -15,6 +15,10 @@ namespace TTCM_QuanLySanBong
         public frmHDBan()
         {
             InitializeComponent();
+
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(btnThemKH, "Thêm");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -23,7 +27,8 @@ namespace TTCM_QuanLySanBong
             frmKhachHang.ShowDialog();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
