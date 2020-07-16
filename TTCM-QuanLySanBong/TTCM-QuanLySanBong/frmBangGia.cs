@@ -22,7 +22,7 @@ namespace TTCM_QuanLySanBong
 
         void LoadBG()
         {
-            string querry = "select LS.tenls, LS.mals , BG.giobatdau, BG.gioketthuc, BG.dongia from loaisan LS, banggiasan BG where LS.mals = BG.mals";
+            string querry = "select LS.tenls, LS.mals , BG.giobatdau, BG.gioketthuc,PARSENAME(CONVERT(varchar, CAST(BG.dongia AS money), 1), 2) as dongia from loaisan LS, banggiasan BG where LS.mals = BG.mals";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvBangGia.DataSource = data;
             panTTBG.Enabled = false;
@@ -84,13 +84,21 @@ namespace TTCM_QuanLySanBong
         private void btnSua_Click(object sender, EventArgs e)
         {
             dem = 2;
-            panTTBG.Enabled = true;
+            
             if (dtpTuGio.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnThemMoi.Enabled = true;
+                btnXoa.Enabled = true;
+                panTTBG.Enabled = false;
             }
-            btnThemMoi.Enabled = false;
-            btnXoa.Enabled = false;
+            else
+            {
+                btnThemMoi.Enabled = false;
+                btnXoa.Enabled = false;
+                panTTBG.Enabled = true;
+            }
+            
         }
         Boolean kiemTra(string tugio,string dengio,string mals)
         {

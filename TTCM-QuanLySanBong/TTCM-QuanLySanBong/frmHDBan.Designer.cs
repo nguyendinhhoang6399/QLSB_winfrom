@@ -45,6 +45,7 @@
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.cboxKhachHang = new System.Windows.Forms.ComboBox();
             this.btnThemKH = new Guna.UI.WinForms.GunaImageButton();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
@@ -67,6 +68,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,6 +166,7 @@
             this.dgvDsSanBong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsSanBong.Location = new System.Drawing.Point(3, 28);
             this.dgvDsSanBong.Name = "dgvDsSanBong";
+            this.dgvDsSanBong.ReadOnly = true;
             this.dgvDsSanBong.RowHeadersVisible = false;
             this.dgvDsSanBong.RowHeadersWidth = 51;
             this.dgvDsSanBong.RowTemplate.Height = 24;
@@ -184,7 +187,7 @@
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvDsSanBong.ThemeStyle.ReadOnly = false;
+            this.dgvDsSanBong.ThemeStyle.ReadOnly = true;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
@@ -198,45 +201,53 @@
             this.maHoaDon.HeaderText = "Mã Hóa Đơn";
             this.maHoaDon.MinimumWidth = 6;
             this.maHoaDon.Name = "maHoaDon";
+            this.maHoaDon.ReadOnly = true;
             // 
             // tenKh
             // 
             this.tenKh.HeaderText = "Tên KH";
             this.tenKh.MinimumWidth = 6;
             this.tenKh.Name = "tenKh";
+            this.tenKh.ReadOnly = true;
             // 
             // tenHh
             // 
             this.tenHh.HeaderText = "Tên Hàng hóa";
             this.tenHh.MinimumWidth = 6;
             this.tenHh.Name = "tenHh";
+            this.tenHh.ReadOnly = true;
             // 
             // dvt
             // 
             this.dvt.HeaderText = "Đơn Vị Tính";
             this.dvt.MinimumWidth = 6;
             this.dvt.Name = "dvt";
+            this.dvt.ReadOnly = true;
             // 
             // soLuong
             // 
             this.soLuong.HeaderText = "Số Lượng";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
             // 
             // donGia
             // 
             this.donGia.HeaderText = "Đơn Giá";
             this.donGia.MinimumWidth = 6;
             this.donGia.Name = "donGia";
+            this.donGia.ReadOnly = true;
             // 
             // thanhTien
             // 
             this.thanhTien.HeaderText = "Thành Tiền";
             this.thanhTien.MinimumWidth = 6;
             this.thanhTien.Name = "thanhTien";
+            this.thanhTien.ReadOnly = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.gunaPictureBox1);
             this.groupBox1.Controls.Add(this.cboxKhachHang);
             this.groupBox1.Controls.Add(this.btnThemKH);
             this.groupBox1.Controls.Add(this.gunaVSeparator1);
@@ -264,13 +275,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__19_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(22, 437);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(418, 177);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 23;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // cboxKhachHang
             // 
             this.cboxKhachHang.FormattingEnabled = true;
             this.cboxKhachHang.Location = new System.Drawing.Point(174, 67);
             this.cboxKhachHang.Name = "cboxKhachHang";
             this.cboxKhachHang.Size = new System.Drawing.Size(191, 33);
-            this.cboxKhachHang.TabIndex = 17;
+            this.cboxKhachHang.TabIndex = 2;
             // 
             // btnThemKH
             // 
@@ -412,7 +435,7 @@
             this.txtDonGIa.Name = "txtDonGIa";
             this.txtDonGIa.PasswordChar = '\0';
             this.txtDonGIa.Size = new System.Drawing.Size(230, 30);
-            this.txtDonGIa.TabIndex = 4;
+            this.txtDonGIa.TabIndex = 6;
             // 
             // txtSoLuong
             // 
@@ -425,7 +448,7 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.PasswordChar = '\0';
             this.txtSoLuong.Size = new System.Drawing.Size(230, 30);
-            this.txtSoLuong.TabIndex = 4;
+            this.txtSoLuong.TabIndex = 5;
             // 
             // txtDvt
             // 
@@ -451,7 +474,7 @@
             this.txtMaHd.Name = "txtMaHd";
             this.txtMaHd.PasswordChar = '\0';
             this.txtMaHd.Size = new System.Drawing.Size(230, 30);
-            this.txtMaHd.TabIndex = 4;
+            this.txtMaHd.TabIndex = 1;
             // 
             // txtTenHangHoa
             // 
@@ -464,7 +487,7 @@
             this.txtTenHangHoa.Name = "txtTenHangHoa";
             this.txtTenHangHoa.PasswordChar = '\0';
             this.txtTenHangHoa.Size = new System.Drawing.Size(230, 30);
-            this.txtTenHangHoa.TabIndex = 4;
+            this.txtTenHangHoa.TabIndex = 3;
             // 
             // gunaLabel4
             // 
@@ -549,6 +572,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,5 +611,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhTien;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

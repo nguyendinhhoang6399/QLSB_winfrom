@@ -16,5 +16,18 @@ namespace TTCM_QuanLySanBong
         {
             InitializeComponent();
         }
+
+      
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            frmDoanhThuSanBanh frmDoanhThu = new frmDoanhThuSanBanh();
+            frmDoanhThu.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoVonNH frmBaoCaoVonNH = new frmBaoCaoVonNH();
+            frmBaoCaoVonNH.ShowDialog();
+        }
     }
 }

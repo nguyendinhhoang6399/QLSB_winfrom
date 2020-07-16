@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.download;
+            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.LOGO_TEAMSPARTAN_FINAL;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "UserHDBG";
             this.Size = new System.Drawing.Size(784, 606);

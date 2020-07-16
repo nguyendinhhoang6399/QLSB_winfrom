@@ -19,7 +19,7 @@ namespace TTCM_QuanLySanBong
             LoadTs();
             LoadMaDS();
             cboxMaDatSan.Enabled = false;
-            gbDatSan.Enabled = false;
+            //gbDatSan.Enabled = false;
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(btnThemKH, "Thêm");
@@ -79,21 +79,16 @@ namespace TTCM_QuanLySanBong
         private void btnReset_Click(object sender, EventArgs e)
         {
             LoadNull();
-            gbDatSan.Enabled = false;
-            btnSua.Enabled = true;
-            btnThem.Enabled = true;
+            //gbDatSan.Enabled = false;
+            //btnSua.Enabled = true;
+            //btnThem.Enabled = true;
             cboxMaDatSan.Enabled = false;
         }
-        Boolean kiemTra(string madatsan)
+        bool kiemTraTgian()
         {
-            string querry = "select madatsan from datsan where madatsan =N'"+madatsan+"'";
+            string querry = "select * from DatSan where tugio >=CONVERT(time,'"+dtpTuGio.Text+ ":00') and tugio <=CONVERT(time,'"+dtpDenGio.Text+ ":00') or denGio >=CONVERT(time,'" + dtpTuGio.Text + ":00') and denGio <=CONVERT(time,'" + dtpDenGio.Text + ":00') and Tungay=N'" + dtpTuNgay.Text+ "' and DenNgay=N'" + dtpDenNgay.Text + "' and maSan='"+cboxTenSan.SelectedValue+"'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-            int dem = 0;
-            foreach (DataRow item in data.Rows)
-            {
-                dem++;
-            }
-            if (dem > 0)
+          if(data.Rows.Count>0)
                 return true;
             return false;
         }
@@ -117,9 +112,9 @@ namespace TTCM_QuanLySanBong
                     {
                         MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (kiemTra(madatsan) == true)
+                    else if (kiemTraTgian() == true)
                     {
-                        MessageBox.Show("Đặt sân đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Thời gian đặt không phù hợp!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else if (dateTN < dateTime || dateDN < dateTime || dateTN > dateDN)
                     {
@@ -177,19 +172,7 @@ namespace TTCM_QuanLySanBong
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            cboxMaDatSan.Enabled = true;
-            gbDatSan.Enabled = true;
-            btnThem.Enabled = false;
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            gbDatSan.Enabled = true;
-            btnSua.Enabled = false;
-            btnThem.Enabled = false;
-        }
+       
 
         private void cboxMaDatSan_SelectedIndexChanged(object sender, EventArgs e)
         {

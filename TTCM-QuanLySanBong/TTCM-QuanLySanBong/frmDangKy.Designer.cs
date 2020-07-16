@@ -162,10 +162,10 @@
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.ZBO9;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.WG8O;
             this.gunaPictureBox1.Location = new System.Drawing.Point(-90, 45);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(573, 227);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(560, 224);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 8;
             this.gunaPictureBox1.TabStop = false;

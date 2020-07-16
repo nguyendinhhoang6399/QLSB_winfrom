@@ -85,11 +85,6 @@ namespace TTCM_QuanLySanBong
             
         }
 
-        private void btnSuaLich_Click(object sender, EventArgs e)
-        {
-            frmDatSan frmDat = new frmDatSan();
-            frmDat.ShowDialog();
-        }
 
         private void cboxKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,8 +106,8 @@ namespace TTCM_QuanLySanBong
 
         private void dtpTuNgay_ValueChanged(object sender, EventArgs e)
         {
-
-            string querry = "select * from DatSan where tungay >= N'" + dtpTuNgay.Text + "' and denngay <= N'" + dtpDenNgay.Text + "' ";
+            
+            string querry = "select DS.MaDatSan, KH.tenkh,S.tensan ,DS.tungay,DS.denngay,DS.tugio,DS.dengio,DS.thoigian,DS.trangthai from DatSan DS, KhachHang KH, San S where DS.makh = KH.makh and S.masan = DS.masan and tungay >= N'" + dtpTuNgay.Text + "' and denngay <= N'" + dtpDenNgay.Text + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvDatSan.DataSource = data;
 
@@ -120,7 +115,8 @@ namespace TTCM_QuanLySanBong
 
         private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
         {
-            string querry = "select * from DatSan where tungay >= N'" + dtpTuNgay.Text + "' and denngay <= N'" + dtpDenNgay.Text + "'";
+            string querry = "select DS.MaDatSan, KH.tenkh,S.tensan ,DS.tungay,DS.denngay,DS.tugio,DS.dengio,DS.thoigian,DS.trangthai from DatSan DS, KhachHang KH, San S where DS.makh = KH.makh and S.masan = DS.masan and tungay >= N'" + dtpTuNgay.Text + "' and denngay <= N'" + dtpDenNgay.Text + "'";
+            
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvDatSan.DataSource = data;
         }
@@ -139,36 +135,21 @@ namespace TTCM_QuanLySanBong
 
         private void btnHuySan_Click(object sender, EventArgs e)
         {
-
-            //foreach (DataGridViewRow row in dgvDatSan.Rows)
-            //{
-            //    if (row.Cells[0].Value.ToString() == lbMaDS.Text)
-            //    {
-            //       
-            //    }
-            //}
-            btnBoHuy.Enabled = true;
+            
             string querry = "update DatSan set trangthai =N'Đã Hủy' where madatsan = '" + lbMaDS.Text + "' ";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             LoadLichDS();
-            btnHuySan.Enabled = false;
+            
         }
 
         private void btnBoHuy_Click(object sender, EventArgs e)
         {
 
-            //foreach (DataGridViewRow row in dgvDatSan.Rows)
-            //{
-            //    if (row.Cells[0].Value.ToString() == lbMaDS.Text)
-            //    {
-            //        row.DefaultCellStyle.BackColor = DefaultBackColor;
-            //    }
-            //}
-            btnHuySan.Enabled = true;
+           
             string querry = "update DatSan set trangthai =N'Đang Đặt' where madatsan = '" + lbMaDS.Text + "' ";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             LoadLichDS();
-            btnBoHuy.Enabled = false;
+           
 
         }
 

@@ -63,6 +63,7 @@
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnReset = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.panHangHoa.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             this.dgvHangHoa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -115,6 +116,7 @@
             this.dgvHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHangHoa.Location = new System.Drawing.Point(3, 52);
             this.dgvHangHoa.Name = "dgvHangHoa";
+            this.dgvHangHoa.ReadOnly = true;
             this.dgvHangHoa.RowHeadersVisible = false;
             this.dgvHangHoa.RowHeadersWidth = 51;
             this.dgvHangHoa.RowTemplate.Height = 24;
@@ -135,7 +137,7 @@
             this.dgvHangHoa.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvHangHoa.ThemeStyle.HeaderStyle.Height = 77;
-            this.dgvHangHoa.ThemeStyle.ReadOnly = false;
+            this.dgvHangHoa.ThemeStyle.ReadOnly = true;
             this.dgvHangHoa.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHangHoa.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHangHoa.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -151,6 +153,7 @@
             this.maHang.HeaderText = "Mã Hàng Hóa";
             this.maHang.MinimumWidth = 6;
             this.maHang.Name = "maHang";
+            this.maHang.ReadOnly = true;
             // 
             // tenhanghoa
             // 
@@ -158,6 +161,7 @@
             this.tenhanghoa.HeaderText = "Tên Hàng Hóa";
             this.tenhanghoa.MinimumWidth = 6;
             this.tenhanghoa.Name = "tenhanghoa";
+            this.tenhanghoa.ReadOnly = true;
             // 
             // dvt
             // 
@@ -165,6 +169,7 @@
             this.dvt.HeaderText = "Đơn Vị Tính";
             this.dvt.MinimumWidth = 6;
             this.dvt.Name = "dvt";
+            this.dvt.ReadOnly = true;
             // 
             // soLuongTon
             // 
@@ -172,6 +177,7 @@
             this.soLuongTon.HeaderText = "Số Lượng Tồn";
             this.soLuongTon.MinimumWidth = 6;
             this.soLuongTon.Name = "soLuongTon";
+            this.soLuongTon.ReadOnly = true;
             // 
             // donGia
             // 
@@ -179,6 +185,7 @@
             this.donGia.HeaderText = "Đơn Giá";
             this.donGia.MinimumWidth = 6;
             this.donGia.Name = "donGia";
+            this.donGia.ReadOnly = true;
             // 
             // gunaLabel2
             // 
@@ -265,7 +272,7 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.Size = new System.Drawing.Size(293, 30);
-            this.txtDonGia.TabIndex = 28;
+            this.txtDonGia.TabIndex = 5;
             // 
             // txtSLTon
             // 
@@ -280,7 +287,7 @@
             this.txtSLTon.PasswordChar = '\0';
             this.txtSLTon.ReadOnly = true;
             this.txtSLTon.Size = new System.Drawing.Size(343, 30);
-            this.txtSLTon.TabIndex = 29;
+            this.txtSLTon.TabIndex = 4;
             // 
             // txtDVT
             // 
@@ -294,7 +301,7 @@
             this.txtDVT.Name = "txtDVT";
             this.txtDVT.PasswordChar = '\0';
             this.txtDVT.Size = new System.Drawing.Size(343, 30);
-            this.txtDVT.TabIndex = 29;
+            this.txtDVT.TabIndex = 3;
             // 
             // txtTenHang
             // 
@@ -308,7 +315,7 @@
             this.txtTenHang.Name = "txtTenHang";
             this.txtTenHang.PasswordChar = '\0';
             this.txtTenHang.Size = new System.Drawing.Size(343, 30);
-            this.txtTenHang.TabIndex = 30;
+            this.txtTenHang.TabIndex = 2;
             // 
             // txtMaHang
             // 
@@ -323,7 +330,7 @@
             this.txtMaHang.PasswordChar = '\0';
             this.txtMaHang.ReadOnly = true;
             this.txtMaHang.Size = new System.Drawing.Size(343, 30);
-            this.txtMaHang.TabIndex = 31;
+            this.txtMaHang.TabIndex = 1;
             // 
             // gunaLabel8
             // 
@@ -546,10 +553,39 @@
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.AnimationHoverSpeed = 0.07F;
+            this.btnReset.AnimationSpeed = 0.03F;
+            this.btnReset.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnReset.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnReset.BorderColor = System.Drawing.Color.Black;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnReset, Guna.UI.Animation.DecorationType.None);
+            this.btnReset.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReset.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_100;
+            this.btnReset.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnReset.Location = new System.Drawing.Point(980, 404);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnReset.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnReset.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReset.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReset.OnHoverImage = null;
+            this.btnReset.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReset.Size = new System.Drawing.Size(131, 50);
+            this.btnReset.TabIndex = 46;
+            this.btnReset.Text = "Làm Mới";
+            this.btnReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // UserHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnNhapHang);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnSua);
@@ -602,5 +638,6 @@
         private Guna.UI.WinForms.GunaLineTextBox txtSLTon;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
+        private Guna.UI.WinForms.GunaGradientButton btnReset;
     }
 }

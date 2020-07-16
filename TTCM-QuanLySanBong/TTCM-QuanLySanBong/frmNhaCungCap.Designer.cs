@@ -55,10 +55,12 @@
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
             this.txtMaNcc = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNcc)).BeginInit();
             this.gboxNcc.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox
@@ -107,6 +109,7 @@
             this.dgvNcc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNcc.Location = new System.Drawing.Point(3, 28);
             this.dgvNcc.Name = "dgvNcc";
+            this.dgvNcc.ReadOnly = true;
             this.dgvNcc.RowHeadersVisible = false;
             this.dgvNcc.RowHeadersWidth = 51;
             this.dgvNcc.RowTemplate.Height = 24;
@@ -127,7 +130,7 @@
             this.dgvNcc.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvNcc.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvNcc.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvNcc.ThemeStyle.ReadOnly = false;
+            this.dgvNcc.ThemeStyle.ReadOnly = true;
             this.dgvNcc.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNcc.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNcc.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
@@ -143,6 +146,7 @@
             this.maNcc.HeaderText = "Mã NCC";
             this.maNcc.MinimumWidth = 6;
             this.maNcc.Name = "maNcc";
+            this.maNcc.ReadOnly = true;
             // 
             // tenNCC
             // 
@@ -150,6 +154,7 @@
             this.tenNCC.HeaderText = "Tên NCC";
             this.tenNCC.MinimumWidth = 6;
             this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
             // 
             // diaChi
             // 
@@ -157,6 +162,7 @@
             this.diaChi.HeaderText = "Địa Chỉ";
             this.diaChi.MinimumWidth = 6;
             this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
             // 
             // soDienThoai
             // 
@@ -164,6 +170,7 @@
             this.soDienThoai.HeaderText = "Số điện thoại";
             this.soDienThoai.MinimumWidth = 6;
             this.soDienThoai.Name = "soDienThoai";
+            this.soDienThoai.ReadOnly = true;
             // 
             // gboxNcc
             // 
@@ -192,7 +199,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.Size = new System.Drawing.Size(230, 30);
-            this.txtSDT.TabIndex = 4;
+            this.txtSDT.TabIndex = 3;
             // 
             // txtDiaChi
             // 
@@ -205,7 +212,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.Size = new System.Drawing.Size(230, 30);
-            this.txtDiaChi.TabIndex = 4;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // txtTenNcc
             // 
@@ -218,7 +225,7 @@
             this.txtTenNcc.Name = "txtTenNcc";
             this.txtTenNcc.PasswordChar = '\0';
             this.txtTenNcc.Size = new System.Drawing.Size(230, 30);
-            this.txtTenNcc.TabIndex = 4;
+            this.txtTenNcc.TabIndex = 1;
             // 
             // gunaLabel3
             // 
@@ -458,11 +465,24 @@
             this.gunaVSeparator1.TabIndex = 25;
             this.gunaVSeparator1.Thickness = 5;
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__20_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(453, 381);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(418, 160);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 26;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 555);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaVSeparator1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnSua);
@@ -482,6 +502,7 @@
             this.gboxNcc.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -512,5 +533,6 @@
         private Guna.UI.WinForms.GunaGradientButton btnThemMoi;
         private Guna.UI.WinForms.GunaLineTextBox txtMaNcc;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

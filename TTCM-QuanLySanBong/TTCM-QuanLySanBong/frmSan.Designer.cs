@@ -57,10 +57,12 @@
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).BeginInit();
             this.gbSan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,6 +158,7 @@
             this.dgvDsSanBong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsSanBong.Location = new System.Drawing.Point(3, 28);
             this.dgvDsSanBong.Name = "dgvDsSanBong";
+            this.dgvDsSanBong.ReadOnly = true;
             this.dgvDsSanBong.RowHeadersVisible = false;
             this.dgvDsSanBong.RowHeadersWidth = 51;
             this.dgvDsSanBong.RowTemplate.Height = 24;
@@ -176,7 +179,7 @@
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDsSanBong.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvDsSanBong.ThemeStyle.ReadOnly = false;
+            this.dgvDsSanBong.ThemeStyle.ReadOnly = true;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDsSanBong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
@@ -192,6 +195,7 @@
             this.masan.HeaderText = "Mã Sân";
             this.masan.MinimumWidth = 6;
             this.masan.Name = "masan";
+            this.masan.ReadOnly = true;
             // 
             // tenSan
             // 
@@ -199,6 +203,7 @@
             this.tenSan.HeaderText = "Tên Sân";
             this.tenSan.MinimumWidth = 6;
             this.tenSan.Name = "tenSan";
+            this.tenSan.ReadOnly = true;
             // 
             // tenLoaiSan
             // 
@@ -206,6 +211,7 @@
             this.tenLoaiSan.HeaderText = "Tên Loại Sân";
             this.tenLoaiSan.MinimumWidth = 6;
             this.tenLoaiSan.Name = "tenLoaiSan";
+            this.tenLoaiSan.ReadOnly = true;
             // 
             // trangthai
             // 
@@ -213,6 +219,7 @@
             this.trangthai.HeaderText = "Trạng Thái";
             this.trangthai.MinimumWidth = 6;
             this.trangthai.Name = "trangthai";
+            this.trangthai.ReadOnly = true;
             // 
             // gbSan
             // 
@@ -227,7 +234,7 @@
             this.gbSan.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
             this.gbSan.Location = new System.Drawing.Point(445, 39);
             this.gbSan.Name = "gbSan";
-            this.gbSan.Size = new System.Drawing.Size(434, 232);
+            this.gbSan.Size = new System.Drawing.Size(434, 188);
             this.gbSan.TabIndex = 6;
             this.gbSan.TabStop = false;
             this.gbSan.Text = "Thông tin sân";
@@ -235,7 +242,7 @@
             // cboxMaSan
             // 
             this.cboxMaSan.FormattingEnabled = true;
-            this.cboxMaSan.Location = new System.Drawing.Point(179, 44);
+            this.cboxMaSan.Location = new System.Drawing.Point(189, 28);
             this.cboxMaSan.Name = "cboxMaSan";
             this.cboxMaSan.Size = new System.Drawing.Size(230, 33);
             this.cboxMaSan.TabIndex = 1;
@@ -244,10 +251,10 @@
             // 
             this.gunaLabel4.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel4.Location = new System.Drawing.Point(5, 40);
+            this.gunaLabel4.Location = new System.Drawing.Point(15, 24);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(154, 37);
-            this.gunaLabel4.TabIndex = 37;
+            this.gunaLabel4.TabIndex = 45;
             this.gunaLabel4.Text = "Mã sân";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -257,7 +264,7 @@
             this.cboxTrangThai.Items.AddRange(new object[] {
             "Trống",
             "Đang thuê"});
-            this.cboxTrangThai.Location = new System.Drawing.Point(180, 175);
+            this.cboxTrangThai.Location = new System.Drawing.Point(189, 149);
             this.cboxTrangThai.Name = "cboxTrangThai";
             this.cboxTrangThai.Size = new System.Drawing.Size(230, 33);
             this.cboxTrangThai.TabIndex = 4;
@@ -265,7 +272,7 @@
             // cboxTenLs
             // 
             this.cboxTenLs.FormattingEnabled = true;
-            this.cboxTenLs.Location = new System.Drawing.Point(180, 133);
+            this.cboxTenLs.Location = new System.Drawing.Point(189, 107);
             this.cboxTenLs.Name = "cboxTenLs";
             this.cboxTenLs.Size = new System.Drawing.Size(230, 33);
             this.cboxTenLs.TabIndex = 3;
@@ -274,10 +281,10 @@
             // 
             this.gunaLabel3.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(34, 171);
+            this.gunaLabel3.Location = new System.Drawing.Point(43, 145);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(126, 37);
-            this.gunaLabel3.TabIndex = 33;
+            this.gunaLabel3.TabIndex = 43;
             this.gunaLabel3.Text = "Trạng thái";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -285,10 +292,10 @@
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(6, 129);
+            this.gunaLabel2.Location = new System.Drawing.Point(15, 103);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(154, 37);
-            this.gunaLabel2.TabIndex = 34;
+            this.gunaLabel2.TabIndex = 44;
             this.gunaLabel2.Text = "Tên Loại sân";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -299,7 +306,7 @@
             this.txtTenSan.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtTenSan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenSan.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtTenSan.Location = new System.Drawing.Point(179, 87);
+            this.txtTenSan.Location = new System.Drawing.Point(189, 71);
             this.txtTenSan.Name = "txtTenSan";
             this.txtTenSan.PasswordChar = '\0';
             this.txtTenSan.Size = new System.Drawing.Size(230, 30);
@@ -309,10 +316,10 @@
             // 
             this.gunaLabel1.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(18, 80);
+            this.gunaLabel1.Location = new System.Drawing.Point(28, 64);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(140, 37);
-            this.gunaLabel1.TabIndex = 3;
+            this.gunaLabel1.TabIndex = 41;
             this.gunaLabel1.Text = "Tên sân";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -339,7 +346,7 @@
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_unavailable_240;
             this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuy.Location = new System.Drawing.Point(519, 418);
+            this.btnHuy.Location = new System.Drawing.Point(529, 374);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnHuy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -366,7 +373,7 @@
             this.btnBangGia.ForeColor = System.Drawing.Color.Black;
             this.btnBangGia.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_money_pound_80;
             this.btnBangGia.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBangGia.Location = new System.Drawing.Point(624, 277);
+            this.btnBangGia.Location = new System.Drawing.Point(634, 233);
             this.btnBangGia.Name = "btnBangGia";
             this.btnBangGia.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnBangGia.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -393,7 +400,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_delete_1001;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(697, 418);
+            this.btnXoa.Location = new System.Drawing.Point(707, 374);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnXoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -420,7 +427,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_support_100;
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(741, 347);
+            this.btnSua.Location = new System.Drawing.Point(751, 303);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnSua.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -447,7 +454,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_save_64;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(597, 347);
+            this.btnLuu.Location = new System.Drawing.Point(607, 303);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLuu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -474,7 +481,7 @@
             this.btnThemMoi.ForeColor = System.Drawing.Color.Black;
             this.btnThemMoi.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_801;
             this.btnThemMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThemMoi.Location = new System.Drawing.Point(448, 347);
+            this.btnThemMoi.Location = new System.Drawing.Point(458, 303);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnThemMoi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -488,11 +495,24 @@
             this.btnThemMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__13_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(449, 430);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(418, 122);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 32;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // frmSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 555);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnBangGia);
             this.Controls.Add(this.btnXoa);
@@ -512,6 +532,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsSanBong)).EndInit();
             this.gbSan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,23 +547,24 @@
         private Guna.UI.WinForms.GunaDataGridView dgvDsSanBong;
         private System.Windows.Forms.GroupBox gbSan;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
-        private Guna.UI.WinForms.GunaLineTextBox txtTenSan;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaGradientButton btnHuy;
         private Guna.UI.WinForms.GunaGradientButton btnBangGia;
         private Guna.UI.WinForms.GunaGradientButton btnXoa;
         private Guna.UI.WinForms.GunaGradientButton btnSua;
         private Guna.UI.WinForms.GunaGradientButton btnLuu;
         private Guna.UI.WinForms.GunaGradientButton btnThemMoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenLoaiSan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
         private System.Windows.Forms.ComboBox cboxMaSan;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private System.Windows.Forms.ComboBox cboxTrangThai;
         private System.Windows.Forms.ComboBox cboxTenLs;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn masan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenSan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenLoaiSan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
+        private Guna.UI.WinForms.GunaLineTextBox txtTenSan;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

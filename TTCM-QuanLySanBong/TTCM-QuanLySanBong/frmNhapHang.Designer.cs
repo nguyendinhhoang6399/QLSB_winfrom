@@ -39,21 +39,23 @@
             this.dgvDsPhieu = new Guna.UI.WinForms.GunaDataGridView();
             this.maphieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhacungcap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
-            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
-            this.btnIn = new Guna.UI.WinForms.GunaGradientButton();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbMaPhieu = new System.Windows.Forms.Label();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnTaoMoi = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsPhieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,7 +135,6 @@
             this.dgvDsPhieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maphieu,
             this.nhacungcap,
-            this.tenNv,
             this.ngaylap,
             this.thanhtien});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -148,6 +149,7 @@
             this.dgvDsPhieu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsPhieu.Location = new System.Drawing.Point(3, 28);
             this.dgvDsPhieu.Name = "dgvDsPhieu";
+            this.dgvDsPhieu.ReadOnly = true;
             this.dgvDsPhieu.RowHeadersVisible = false;
             this.dgvDsPhieu.RowHeadersWidth = 51;
             this.dgvDsPhieu.RowTemplate.Height = 24;
@@ -168,7 +170,7 @@
             this.dgvDsPhieu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDsPhieu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDsPhieu.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvDsPhieu.ThemeStyle.ReadOnly = false;
+            this.dgvDsPhieu.ThemeStyle.ReadOnly = true;
             this.dgvDsPhieu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDsPhieu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDsPhieu.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
@@ -176,6 +178,7 @@
             this.dgvDsPhieu.ThemeStyle.RowsStyle.Height = 24;
             this.dgvDsPhieu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsPhieu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvDsPhieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsPhieu_CellClick);
             // 
             // maphieu
             // 
@@ -183,6 +186,7 @@
             this.maphieu.HeaderText = "Mã Phiếu";
             this.maphieu.MinimumWidth = 6;
             this.maphieu.Name = "maphieu";
+            this.maphieu.ReadOnly = true;
             // 
             // nhacungcap
             // 
@@ -190,13 +194,7 @@
             this.nhacungcap.HeaderText = "Nhà Cung Cấp";
             this.nhacungcap.MinimumWidth = 6;
             this.nhacungcap.Name = "nhacungcap";
-            // 
-            // tenNv
-            // 
-            this.tenNv.DataPropertyName = "tenNv";
-            this.tenNv.HeaderText = "Tên Nhân Viên";
-            this.tenNv.MinimumWidth = 6;
-            this.tenNv.Name = "tenNv";
+            this.nhacungcap.ReadOnly = true;
             // 
             // ngaylap
             // 
@@ -204,6 +202,7 @@
             this.ngaylap.HeaderText = "Ngày Lập";
             this.ngaylap.MinimumWidth = 6;
             this.ngaylap.Name = "ngaylap";
+            this.ngaylap.ReadOnly = true;
             // 
             // thanhtien
             // 
@@ -211,26 +210,7 @@
             this.thanhtien.HeaderText = "Thành tiền";
             this.thanhtien.MinimumWidth = 6;
             this.thanhtien.Name = "thanhtien";
-            // 
-            // dtpDenNgay
-            // 
-            this.dtpDenNgay.CustomFormat = "dd/mm/yyyy";
-            this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDenNgay.Location = new System.Drawing.Point(348, 47);
-            this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(163, 34);
-            this.dtpDenNgay.TabIndex = 9;
-            // 
-            // dtpTuNgay
-            // 
-            this.dtpTuNgay.CustomFormat = "dd/mm/yyyy";
-            this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTuNgay.Location = new System.Drawing.Point(94, 47);
-            this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(149, 30);
-            this.dtpTuNgay.TabIndex = 10;
+            this.thanhtien.ReadOnly = true;
             // 
             // gunaLabel2
             // 
@@ -262,31 +242,75 @@
             this.gunaVSeparator1.TabIndex = 16;
             this.gunaVSeparator1.Thickness = 5;
             // 
-            // btnIn
+            // dtpTuNgay
             // 
-            this.btnIn.AnimationHoverSpeed = 0.07F;
-            this.btnIn.AnimationSpeed = 0.03F;
-            this.btnIn.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnIn.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnIn.BorderColor = System.Drawing.Color.Black;
-            this.btnIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIn.FocusedColor = System.Drawing.Color.Empty;
-            this.btnIn.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.ForeColor = System.Drawing.Color.Black;
-            this.btnIn.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_print_100;
-            this.btnIn.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnIn.Location = new System.Drawing.Point(723, 357);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnIn.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnIn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnIn.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnIn.OnHoverImage = null;
-            this.btnIn.OnPressedColor = System.Drawing.Color.Black;
-            this.btnIn.Size = new System.Drawing.Size(144, 50);
-            this.btnIn.TabIndex = 12;
-            this.btnIn.Text = "IN PHIẾU";
-            this.btnIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dtpTuNgay.CustomFormat = "yyyy-MM-dd";
+            this.dtpTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTuNgay.Location = new System.Drawing.Point(94, 44);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(149, 34);
+            this.dtpTuNgay.TabIndex = 17;
+            this.dtpTuNgay.ValueChanged += new System.EventHandler(this.dtpTuNgay_ValueChanged);
+            // 
+            // dtpDenNgay
+            // 
+            this.dtpDenNgay.CustomFormat = "yyyy-MM-dd";
+            this.dtpDenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDenNgay.Location = new System.Drawing.Point(339, 45);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(163, 34);
+            this.dtpDenNgay.TabIndex = 18;
+            this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dtpDenNgay_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("UVN Thay Giao", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(724, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 40);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Mã Phiếu";
+            // 
+            // lbMaPhieu
+            // 
+            this.lbMaPhieu.Font = new System.Drawing.Font("UVN Thay Giao", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaPhieu.ForeColor = System.Drawing.Color.Red;
+            this.lbMaPhieu.Location = new System.Drawing.Point(724, 97);
+            this.lbMaPhieu.Name = "lbMaPhieu";
+            this.lbMaPhieu.Size = new System.Drawing.Size(143, 40);
+            this.lbMaPhieu.TabIndex = 19;
+            this.lbMaPhieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaGradientButton1
+            // 
+            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Snow;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Lime;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_search_more_1001;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(723, 184);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(144, 50);
+            this.gunaGradientButton1.TabIndex = 12;
+            this.gunaGradientButton1.Text = "XEM CT";
+            this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // btnXoa
             // 
@@ -301,7 +325,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_delete_1001;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(723, 292);
+            this.btnXoa.Location = new System.Drawing.Point(723, 317);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnXoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -313,32 +337,7 @@
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "XÓA PHIẾU";
             this.btnXoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnSua
-            // 
-            this.btnSua.AnimationHoverSpeed = 0.07F;
-            this.btnSua.AnimationSpeed = 0.03F;
-            this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnSua.BorderColor = System.Drawing.Color.Black;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.Black;
-            this.btnSua.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_inscription_96;
-            this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(723, 224);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnSua.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSua.OnHoverImage = null;
-            this.btnSua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(144, 50);
-            this.btnSua.TabIndex = 12;
-            this.btnSua.Text = "SỬA PHIẾU";
-            this.btnSua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTaoMoi
             // 
@@ -353,7 +352,7 @@
             this.btnTaoMoi.ForeColor = System.Drawing.Color.Black;
             this.btnTaoMoi.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_80;
             this.btnTaoMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTaoMoi.Location = new System.Drawing.Point(723, 158);
+            this.btnTaoMoi.Location = new System.Drawing.Point(723, 252);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnTaoMoi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -367,22 +366,36 @@
             this.btnTaoMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__16_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(678, 373);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(228, 182);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 24;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 555);
-            this.Controls.Add(this.gunaVSeparator1);
-            this.Controls.Add(this.btnIn);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnTaoMoi);
+            this.Controls.Add(this.lbMaPhieu);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDenNgay);
             this.Controls.Add(this.dtpTuNgay);
+            this.Controls.Add(this.gunaVSeparator1);
+            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnTaoMoi);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gunaPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -391,7 +404,9 @@
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsPhieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -403,19 +418,20 @@
         private Guna.UI.WinForms.GunaImageButton btnClose;
         private System.Windows.Forms.GroupBox groupBox2;
         private Guna.UI.WinForms.GunaDataGridView dgvDsPhieu;
-        private System.Windows.Forms.DateTimePicker dtpDenNgay;
-        private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaGradientButton btnTaoMoi;
-        private Guna.UI.WinForms.GunaGradientButton btnSua;
         private Guna.UI.WinForms.GunaGradientButton btnXoa;
-        private Guna.UI.WinForms.GunaGradientButton btnIn;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn nhacungcap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenNv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMaPhieu;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

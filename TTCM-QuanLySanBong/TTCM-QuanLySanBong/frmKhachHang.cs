@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,14 +65,22 @@ namespace TTCM_QuanLySanBong
         private void btnSua_Click_1(object sender, EventArgs e)
         {
             dem = 2;
-            gbKhachHang.Enabled = true;
+            
             if (txtTenKh.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnThemMoi.Enabled = true;
+                btnXoa.Enabled = true;
+                gbKhachHang.Enabled = false;
             }
-            btnThemMoi.Enabled = false;
-            btnXoa.Enabled = false;
+            else
+            {
+                btnThemMoi.Enabled = false;
+                btnXoa.Enabled = false;
+                gbKhachHang.Enabled = true;
+            }
             
+
         }
 
         Boolean kiemTra(string tenkh)

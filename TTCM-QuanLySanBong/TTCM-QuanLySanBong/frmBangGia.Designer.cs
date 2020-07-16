@@ -58,11 +58,13 @@
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             this.gbBangGia.SuspendLayout();
             this.panTTBG.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -143,7 +145,7 @@
             this.cboxTenLs.Location = new System.Drawing.Point(178, 18);
             this.cboxTenLs.Name = "cboxTenLs";
             this.cboxTenLs.Size = new System.Drawing.Size(222, 33);
-            this.cboxTenLs.TabIndex = 26;
+            this.cboxTenLs.TabIndex = 1;
             // 
             // gunaLabel2
             // 
@@ -166,7 +168,7 @@
             this.dtpDenGio.Name = "dtpDenGio";
             this.dtpDenGio.ShowUpDown = true;
             this.dtpDenGio.Size = new System.Drawing.Size(222, 35);
-            this.dtpDenGio.TabIndex = 23;
+            this.dtpDenGio.TabIndex = 3;
             this.dtpDenGio.Value = new System.DateTime(2020, 7, 8, 0, 0, 0, 0);
             // 
             // dtpTuGio
@@ -179,7 +181,7 @@
             this.dtpTuGio.Name = "dtpTuGio";
             this.dtpTuGio.ShowUpDown = true;
             this.dtpTuGio.Size = new System.Drawing.Size(222, 35);
-            this.dtpTuGio.TabIndex = 24;
+            this.dtpTuGio.TabIndex = 2;
             this.dtpTuGio.Value = new System.DateTime(2020, 7, 8, 0, 0, 0, 0);
             // 
             // txtDonGia
@@ -193,7 +195,7 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.Size = new System.Drawing.Size(230, 30);
-            this.txtDonGia.TabIndex = 22;
+            this.txtDonGia.TabIndex = 4;
             // 
             // gunaLabel4
             // 
@@ -492,11 +494,24 @@
             this.btnHuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__9_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(445, 433);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(418, 119);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 25;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // frmBangGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 555);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.gunaVSeparator1);
             this.Controls.Add(this.btnSua);
@@ -516,6 +531,7 @@
             this.panTTBG.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.ComboBox cboxTenLs;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

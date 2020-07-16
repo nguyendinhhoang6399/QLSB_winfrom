@@ -17,6 +17,7 @@ namespace TTCM_QuanLySanBong
             InitializeComponent();
             userHDBanHang1.Hide();
             userHDNhapHang1.Hide();
+           
         }
 
         private void rbtnHDBan_CheckedChanged(object sender, EventArgs e)

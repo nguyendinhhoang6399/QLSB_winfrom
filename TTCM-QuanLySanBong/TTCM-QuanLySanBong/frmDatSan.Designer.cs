@@ -52,8 +52,6 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.btnReset = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1.SuspendLayout();
@@ -345,58 +343,6 @@
             this.gunaLabel3.Text = "Mã đặt sân";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnThem
-            // 
-            this.btnThem.AnimationHoverSpeed = 0.07F;
-            this.btnThem.AnimationSpeed = 0.03F;
-            this.btnThem.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnThem.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnThem.BorderColor = System.Drawing.Color.Black;
-            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThem.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold);
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_802;
-            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(273, 393);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThem.OnHoverImage = null;
-            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(153, 50);
-            this.btnThem.TabIndex = 13;
-            this.btnThem.Text = "Thêm Mới";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.AnimationHoverSpeed = 0.07F;
-            this.btnSua.AnimationSpeed = 0.03F;
-            this.btnSua.BaseColor1 = System.Drawing.Color.Snow;
-            this.btnSua.BaseColor2 = System.Drawing.Color.Lime;
-            this.btnSua.BorderColor = System.Drawing.Color.Black;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSua.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSua.ForeColor = System.Drawing.Color.Black;
-            this.btnSua.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_support_1001;
-            this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(458, 393);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnSua.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSua.OnHoverImage = null;
-            this.btnSua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(131, 50);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // btnLuu
             // 
             this.btnLuu.AnimationHoverSpeed = 0.07F;
@@ -410,7 +356,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_save_64;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(611, 393);
+            this.btnLuu.Location = new System.Drawing.Point(445, 393);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLuu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -437,7 +383,7 @@
             this.btnReset.ForeColor = System.Drawing.Color.Black;
             this.btnReset.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_100;
             this.btnReset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReset.Location = new System.Drawing.Point(119, 393);
+            this.btnReset.Location = new System.Drawing.Point(233, 393);
             this.btnReset.Name = "btnReset";
             this.btnReset.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnReset.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -456,8 +402,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 472);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.gbDatSan);
@@ -504,7 +448,5 @@
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.ComboBox cboxMaDatSan;
-        private Guna.UI.WinForms.GunaGradientButton btnSua;
-        private Guna.UI.WinForms.GunaGradientButton btnThem;
     }
 }

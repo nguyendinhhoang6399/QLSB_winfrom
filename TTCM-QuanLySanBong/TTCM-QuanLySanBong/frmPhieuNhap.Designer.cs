@@ -49,13 +49,14 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.txtDvt = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtSoLuong = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtGiaNhap = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.gbPhieuNhap = new System.Windows.Forms.GroupBox();
             this.cboxMaPhieu = new System.Windows.Forms.ComboBox();
+            this.cboxDVT = new System.Windows.Forms.ComboBox();
             this.cboxTenHang = new System.Windows.Forms.ComboBox();
+            this.cboxThanhTien = new System.Windows.Forms.ComboBox();
             this.cboxNcc = new System.Windows.Forms.ComboBox();
             this.btnThemNcc = new Guna.UI.WinForms.GunaImageButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
@@ -63,10 +64,14 @@
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnIn = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnLamMoi = new Guna.UI.WinForms.GunaImageButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).BeginInit();
             this.gbPhieuNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,6 +168,7 @@
             this.dgvNhapHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNhapHang.Location = new System.Drawing.Point(3, 28);
             this.dgvNhapHang.Name = "dgvNhapHang";
+            this.dgvNhapHang.ReadOnly = true;
             this.dgvNhapHang.RowHeadersVisible = false;
             this.dgvNhapHang.RowHeadersWidth = 51;
             this.dgvNhapHang.RowTemplate.Height = 24;
@@ -183,7 +189,7 @@
             this.dgvNhapHang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvNhapHang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvNhapHang.ThemeStyle.HeaderStyle.Height = 23;
-            this.dgvNhapHang.ThemeStyle.ReadOnly = false;
+            this.dgvNhapHang.ThemeStyle.ReadOnly = true;
             this.dgvNhapHang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhapHang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNhapHang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
@@ -199,6 +205,7 @@
             this.maPhieu.HeaderText = "Mã Phiếu";
             this.maPhieu.MinimumWidth = 6;
             this.maPhieu.Name = "maPhieu";
+            this.maPhieu.ReadOnly = true;
             // 
             // tenHh
             // 
@@ -206,6 +213,7 @@
             this.tenHh.HeaderText = "Tên Hàng hóa";
             this.tenHh.MinimumWidth = 6;
             this.tenHh.Name = "tenHh";
+            this.tenHh.ReadOnly = true;
             // 
             // dvt
             // 
@@ -213,6 +221,7 @@
             this.dvt.HeaderText = "Đơn Vị Tính";
             this.dvt.MinimumWidth = 6;
             this.dvt.Name = "dvt";
+            this.dvt.ReadOnly = true;
             // 
             // soLuong
             // 
@@ -220,6 +229,7 @@
             this.soLuong.HeaderText = "Số Lượng Nhập";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
             // 
             // gianhap
             // 
@@ -227,6 +237,7 @@
             this.gianhap.HeaderText = "Giá Nhập";
             this.gianhap.MinimumWidth = 6;
             this.gianhap.Name = "gianhap";
+            this.gianhap.ReadOnly = true;
             // 
             // tenNcc
             // 
@@ -234,6 +245,7 @@
             this.tenNcc.HeaderText = "Tên NCC";
             this.tenNcc.MinimumWidth = 6;
             this.tenNcc.Name = "tenNcc";
+            this.tenNcc.ReadOnly = true;
             // 
             // gunaLabel1
             // 
@@ -261,7 +273,7 @@
             // 
             this.gunaLabel6.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel6.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel6.Location = new System.Drawing.Point(16, 239);
+            this.gunaLabel6.Location = new System.Drawing.Point(16, 257);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(140, 37);
             this.gunaLabel6.TabIndex = 3;
@@ -301,19 +313,6 @@
             this.gunaLabel4.Text = "Giá nhập";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtDvt
-            // 
-            this.txtDvt.BackColor = System.Drawing.Color.White;
-            this.txtDvt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDvt.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtDvt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDvt.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtDvt.Location = new System.Drawing.Point(174, 119);
-            this.txtDvt.Name = "txtDvt";
-            this.txtDvt.PasswordChar = '\0';
-            this.txtDvt.Size = new System.Drawing.Size(230, 30);
-            this.txtDvt.TabIndex = 4;
-            // 
             // txtSoLuong
             // 
             this.txtSoLuong.BackColor = System.Drawing.Color.White;
@@ -338,7 +337,7 @@
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.PasswordChar = '\0';
             this.txtGiaNhap.Size = new System.Drawing.Size(230, 30);
-            this.txtGiaNhap.TabIndex = 4;
+            this.txtGiaNhap.TabIndex = 5;
             // 
             // gunaVSeparator1
             // 
@@ -352,13 +351,15 @@
             // 
             // gbPhieuNhap
             // 
+            this.gbPhieuNhap.Controls.Add(this.btnLamMoi);
             this.gbPhieuNhap.Controls.Add(this.cboxMaPhieu);
+            this.gbPhieuNhap.Controls.Add(this.cboxDVT);
             this.gbPhieuNhap.Controls.Add(this.cboxTenHang);
+            this.gbPhieuNhap.Controls.Add(this.cboxThanhTien);
             this.gbPhieuNhap.Controls.Add(this.cboxNcc);
             this.gbPhieuNhap.Controls.Add(this.btnThemNcc);
             this.gbPhieuNhap.Controls.Add(this.txtGiaNhap);
             this.gbPhieuNhap.Controls.Add(this.txtSoLuong);
-            this.gbPhieuNhap.Controls.Add(this.txtDvt);
             this.gbPhieuNhap.Controls.Add(this.gunaLabel4);
             this.gbPhieuNhap.Controls.Add(this.gunaLabel3);
             this.gbPhieuNhap.Controls.Add(this.gunaLabel5);
@@ -368,7 +369,7 @@
             this.gbPhieuNhap.Font = new System.Drawing.Font("UVN Thanh Pho", 12F);
             this.gbPhieuNhap.Location = new System.Drawing.Point(800, 39);
             this.gbPhieuNhap.Name = "gbPhieuNhap";
-            this.gbPhieuNhap.Size = new System.Drawing.Size(417, 308);
+            this.gbPhieuNhap.Size = new System.Drawing.Size(417, 324);
             this.gbPhieuNhap.TabIndex = 7;
             this.gbPhieuNhap.TabStop = false;
             this.gbPhieuNhap.Text = "Thông tin phiếu nhập";
@@ -379,7 +380,18 @@
             this.cboxMaPhieu.Location = new System.Drawing.Point(174, 28);
             this.cboxMaPhieu.Name = "cboxMaPhieu";
             this.cboxMaPhieu.Size = new System.Drawing.Size(230, 33);
-            this.cboxMaPhieu.TabIndex = 19;
+            this.cboxMaPhieu.TabIndex = 1;
+            // 
+            // cboxDVT
+            // 
+            this.cboxDVT.FormattingEnabled = true;
+            this.cboxDVT.Items.AddRange(new object[] {
+            "Chai",
+            "Lon"});
+            this.cboxDVT.Location = new System.Drawing.Point(174, 117);
+            this.cboxDVT.Name = "cboxDVT";
+            this.cboxDVT.Size = new System.Drawing.Size(230, 33);
+            this.cboxDVT.TabIndex = 3;
             // 
             // cboxTenHang
             // 
@@ -387,15 +399,24 @@
             this.cboxTenHang.Location = new System.Drawing.Point(174, 75);
             this.cboxTenHang.Name = "cboxTenHang";
             this.cboxTenHang.Size = new System.Drawing.Size(230, 33);
-            this.cboxTenHang.TabIndex = 18;
+            this.cboxTenHang.TabIndex = 2;
+            // 
+            // cboxThanhTien
+            // 
+            this.cboxThanhTien.FormattingEnabled = true;
+            this.cboxThanhTien.Location = new System.Drawing.Point(21, 278);
+            this.cboxThanhTien.Name = "cboxThanhTien";
+            this.cboxThanhTien.Size = new System.Drawing.Size(39, 33);
+            this.cboxThanhTien.TabIndex = 17;
+            this.cboxThanhTien.Visible = false;
             // 
             // cboxNcc
             // 
             this.cboxNcc.FormattingEnabled = true;
-            this.cboxNcc.Location = new System.Drawing.Point(174, 239);
+            this.cboxNcc.Location = new System.Drawing.Point(174, 257);
             this.cboxNcc.Name = "cboxNcc";
             this.cboxNcc.Size = new System.Drawing.Size(191, 33);
-            this.cboxNcc.TabIndex = 17;
+            this.cboxNcc.TabIndex = 6;
             // 
             // btnThemNcc
             // 
@@ -425,7 +446,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_delete_1001;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(1079, 385);
+            this.btnXoa.Location = new System.Drawing.Point(1083, 383);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnXoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -452,7 +473,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_support_100;
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(933, 385);
+            this.btnSua.Location = new System.Drawing.Point(946, 383);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnSua.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -479,7 +500,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_save_64;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(1012, 455);
+            this.btnLuu.Location = new System.Drawing.Point(946, 450);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLuu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -506,7 +527,7 @@
             this.btnThemMoi.ForeColor = System.Drawing.Color.Black;
             this.btnThemMoi.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_plus_math_801;
             this.btnThemMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThemMoi.Location = new System.Drawing.Point(786, 385);
+            this.btnThemMoi.Location = new System.Drawing.Point(802, 383);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnThemMoi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -533,7 +554,7 @@
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_unavailable_240;
             this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuy.Location = new System.Drawing.Point(853, 455);
+            this.btnHuy.Location = new System.Drawing.Point(802, 450);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnHuy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -547,11 +568,67 @@
             this.btnHuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // btnIn
+            // 
+            this.btnIn.AnimationHoverSpeed = 0.07F;
+            this.btnIn.AnimationSpeed = 0.03F;
+            this.btnIn.BaseColor1 = System.Drawing.Color.Snow;
+            this.btnIn.BaseColor2 = System.Drawing.Color.Lime;
+            this.btnIn.BorderColor = System.Drawing.Color.Black;
+            this.btnIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIn.FocusedColor = System.Drawing.Color.Empty;
+            this.btnIn.Font = new System.Drawing.Font("UVN Thanh Pho", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.Color.Black;
+            this.btnIn.Image = global::TTCM_QuanLySanBong.Properties.Resources.icons8_print_100;
+            this.btnIn.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnIn.Location = new System.Drawing.Point(1083, 450);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnIn.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnIn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnIn.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnIn.OnHoverImage = null;
+            this.btnIn.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIn.Size = new System.Drawing.Size(131, 50);
+            this.btnIn.TabIndex = 22;
+            this.btnIn.Text = "In";
+            this.btnIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__25_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(797, 506);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(417, 141);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 23;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_1002;
+            this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamMoi.Image = null;
+            this.btnLamMoi.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLamMoi.Location = new System.Drawing.Point(371, 278);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.OnHoverImage = null;
+            this.btnLamMoi.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLamMoi.Size = new System.Drawing.Size(31, 34);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // frmPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 659);
+            this.Controls.Add(this.gunaPictureBox1);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.gunaVSeparator1);
             this.Controls.Add(this.btnXoa);
@@ -570,6 +647,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).EndInit();
             this.gbPhieuNhap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,7 +666,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaLineTextBox txtDvt;
         private Guna.UI.WinForms.GunaLineTextBox txtSoLuong;
         private Guna.UI.WinForms.GunaLineTextBox txtGiaNhap;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
@@ -608,5 +685,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gianhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNcc;
         private System.Windows.Forms.ComboBox cboxMaPhieu;
+        private System.Windows.Forms.ComboBox cboxDVT;
+        private Guna.UI.WinForms.GunaGradientButton btnIn;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private System.Windows.Forms.ComboBox cboxThanhTien;
+        private Guna.UI.WinForms.GunaImageButton btnLamMoi;
     }
 }

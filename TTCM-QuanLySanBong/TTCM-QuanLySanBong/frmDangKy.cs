@@ -13,17 +13,27 @@ namespace TTCM_QuanLySanBong
 {
     public partial class frmDangKy : Form
     {
-        private string manv = null;
+        private string manv;
         public frmDangKy(string maNv = null)
         {
             this.manv = maNv;
             InitializeComponent();
+            if(Manv != null)
+            {
+                txtMaNv.Text = Manv;
+                txtMaNv.Enabled = false;
+            }
+            else
+            {
+                txtMaNv.Text = "";
+                txtMaNv.Enabled = true;
+            }
             
         }
         public string Manv { get => manv; set => manv = value; }
         bool kiemtraTenTK(string UserName)
         {
-            string query = "select * from TaiKhoan where tenDn=N'" + UserName + "'";
+            string query = "select * from TaiKhoan where username=N'" + UserName + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(query);
             return data.Rows.Count > 0;
         }
@@ -93,16 +103,18 @@ namespace TTCM_QuanLySanBong
             {
                 string query;
                 if (Manv == null)
-                    query = "Insert into account values(N'" + txtTaiKhoan.Text + "',N'" + Encrypt(txtMatKhau.Text) + "','2','" + txtMaNv.Text + "')";
+                    query = "Insert into TaiKhoan values(N'" + txtTaiKhoan.Text + "',N'" + Encrypt(txtMatKhau.Text) + "','2','" + txtMaNv.Text + "')";
                 else
-                    query = "Insert into account values(N'" + txtTaiKhoan.Text + "',N'" + Encrypt(txtMatKhau.Text) + "','2','" + Manv + "')";
+                    query = "Insert into TaiKhoan values(N'" + txtTaiKhoan.Text + "',N'" + Encrypt(txtMatKhau.Text) + "','2','" + Manv + "')";
 
                 DataTable data = KetNoi.Istance.ExcuteQuerry(query);
 
                 MessageBox.Show("Đăng ký thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtTaiKhoan.ResetText();
+                txtMaNv.ResetText();
                 txtMatKhau.ResetText();
                 txtMatKhau2.ResetText();
+                this.Close();
             }
         }
 

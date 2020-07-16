@@ -64,18 +64,18 @@
             this.ckboxLuuMK.ForeColor = System.Drawing.Color.White;
             this.ckboxLuuMK.Location = new System.Drawing.Point(121, 500);
             this.ckboxLuuMK.Name = "ckboxLuuMK";
-            this.ckboxLuuMK.Size = new System.Drawing.Size(154, 33);
+            this.ckboxLuuMK.Size = new System.Drawing.Size(156, 33);
             this.ckboxLuuMK.TabIndex = 3;
-            this.ckboxLuuMK.Text = "Lưu mật khẩu";
+            this.ckboxLuuMK.Text = "Nhớ mật khẩu";
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.WG8O;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(-97, 99);
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.ZBO91;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(-151, 50);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(591, 305);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(703, 354);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 3;
             this.gunaPictureBox1.TabStop = false;
@@ -86,7 +86,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("UVN Bai Hoc", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(93, 70);
+            this.label1.Location = new System.Drawing.Point(93, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 41);
             this.label1.TabIndex = 4;
@@ -150,12 +150,13 @@
             // 
             // picDangNhap
             // 
+            this.picDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.picDangNhap.BaseColor = System.Drawing.Color.White;
             this.picDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDangNhap.Image = global::TTCM_QuanLySanBong.Properties.Resources.the_uefa_champions_league_trophy;
-            this.picDangNhap.Location = new System.Drawing.Point(161, 539);
+            this.picDangNhap.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__23_;
+            this.picDangNhap.Location = new System.Drawing.Point(137, 539);
             this.picDangNhap.Name = "picDangNhap";
-            this.picDangNhap.Size = new System.Drawing.Size(77, 73);
+            this.picDangNhap.Size = new System.Drawing.Size(112, 95);
             this.picDangNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDangNhap.TabIndex = 7;
             this.picDangNhap.TabStop = false;

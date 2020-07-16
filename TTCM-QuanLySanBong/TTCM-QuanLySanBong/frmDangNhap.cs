@@ -90,8 +90,13 @@ namespace TTCM_QuanLySanBong
                 {
                     maNv = item["maNv"].ToString();
                 }
-
-                FrmMain main = new FrmMain();
+                string querry1 = "select manv from taikhoan where username =N'" + txtTaiKhoan.Text + "'";
+                DataTable data1 = KetNoi.Istance.ExcuteQuerry(querry1);
+                foreach(DataRow item in data1.Rows)
+                {
+                    maNv = item["manv"].ToString();
+                }
+                FrmMain main = new FrmMain(maNv);
                 this.Hide();
                 main.ShowDialog();
 

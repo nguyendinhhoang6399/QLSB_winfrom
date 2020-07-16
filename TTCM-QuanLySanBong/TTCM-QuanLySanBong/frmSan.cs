@@ -97,13 +97,21 @@ namespace TTCM_QuanLySanBong
         private void btnSua_Click(object sender, EventArgs e)
         {
             dem = 2;
-            gbSan.Enabled = true;
+            
             if (txtTenSan.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnThemMoi.Enabled = true;
+                btnXoa.Enabled = true;
+                gbSan.Enabled = false;
             }
-            btnThemMoi.Enabled = false;
-            btnXoa.Enabled = false;
+            else
+            {
+                btnThemMoi.Enabled = false;
+                btnXoa.Enabled = false;
+                gbSan.Enabled = true;
+            }
+
         }
         Boolean kiemTra(string tensan)
         {

@@ -32,9 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.dgvKhachHang = new Guna.UI.WinForms.GunaDataGridView();
             this.maKh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,15 +51,19 @@
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtMaKh = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXoa = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemMoi = new Guna.UI.WinForms.GunaGradientButton();
             this.btnSua = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new Guna.UI.WinForms.GunaImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.gbKhachHang.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,15 +78,6 @@
             this.panel1.Size = new System.Drawing.Size(879, 39);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(34, 38);
-            this.panel2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -94,21 +87,6 @@
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Khách Hàng";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = null;
-            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClose.Location = new System.Drawing.Point(834, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.OnHoverImage = null;
-            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClose.Size = new System.Drawing.Size(45, 39);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvKhachHang
             // 
@@ -370,6 +348,18 @@
             this.txtMaKh.TabIndex = 16;
             this.txtMaKh.Visible = false;
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.giphy__8_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(449, 383);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(418, 160);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 22;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // btnHuy
             // 
             this.btnHuy.AnimationHoverSpeed = 0.07F;
@@ -505,11 +495,36 @@
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_stadium_96;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 38);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_close_window_64;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = null;
+            this.btnClose.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnClose.Location = new System.Drawing.Point(834, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnClose.Size = new System.Drawing.Size(45, 39);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 555);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThemMoi);
@@ -529,6 +544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.gbKhachHang.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -562,5 +578,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn soDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

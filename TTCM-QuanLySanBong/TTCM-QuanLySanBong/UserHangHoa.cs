@@ -17,10 +17,9 @@ namespace TTCM_QuanLySanBong
             InitializeComponent();
             LoadHH();
         }
-
         void LoadHH()
         {
-            string querry = "select * from  HangHoa";
+            string querry = "select mahh, tenhh, dvt, soluongton,PARSENAME(CONVERT(varchar, CAST(dongia AS money), 1), 2) as dongia from  HangHoa";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             dgvHangHoa.DataSource = data;
             panHangHoa.Enabled = false;
@@ -30,7 +29,7 @@ namespace TTCM_QuanLySanBong
         private void btnBangGia_Click(object sender, EventArgs e)
         {
             frmNhapHang nhapHang = new frmNhapHang();
-            
+
             nhapHang.ShowDialog();
         }
 
@@ -46,7 +45,7 @@ namespace TTCM_QuanLySanBong
                 txtDVT.Text = dgvHangHoa.Rows[numrow].Cells[2].Value.ToString();
                 txtSLTon.Text = dgvHangHoa.Rows[numrow].Cells[3].Value.ToString();
                 txtDonGia.Text = dgvHangHoa.Rows[numrow].Cells[4].Value.ToString();
-                
+
             }
         }
         void loadNull()
@@ -57,33 +56,40 @@ namespace TTCM_QuanLySanBong
             txtDonGia.Text = "";
             txtSLTon.Text = "";
         }
-        
-        
+
+
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            panHangHoa.Enabled = true;
+
             if (txtMaHang.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn dòng cần sửa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnXoa.Enabled = true;
+                dgvHangHoa.Enabled = true;
+                panHangHoa.Enabled = false;
             }
-            btnXoa.Enabled = false;
-            dgvHangHoa.Enabled = false;
-            
-        }
-        Boolean kiemTra(string mahh)
-        {
-            string querry = "select * from HangHoa where mahh = '" + mahh + "'";
-            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-            int dem = 0;
-            foreach (DataRow item in data.Rows)
+            else
             {
-                dem++;
+                btnXoa.Enabled = false;
+                dgvHangHoa.Enabled = false;
+                panHangHoa.Enabled = true;
             }
-            if (dem > 0)
-                return true;
-            return false;
+
         }
+        //Boolean kiemTra(string mahh)
+        //{
+        //    string querry = "select * from HangHoa where mahh = '" + mahh + "'";
+        //    DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+        //    int dem = 0;
+        //    foreach (DataRow item in data.Rows)
+        //    {
+        //        dem++;
+        //    }
+        //    if (dem > 0)
+        //        return true;
+        //    return false;
+        //}
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -99,51 +105,51 @@ namespace TTCM_QuanLySanBong
         {
             try
             {
-                
-                
-                    string mahh = txtMaHang.Text;
-                    string tenhh = txtTenHang.Text;
-                    string dvt = txtDVT.Text;
-                    string slTon = txtSLTon.Text;
-                    decimal dongia = 0;
-                    if (txtMaHang.Text == "")
-                    {
-                        MessageBox.Show("Vui lòng chọn đối tượng muốn sửa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else if (txtTenHang.Text == "" || txtDonGia.Text == "" || txtDVT.Text == "" || txtSLTon.Text == "")
-                    {
-                        MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        try
-                        {
-                            dongia = decimal.Parse(txtDonGia.Text);
-                        }
-                        catch
-                        {
 
-                            MessageBox.Show("Đơn giá nhập không hợp lệ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
 
-                        try
-                        {
-                            string querry = "update HangHoa set tenhh = N'" + tenhh + "',dvt = N'" + dvt + "',soluongton ='" + slTon + "',dongia=N'" + dongia + "' where mahh ='" + mahh + "'";
-                            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-                            MessageBox.Show("Sửa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            loadNull();
-                            LoadHH();
+                string mahh = txtMaHang.Text;
+                string tenhh = txtTenHang.Text;
+                string dvt = txtDVT.Text;
+                string slTon = txtSLTon.Text;
+                decimal dongia = 0;
+                if (txtMaHang.Text == "")
+                {
+                    MessageBox.Show("Vui lòng chọn đối tượng muốn sửa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (txtTenHang.Text == "" || txtDonGia.Text == "" || txtDVT.Text == "" || txtSLTon.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    try
+                    {
+                        dongia = decimal.Parse(txtDonGia.Text);
+                    }
+                    catch
+                    {
+
+                        MessageBox.Show("Đơn giá nhập không hợp lệ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    try
+                    {
+                        string querry = "update HangHoa set tenhh = N'" + tenhh + "',dvt = N'" + dvt + "',soluongton ='" + slTon + "',dongia=N'" + dongia + "' where mahh ='" + mahh + "'";
+                        DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                        MessageBox.Show("Sửa Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadNull();
+                        LoadHH();
                         dgvHangHoa.Enabled = true;
                         btnXoa.Enabled = true;
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Sửa thất bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-
-                    
                     }
+                    catch
+                    {
+                        MessageBox.Show("Sửa thất bại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+
+                }
             }
             catch
             {
@@ -181,6 +187,15 @@ namespace TTCM_QuanLySanBong
             frmNhapHang.ShowDialog();
         }
 
-        
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            LoadHH();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LoadHH();
+        }
     }
 }
+

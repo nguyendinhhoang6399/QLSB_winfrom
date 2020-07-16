@@ -1,7 +1,7 @@
 ﻿create database QuanLySanBong
 use QuanLySanBong
 
---drop database QuanLySanBong
+
 
 create table LoaiSan(
 	MaLs int identity(1,1),
@@ -20,16 +20,13 @@ create table BangGiaSan(
 	primary key(GioBatDau,GioKetThuc,MaLs),
 	foreign key(MaLs) references LoaiSan (MaLs)
 )
---drop table BangGiaSan
-select * from BangGiaSan
+
 insert into BangGiaSan values('5:0','11:0','70000','1')
 insert into BangGiaSan values('11:0','16:0','50000','1')
 insert into BangGiaSan values('16:0','0:0','100000','1')
 insert into BangGiaSan values('5:0','11:0','200000','2')
 insert into BangGiaSan values('11:0','16:0','180000','2')
 insert into BangGiaSan values('16:0','0:0','250000','2')
-
-select * from BangGiaSan
 
 create table NhaCungCap(
 	MaNcc int identity(1,1),
@@ -38,7 +35,6 @@ create table NhaCungCap(
 	SoDienThoai nvarchar(50),
 	primary key(MaNcc)
 )
-drop table NhaCungCap
 
 insert into NhaCungCap(TenNcc,DiaChi,SoDienThoai) values(N'Tân Hiệp Phát',N'65 Tân Quy','0909164165')
 insert into NhaCungCap(TenNcc,DiaChi,SoDienThoai) values(N'Suntory Pepsico',N'37 Tân Kiểng','0908119911')
@@ -53,7 +49,7 @@ create table NhanVien(
 	Email nvarchar(50),
 	primary key(MaNv)
 )
---drop table NhanVien
+
 insert into NhanVien values(N'A000',N'ADMIN',N'Nam','01/02/2020','0365486987','dinhhoangnguyen6399@gmail.com')
 insert into NhanVien values(N'A001',N'Nguyễn Minh A',N'Nam','01/02/2020','0365486987','dinhhoangnguyen6399@gmail.com')
 insert into NhanVien values(N'A002',N'Nguyễn Minh B',N'Nam','01/02/2020','0365487894','dinhhoangnguyen6399@gmail.com')
@@ -78,10 +74,17 @@ create table TaiKhoan(
 	foreign key(MaNv) references NhanVien(MaNv)ON DELETE CASCADE ,
 	foreign key(MaLoaiTk) references LoaiTk(MaLoaiTK)
 )
+
+create table PhanViec(
+  MaNv nvarchar(50),
+  tenCv nvarchar(50),
+  primary key(MaNv,tenCv),
+  foreign key(MaNv) references NhanVien(MaNv)ON DELETE CASCADE  
+)
+insert into PhanViec values('A001',N'Bán Hàng')
+insert into PhanViec values('A002',N'Dọn Sân')
 insert into TaiKhoan values('admin','lu0c+GqlVMQ=','1','A000')
-drop table TaiKhoan
-update TaiKhoan set MaNv = 'A000' where userName = 'admin'
-select pass from TaiKhoan where username ='admin'
+
 create table KhachHang(
 	MaKh int identity(1,1),
 	TenKh nvarchar(50),
@@ -90,7 +93,6 @@ create table KhachHang(
 	Email nvarchar(50),
 	primary key(MaKh)
 )
-
 
 insert into KhachHang(TenKh,DiaChi,SoDienThoai,Email) values(N'Lê Văn A',N'65 Lê Lai','0452787878','')
 insert into KhachHang(TenKh,DiaChi,SoDienThoai,Email) values(N'Lê Văn B',N'45 Lê Lợi','0452474778','')
@@ -118,17 +120,15 @@ insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-C',N'Trống','2')
 insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-D',N'Trống','2')
 insert into San(TenSan,TrangThai,MaLs) values(N'Sân 7-E',N'Trống','2')
 insert into San(TenSan,TrangThai,MaLs) values(N'Sân 5-F',N'Trống','1')
-select tensan from San
-delete san where mals = '2'
---drop table San
 
 create table HoaDon(
 	MaHd int identity(1,1),
 	GioBatDau time,
 	GioKetThuc time,
-	ThoiGianSuDung time,
+	ThoiGianSuDung float,
 	NgayXuat date,
 	TongTien money,
+	trangThai nvarchar(50),
 	MaNv nvarchar(50),
 	MaKh int,
 	MaSan int,
@@ -137,7 +137,7 @@ create table HoaDon(
 	foreign key(MaKh) references KhachHang(MaKh),
 	foreign key(MaSan) references San(MaSan),
 )
-drop table HoaDon
+
 create table HangHoa(
 	MaHh int identity(1,1),
 	TenHh nvarchar(50),
@@ -146,7 +146,7 @@ create table HangHoa(
 	DonGia money,
 	primary key(MaHh)
 ) 
-drop table HangHoa
+
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Revive',N'Chai','10','12000')
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Revive Chanh Muối',N'Chai','10','12000')
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Pepsi',N'Chai','10','12000')
@@ -158,7 +158,6 @@ insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Mirinda',N'Lon','10','
 insert into HangHoa(TenHh,DVT,SoLuongTon,DonGia) values(N'Lavie',N'Chai','10','7000')
 
 create table CTHoaDon(
-	TenHh nvarchar(50),
 	SoLuongBan int,
 	donGia money,
 	ThanhTien money,
@@ -168,26 +167,20 @@ create table CTHoaDon(
 	foreign key (MaHh) references HangHoa(MaHh),
 	foreign key (MaHd) references HoaDon(MaHd)
 )
+select top 1 with ties mahd from HoaDon order by (maHd) DESC
 
-drop table CTHoaDon
-
+insert into CTHoaDon values('1','10000','0','4','3')
 create table PhieuNhap(
 	MaPhieu int identity(1,1),
 	NgayNhap date,
 	ThanhTien money,
 	MaNcc int,
-	MaNv nvarchar(50),
 	primary key(MaPhieu),
-	foreign key(MaNv) references NhanVien(MaNv),
 	foreign key(MaNcc) references NhaCungCap(MaNcc)
 )
-insert into PhieuNhap(NgayNhap,ThanhTien,MaNcc,MaNv) values('10/07/2020','0','1','A001')
+
 insert into PhieuNhap(NgayNhap,ThanhTien,MaNcc,MaNv) values(null,null,null,null)
-select * from PhieuNhap
-select * from NhaCungCap
-update PhieuNhap set NgayNhap = Getdate(date), ThanhTien = ''
---drop table PhieuNhap
-select * from PhieuNhap
+
 create table CTPhieuNhap(
 	MaPhieu int,
 	DVT nvarchar(50),
@@ -201,8 +194,6 @@ create table CTPhieuNhap(
 	foreign key (MaNcc) references NhaCungCap(MaNcc),
 )
 insert into CTPhieuNhap values('2','Chai','10','8000','1','2')
---drop table CTPhieuNhap
-select * from CTPhieuNhap
 
 create table DatSan(
 	MaDatSan int identity(1,1),
@@ -218,23 +209,108 @@ create table DatSan(
 	foreign key(MaSan) references San(MaSan),
 	foreign key(MaKh) references KhachHang(MaKh)
 )
-drop table DatSan
+
 insert into DatSan(masan,makh,tugio,dengio,tungay,denngay,thoigian,trangthai) values('11','1','16:00','17:30','10/07/2020','10/07/2020','01:30',N'đã đặt')
-select * from DatSan
-update DatSan set masan ='11', makh = '1',tugio = '09:00',dengio='10:30',tungay='10/07/2020',denngay='10/07/2020',trangthai=N'Đang đặt' where madatsan = '1'
-	
---drop table DatCung
-SELECT * FROM KhachHang
-select * from San where mals = 1
-select * from CTHoaDon
-select * from HangHoa
-insert into CTHoaDon values('2','12000','24000','','Revive')
 
 
-select * from NhaCungCap
-delete from KhachHang where TenKh = N'Võ A'
-update KhachHang set TenKh = N'Võ A', DiaChi = N'24 Cô Bắc',SoDienThoai='123',Email=N'huyhuyhoihoi@xyz' where 
-delete khachHang where tenkh = N'Lê Văn A'
+ Create trigger tg_HoaDon_in on HoaDon for Insert
+ as begin
+  Declare @maHd int,@gioBatDau datetime,@gioKetThuc datetime, @donGia money,
+  @maSan int,@maLoaiSan int,@soGioDa float 
+  select @maHd=maHd,@gioBatDau=GioBatDau,@gioKetThuc=gioKetThuc,@maSan=MaSan from inserted
+  select @maLoaiSan=MaLs from San where MaSan=@maSan
+  select @donGia=DonGia from BangGiaSan where MaLs=@maLoaiSan and GioBatDau<= CONVERT(time,@gioBatDau) and GioKetThuc>= CONVERT(time,@gioBatDau)
+  set @soGioDa= cast(datepart(hour, @gioKetThuc -@gioBatDau) as float)+cast(datepart(MINUTE, @gioKetThuc -@gioBatDau) as float)/60
+  update hoaDon set tongTien=@donGia*@soGioDa where maHd=@maHd
+ end
+ drop trigger tg_HoaDon_in
+ select DonGia from BangGiaSan where MaLs=1 and GioBatDau<= CONVERT(time,'18:00:00') and GioKetThuc>= CONVERT(time,'18:00:00')
 
-select * from datsan
- select * from DatSan where tungay >= N'2020-10-06' and denngay <= N'2020-10-11'
+ ---Trigger CTHD------
+CREATE trigger tr_CTHD_IN on CTHoaDon for insert
+as begin
+ Declare @maHd int, @soLuongBan int, @donGia money, @thanhTien Money,
+@MaHh int
+ select @maHd=Mahd, @soLuongBan=SoLuongBan,@donGia=donGia,@MaHh=MaHh from inserted
+ print @soluongBan
+ set @thanhTien=@soLuongBan*@donGia
+ print @donGia
+ update CTHoaDon set ThanhTien=@thanhTien where MaHd=@maHd and MaHh=@maHh
+ update HoaDon set tongTien=tongTien + @thanhTien where mahd=@maHd
+ Update HangHoa set soLuongTon=soLuongTon-@soLuongBan where maHh=@MaHh
+end
+
+Create trigger tg_THD_Up on CTHoaDon for update
+as begin
+  Declare @maHd int, @soLuongBan int, @donGia money,@soLuongBanCu int,
+  @thanhTienCu Money,@thanhTienMoi Money, @MaHh int
+  select @thanhTienCu=thanhTien,@soLuongBanCu=SoLuongBan from deleted
+  select @maHd=Mahd, @soLuongBan=SoLuongBan,@donGia=donGia,@MaHh=MaHh from inserted
+ set @thanhTienMoi=@soLuongBan*@donGia
+if(@thanhTienCu !=0) begin
+  update CTHoaDon set ThanhTien=@thanhTienMoi where MaHd=@maHd and MaHh=@maHh
+  update HoaDon set tongTien=tongTien + @thanhTienMoi-@thanhTienCu where mahd=@maHd
+  Update HangHoa Set soLuongTon=soLuongTon-@soLuongBan+@soLuongBanCu where maHh=@maHh
+  end
+end
+
+Create trigger tg_CThd_de on CTHoaDon for delete
+as begin
+Declare @maHd int,@thanhTien money,@maHh int,@soLuongBan int
+select @maHd=maHd, @thanhTien=thanhTien,@maHh=MaHh,@soLuongBan=SoLuongBan from deleted
+update HoaDon set tongTien=tongTien-@thanhTien where mahd=@maHd
+  Update HangHoa Set soLuongTon=soLuongTon+@soLuongBan where maHh=@maHh
+end
+
+
+---Trigger CTPhieuNhap-----
+Create trigger Tg_CTPhieuNhap_in on CTPhieuNhap for Insert
+as begin
+Declare @MaPhieu int,@soLuongNhap int,@giaNhap Money,@maHh int
+ Select @MaPhieu=maPhieu,@soLuongNhap=SoLuongNhap,@giaNhap=GiaNhap,@maHh=maHh from inserted
+ update PhieuNhap set thanhTien=ThanhTien+(@soLuongNhap*@giaNhap) where maPhieu=@MaPhieu
+ update HangHoa set SoLuongTon=soLuongTon + @soLuongNhap where maHh=@maHh
+end
+
+Create trigger Tg_CTPhieuNhap_Up on CTPhieuNhap for Update
+as begin
+Declare @MaPhieu int,@soLuongNhapCu int,@giaNhapCu Money,@maHh int,
+@soLuongNhapMoi int,@GiaNhapMoi money
+select @soLuongNhapCu=SoLuongNhap,@giaNhapCu=GiaNhap from deleted
+Select @soLuongNhapMoi=SoLuongNhap,@GiaNhapMoi=GiaNhap,@MaPhieu=maPhieu,@maHh=MaHh from inserted
+Update PhieuNhap set thanhTien=ThanhTien+(@soLuongNhapMoi*@GiaNhapMoi)-(@soLuongNhapCu*@giaNhapCu) where maPhieu=@MaPhieu
+update HangHoa set soLuongTon=soLuongTon+@soLuongNhapMoi-@soLuongNhapCu where maHh=@maHh
+end
+
+Create trigger Tg_CTPhieuNhap_dele on CTPhieuNhap for delete
+as begin
+Declare @MaPhieu int,@soLuongNhap int,@giaNhap Money,@maHh int
+select @MaPhieu=maPhieu,@soLuongNhap=soLuongNhap,@giaNhap=giaNhap from deleted
+update PhieuNhap set thanhTien=thanhTien-(@soLuongNhap*@giaNhap) where maPhieu=@MaPhieu
+Update HangHoa set soLuongTon=soLuongTon-@soLuongNhap where maHh=@maHh
+SELECT FORMAT(123456789, 'C0')
+end
+select * from BangGiaSan
+Select FORMAT(sum(ThanhTien),'C0')as thanhTien from CTHoaDon
+update hoadon set trangThai=N'Chưa Thanh Toán'
+select * from HoaDon
+
+--Proc--
+Create proc pr_HoaDon
+as begin
+ Select Mahd,MaNv,NgayXuat,MaKh,TongTien,TrangThai from HoaDon where NgayXuat betWeen N'2020-07-20' and N'2020-07-21'
+end
+Create proc LayNgay
+as begin
+ select getdate()as tuNgay,getdate() as denNgay
+end
+create proc getTien
+as begin 
+select PARSENAME(CONVERT(varchar, CAST(sum(tongTien) AS money), 1), 2)as thanhTien from HoaDon
+end
+
+
+--querry Doanh Thu---
+select * from taikhoan
+select convert(nvarchar(30), NgayXuat, 23)as NgayXuat,sum(TongTien)as TongTien from HoaDon 
+   where NgayXuat between N'2020-07-13' and N'2020-07-15' group by convert(nvarchar(30), NgayXuat, 23)
