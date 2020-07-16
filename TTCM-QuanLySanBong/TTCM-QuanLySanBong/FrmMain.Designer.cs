@@ -29,13 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.lbTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.userNhanSu1 = new TTCM_QuanLySanBong.UserNhanSu();
+            this.userBaoCao1 = new TTCM_QuanLySanBong.UserBaoCao();
+            this.userHoaDon1 = new TTCM_QuanLySanBong.UserHoaDon();
+            this.userHangHoa1 = new TTCM_QuanLySanBong.UserHangHoa();
+            this.userDatSan1 = new TTCM_QuanLySanBong.UserDatSan();
+            this.userTinhTien1 = new TTCM_QuanLySanBong.UserTinhTien();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.btnMain = new Guna.UI.WinForms.GunaImageButton();
             this.btnNhanSu = new Guna.UI.WinForms.GunaImageButton();
@@ -45,14 +53,9 @@
             this.btnHoaDon = new Guna.UI.WinForms.GunaImageButton();
             this.btnDatSan = new Guna.UI.WinForms.GunaImageButton();
             this.btnTinhTien = new Guna.UI.WinForms.GunaImageButton();
-            this.userNhanSu1 = new TTCM_QuanLySanBong.UserNhanSu();
-            this.userBaoCao1 = new TTCM_QuanLySanBong.UserBaoCao();
-            this.userHoaDon1 = new TTCM_QuanLySanBong.UserHoaDon();
-            this.userHangHoa1 = new TTCM_QuanLySanBong.UserHangHoa();
-            this.userDatSan1 = new TTCM_QuanLySanBong.UserDatSan();
             this.userMain1 = new TTCM_QuanLySanBong.UserMain();
-            this.userTinhTien1 = new TTCM_QuanLySanBong.UserTinhTien();
             this.panel1.SuspendLayout();
+            this.gunaLinePanel2.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,32 +83,11 @@
             // 
             this.gunaDragControl1.TargetControl = this.gunaLinePanel2;
             // 
-            // gunaTransition1
-            // 
-            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlideAndRotate;
-            this.gunaTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(50);
-            animation1.RotateCoeff = 0.3F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation1;
-            this.gunaTransition1.Interval = 6;
-            // 
             // gunaLinePanel2
             // 
-            this.gunaLinePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaLinePanel2.BackColor = System.Drawing.Color.Black;
             this.gunaLinePanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaLinePanel2.Controls.Add(this.lbTime);
             this.gunaTransition1.SetDecoration(this.gunaLinePanel2, Guna.UI.Animation.DecorationType.None);
             this.gunaLinePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaLinePanel2.LineColor = System.Drawing.Color.Black;
@@ -116,163 +98,44 @@
             this.gunaLinePanel2.TabIndex = 3;
             this.gunaLinePanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaLinePanel2_Paint);
             // 
-            // gunaLinePanel1
+            // gunaTransition1
             // 
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(165)))), ((int)(((byte)(173)))));
-            this.gunaLinePanel1.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.REACH_Header_Blue_Background1;
-            this.gunaLinePanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaLinePanel1.Controls.Add(this.btnMain);
-            this.gunaLinePanel1.Controls.Add(this.btnNhanSu);
-            this.gunaLinePanel1.Controls.Add(this.btnThoat);
-            this.gunaLinePanel1.Controls.Add(this.btnHangHoa);
-            this.gunaLinePanel1.Controls.Add(this.btnBaoCao);
-            this.gunaLinePanel1.Controls.Add(this.btnHoaDon);
-            this.gunaLinePanel1.Controls.Add(this.btnDatSan);
-            this.gunaLinePanel1.Controls.Add(this.btnTinhTien);
-            this.gunaTransition1.SetDecoration(this.gunaLinePanel1, Guna.UI.Animation.DecorationType.None);
-            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(103, 733);
-            this.gunaLinePanel1.TabIndex = 1;
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlideAndRotate;
+            this.gunaTransition1.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(50);
+            animation2.RotateCoeff = 0.3F;
+            animation2.RotateLimit = 0.2F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation2;
+            this.gunaTransition1.Interval = 6;
             // 
-            // btnMain
+            // lbTime
             // 
-            this.btnMain.BackColor = System.Drawing.Color.Transparent;
-            this.btnMain.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.logo;
-            this.btnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnMain, Guna.UI.Animation.DecorationType.None);
-            this.btnMain.Image = null;
-            this.btnMain.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMain.Location = new System.Drawing.Point(-10, 3);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.OnHoverImage = null;
-            this.btnMain.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnMain.Size = new System.Drawing.Size(113, 101);
-            this.btnMain.TabIndex = 3;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            this.lbTime.AutoSize = true;
+            this.lbTime.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTransition1.SetDecoration(this.lbTime, Guna.UI.Animation.DecorationType.None);
+            this.lbTime.Font = new System.Drawing.Font("UVN Banh Mi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.White;
+            this.lbTime.Location = new System.Drawing.Point(31, 9);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(146, 41);
+            this.lbTime.TabIndex = 0;
+            this.lbTime.Text = "00:00:00";
             // 
-            // btnNhanSu
+            // timer1
             // 
-            this.btnNhanSu.BackColor = System.Drawing.Color.Transparent;
-            this.btnNhanSu.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_gender_neutral_employee_group_100;
-            this.btnNhanSu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNhanSu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnNhanSu, Guna.UI.Animation.DecorationType.None);
-            this.btnNhanSu.Image = null;
-            this.btnNhanSu.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnNhanSu.Location = new System.Drawing.Point(12, 570);
-            this.btnNhanSu.Name = "btnNhanSu";
-            this.btnNhanSu.OnHoverImage = null;
-            this.btnNhanSu.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnNhanSu.Size = new System.Drawing.Size(77, 76);
-            this.btnNhanSu.TabIndex = 3;
-            this.btnNhanSu.Click += new System.EventHandler(this.gunaImageButton1_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
-            this.btnThoat.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_shutdown_64;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnThoat, Guna.UI.Animation.DecorationType.None);
-            this.btnThoat.Image = null;
-            this.btnThoat.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThoat.Location = new System.Drawing.Point(12, 661);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.OnHoverImage = null;
-            this.btnThoat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnThoat.Size = new System.Drawing.Size(77, 68);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnHangHoa
-            // 
-            this.btnHangHoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnHangHoa.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_trolley_64;
-            this.btnHangHoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnHangHoa, Guna.UI.Animation.DecorationType.None);
-            this.btnHangHoa.Image = null;
-            this.btnHangHoa.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHangHoa.Location = new System.Drawing.Point(12, 478);
-            this.btnHangHoa.Name = "btnHangHoa";
-            this.btnHangHoa.OnHoverImage = null;
-            this.btnHangHoa.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnHangHoa.Size = new System.Drawing.Size(77, 76);
-            this.btnHangHoa.TabIndex = 2;
-            this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
-            // 
-            // btnBaoCao
-            // 
-            this.btnBaoCao.BackColor = System.Drawing.Color.Transparent;
-            this.btnBaoCao.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_increase_64;
-            this.btnBaoCao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBaoCao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnBaoCao, Guna.UI.Animation.DecorationType.None);
-            this.btnBaoCao.Image = null;
-            this.btnBaoCao.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnBaoCao.Location = new System.Drawing.Point(12, 370);
-            this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.OnHoverImage = null;
-            this.btnBaoCao.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnBaoCao.Size = new System.Drawing.Size(77, 84);
-            this.btnBaoCao.TabIndex = 2;
-            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
-            // 
-            // btnHoaDon
-            // 
-            this.btnHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.btnHoaDon.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_bill_64;
-            this.btnHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnHoaDon, Guna.UI.Animation.DecorationType.None);
-            this.btnHoaDon.Image = null;
-            this.btnHoaDon.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHoaDon.Location = new System.Drawing.Point(12, 289);
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.OnHoverImage = null;
-            this.btnHoaDon.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnHoaDon.Size = new System.Drawing.Size(77, 84);
-            this.btnHoaDon.TabIndex = 2;
-            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
-            // 
-            // btnDatSan
-            // 
-            this.btnDatSan.BackColor = System.Drawing.Color.Transparent;
-            this.btnDatSan.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_performance_64;
-            this.btnDatSan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDatSan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnDatSan, Guna.UI.Animation.DecorationType.None);
-            this.btnDatSan.Image = null;
-            this.btnDatSan.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnDatSan.Location = new System.Drawing.Point(12, 207);
-            this.btnDatSan.Name = "btnDatSan";
-            this.btnDatSan.OnHoverImage = null;
-            this.btnDatSan.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnDatSan.Size = new System.Drawing.Size(77, 67);
-            this.btnDatSan.TabIndex = 2;
-            this.btnDatSan.Click += new System.EventHandler(this.btnSan_Click);
-            // 
-            // btnTinhTien
-            // 
-            this.btnTinhTien.BackColor = System.Drawing.Color.Transparent;
-            this.btnTinhTien.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_cash_register_64;
-            this.btnTinhTien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTinhTien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaTransition1.SetDecoration(this.btnTinhTien, Guna.UI.Animation.DecorationType.None);
-            this.btnTinhTien.Image = null;
-            this.btnTinhTien.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnTinhTien.Location = new System.Drawing.Point(12, 110);
-            this.btnTinhTien.Name = "btnTinhTien";
-            this.btnTinhTien.OnHoverImage = null;
-            this.btnTinhTien.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnTinhTien.Size = new System.Drawing.Size(77, 74);
-            this.btnTinhTien.TabIndex = 2;
-            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // userNhanSu1
             // 
@@ -321,15 +184,6 @@
             this.userDatSan1.Size = new System.Drawing.Size(1217, 659);
             this.userDatSan1.TabIndex = 2;
             // 
-            // userMain1
-            // 
-            this.gunaTransition1.SetDecoration(this.userMain1, Guna.UI.Animation.DecorationType.None);
-            this.userMain1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userMain1.Location = new System.Drawing.Point(0, 0);
-            this.userMain1.Name = "userMain1";
-            this.userMain1.Size = new System.Drawing.Size(1217, 659);
-            this.userMain1.TabIndex = 1;
-            // 
             // userTinhTien1
             // 
             this.gunaTransition1.SetDecoration(this.userTinhTien1, Guna.UI.Animation.DecorationType.None);
@@ -338,6 +192,174 @@
             this.userTinhTien1.Name = "userTinhTien1";
             this.userTinhTien1.Size = new System.Drawing.Size(1217, 659);
             this.userTinhTien1.TabIndex = 0;
+            // 
+            // gunaLinePanel1
+            // 
+            this.gunaLinePanel1.BackColor = System.Drawing.Color.Yellow;
+            this.gunaLinePanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaLinePanel1.Controls.Add(this.btnMain);
+            this.gunaLinePanel1.Controls.Add(this.btnNhanSu);
+            this.gunaLinePanel1.Controls.Add(this.btnThoat);
+            this.gunaLinePanel1.Controls.Add(this.btnHangHoa);
+            this.gunaLinePanel1.Controls.Add(this.btnBaoCao);
+            this.gunaLinePanel1.Controls.Add(this.btnHoaDon);
+            this.gunaLinePanel1.Controls.Add(this.btnDatSan);
+            this.gunaLinePanel1.Controls.Add(this.btnTinhTien);
+            this.gunaTransition1.SetDecoration(this.gunaLinePanel1, Guna.UI.Animation.DecorationType.None);
+            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaLinePanel1.Name = "gunaLinePanel1";
+            this.gunaLinePanel1.Size = new System.Drawing.Size(103, 733);
+            this.gunaLinePanel1.TabIndex = 1;
+            // 
+            // btnMain
+            // 
+            this.btnMain.BackColor = System.Drawing.Color.Transparent;
+            this.btnMain.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.spartan_icon_16974;
+            this.btnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnMain, Guna.UI.Animation.DecorationType.None);
+            this.btnMain.Image = null;
+            this.btnMain.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMain.Location = new System.Drawing.Point(4, 12);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.OnHoverImage = null;
+            this.btnMain.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnMain.Size = new System.Drawing.Size(85, 76);
+            this.btnMain.TabIndex = 3;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            // 
+            // btnNhanSu
+            // 
+            this.btnNhanSu.BackColor = System.Drawing.Color.Transparent;
+            this.btnNhanSu.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_employee_100;
+            this.btnNhanSu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNhanSu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnNhanSu, Guna.UI.Animation.DecorationType.None);
+            this.btnNhanSu.Image = null;
+            this.btnNhanSu.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnNhanSu.Location = new System.Drawing.Point(12, 570);
+            this.btnNhanSu.Name = "btnNhanSu";
+            this.btnNhanSu.OnHoverImage = null;
+            this.btnNhanSu.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnNhanSu.Size = new System.Drawing.Size(77, 76);
+            this.btnNhanSu.TabIndex = 3;
+            this.btnNhanSu.Click += new System.EventHandler(this.gunaImageButton1_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_exit_642;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnThoat, Guna.UI.Animation.DecorationType.None);
+            this.btnThoat.Image = null;
+            this.btnThoat.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThoat.Location = new System.Drawing.Point(12, 653);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.OnHoverImage = null;
+            this.btnThoat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThoat.Size = new System.Drawing.Size(77, 68);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnHangHoa
+            // 
+            this.btnHangHoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnHangHoa.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_commodity_100;
+            this.btnHangHoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnHangHoa, Guna.UI.Animation.DecorationType.None);
+            this.btnHangHoa.Image = null;
+            this.btnHangHoa.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnHangHoa.Location = new System.Drawing.Point(12, 479);
+            this.btnHangHoa.Name = "btnHangHoa";
+            this.btnHangHoa.OnHoverImage = null;
+            this.btnHangHoa.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnHangHoa.Size = new System.Drawing.Size(77, 76);
+            this.btnHangHoa.TabIndex = 2;
+            this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
+            // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.BackColor = System.Drawing.Color.Transparent;
+            this.btnBaoCao.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_combo_chart_1001;
+            this.btnBaoCao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBaoCao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnBaoCao, Guna.UI.Animation.DecorationType.None);
+            this.btnBaoCao.Image = null;
+            this.btnBaoCao.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnBaoCao.Location = new System.Drawing.Point(12, 370);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.OnHoverImage = null;
+            this.btnBaoCao.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnBaoCao.Size = new System.Drawing.Size(77, 84);
+            this.btnBaoCao.TabIndex = 2;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnHoaDon.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_paid_bill_100;
+            this.btnHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnHoaDon, Guna.UI.Animation.DecorationType.None);
+            this.btnHoaDon.Image = null;
+            this.btnHoaDon.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnHoaDon.Location = new System.Drawing.Point(12, 280);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.OnHoverImage = null;
+            this.btnHoaDon.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnHoaDon.Size = new System.Drawing.Size(77, 84);
+            this.btnHoaDon.TabIndex = 2;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+            // 
+            // btnDatSan
+            // 
+            this.btnDatSan.BackColor = System.Drawing.Color.Transparent;
+            this.btnDatSan.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_calendar_1002;
+            this.btnDatSan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDatSan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnDatSan, Guna.UI.Animation.DecorationType.None);
+            this.btnDatSan.Image = null;
+            this.btnDatSan.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnDatSan.Location = new System.Drawing.Point(12, 207);
+            this.btnDatSan.Name = "btnDatSan";
+            this.btnDatSan.OnHoverImage = null;
+            this.btnDatSan.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnDatSan.Size = new System.Drawing.Size(77, 67);
+            this.btnDatSan.TabIndex = 2;
+            this.btnDatSan.Click += new System.EventHandler(this.btnSan_Click);
+            // 
+            // btnTinhTien
+            // 
+            this.btnTinhTien.BackColor = System.Drawing.Color.Transparent;
+            this.btnTinhTien.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_cash_register_64__1_;
+            this.btnTinhTien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTinhTien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnTinhTien, Guna.UI.Animation.DecorationType.None);
+            this.btnTinhTien.Image = null;
+            this.btnTinhTien.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnTinhTien.Location = new System.Drawing.Point(12, 108);
+            this.btnTinhTien.Name = "btnTinhTien";
+            this.btnTinhTien.OnHoverImage = null;
+            this.btnTinhTien.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnTinhTien.Size = new System.Drawing.Size(77, 74);
+            this.btnTinhTien.TabIndex = 2;
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
+            // 
+            // userMain1
+            // 
+            this.userMain1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userMain1.BackgroundImage")));
+            this.userMain1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaTransition1.SetDecoration(this.userMain1, Guna.UI.Animation.DecorationType.None);
+            this.userMain1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userMain1.Location = new System.Drawing.Point(0, 0);
+            this.userMain1.Name = "userMain1";
+            this.userMain1.Size = new System.Drawing.Size(1217, 659);
+            this.userMain1.TabIndex = 1;
             // 
             // FrmMain
             // 
@@ -354,6 +376,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.gunaLinePanel2.ResumeLayout(false);
+            this.gunaLinePanel2.PerformLayout();
             this.gunaLinePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -382,5 +406,7 @@
         private UserNhanSu userNhanSu1;
         private Guna.UI.WinForms.GunaImageButton btnNhanSu;
         private Guna.UI.WinForms.GunaImageButton btnMain;
+        private System.Windows.Forms.Label lbTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

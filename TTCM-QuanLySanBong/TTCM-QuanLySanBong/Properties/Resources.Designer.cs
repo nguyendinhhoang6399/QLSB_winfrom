@@ -573,6 +573,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_1002 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-calendar-1002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancel_128 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cancel-128", resourceCulture);
@@ -603,6 +613,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cash_register_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cash-register-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_window_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-window-64", resourceCulture);
@@ -616,6 +636,26 @@ namespace TTCM_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap icons8_combo_chart_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-combo-chart-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_combo_chart_1001 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-combo-chart-1001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_commodity_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-commodity-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,6 +733,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_employee_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-employee-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_exit_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-exit-64", resourceCulture);
@@ -706,6 +756,16 @@ namespace TTCM_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap icons8_exit_641 {
             get {
                 object obj = ResourceManager.GetObject("icons8-exit-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_exit_642 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exit-642", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -816,6 +876,16 @@ namespace TTCM_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap icons8_money_pound_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-money-pound-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_paid_bill_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-paid-bill-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1153,9 +1223,70 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LOGO_TEAMSPARTAN_FINAL1 {
+            get {
+                object obj = ResourceManager.GetObject("LOGO_TEAMSPARTAN_FINAL1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap michigan_state_university_spartan_army_michigan_state_spartans_helmet_helmet_png_clip_art {
+            get {
+                object obj = ResourceManager.GetObject("michigan-state-university-spartan-army-michigan-state-spartans-helmet-helmet-png-" +
+                        "clip-art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pay {
             get {
                 object obj = ResourceManager.GetObject("pay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwave {
+            get {
+                object obj = ResourceManager.GetObject("pngwave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poster {
+            get {
+                object obj = ResourceManager.GetObject("poster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poster1 {
+            get {
+                object obj = ResourceManager.GetObject("poster1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Poter {
+            get {
+                object obj = ResourceManager.GetObject("Poter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1196,6 +1327,16 @@ namespace TTCM_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap report1 {
             get {
                 object obj = ResourceManager.GetObject("report1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spartan_icon_16974 {
+            get {
+                object obj = ResourceManager.GetObject("spartan-icon-16974", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1248,6 +1389,17 @@ namespace TTCM_QuanLySanBong.Properties {
             get {
                 object obj = ResourceManager.GetObject("thumb2-abstract-lines-background-creative-violet-backgrounds-abstract-art-colorfu" +
                         "l-lines1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thumb2_abstract_lines_background_creative_violet_backgrounds_abstract_art_colorful_lines2 {
+            get {
+                object obj = ResourceManager.GetObject("thumb2-abstract-lines-background-creative-violet-backgrounds-abstract-art-colorfu" +
+                        "l-lines2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

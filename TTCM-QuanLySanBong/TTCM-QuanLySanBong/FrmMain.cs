@@ -41,6 +41,7 @@ namespace TTCM_QuanLySanBong
             nullButton();
             check();
             GetPhanQuyen();
+            timer1.Start();
             
             //userHoaDon1.MaNv = MaNv;
 
@@ -197,6 +198,32 @@ namespace TTCM_QuanLySanBong
             userNhanSu1.Hide();
             userBaoCao1.Hide();
             gunaTransition1.Show(userMain1);
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            int hour = DateTime.Now.Hour;
+            int min = DateTime.Now.Minute;
+            int second = DateTime.Now.Second;
+
+            string time = "";
+            if (hour < 10)
+            {
+                time += "0" + hour;
+
+            }
+            else
+                time += hour;
+            time += ":";
+            if (min < 10)
+                time += "0" + min;
+            else
+                time += min;
+            time += ":";
+            if (second < 10)
+                time += "0" + second;
+            else
+                time += second;
+            lbTime.Text = time;
         }
     }
 }

@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.SuspendLayout();
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.Image = global::TTCM_QuanLySanBong.Properties.Resources.stadium1;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(300, 300);
-            this.gunaImageButton1.Location = new System.Drawing.Point(187, 54);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(859, 539);
-            this.gunaImageButton1.TabIndex = 0;
             // 
             // UserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gunaImageButton1);
+            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.poster1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "UserMain";
             this.Size = new System.Drawing.Size(1217, 659);
             this.ResumeLayout(false);
@@ -54,7 +43,5 @@
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
     }
 }

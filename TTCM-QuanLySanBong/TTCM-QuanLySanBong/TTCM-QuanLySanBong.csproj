@@ -816,6 +816,21 @@
     <None Include="Resources\giphy %2833%29.gif" />
     <None Include="Resources\giphy %2834%29.gif" />
     <None Include="Resources\giphy %2832%291.gif" />
+    <None Include="Resources\LOGO_TEAMSPARTAN_FINAL1.jpg" />
+    <None Include="Resources\poster.jpg" />
+    <None Include="Resources\poster1.jpg" />
+    <None Include="Resources\Poter.jpg" />
+    <None Include="Resources\thumb2-abstract-lines-background-creative-violet-backgrounds-abstract-art-colorful-lines2.jpg" />
+    <None Include="Resources\michigan-state-university-spartan-army-michigan-state-spartans-helmet-helmet-png-clip-art.png" />
+    <None Include="Resources\pngwave.png" />
+    <None Include="Resources\spartan-icon-16974.png" />
+    <None Include="Resources\icons8-cash-register-64 %281%29.png" />
+    <None Include="Resources\icons8-calendar-1002.png" />
+    <None Include="Resources\icons8-paid-bill-100.png" />
+    <None Include="Resources\icons8-combo-chart-1001.png" />
+    <None Include="Resources\icons8-commodity-100.png" />
+    <None Include="Resources\icons8-employee-100.png" />
+    <None Include="Resources\icons8-exit-642.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
