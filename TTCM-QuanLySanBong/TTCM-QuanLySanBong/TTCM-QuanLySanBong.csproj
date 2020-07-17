@@ -831,6 +831,7 @@
     <None Include="Resources\icons8-commodity-100.png" />
     <None Include="Resources\icons8-employee-100.png" />
     <None Include="Resources\icons8-exit-642.png" />
+    <None Include="Resources\47ccc0738a4247a03863922199d5e257.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

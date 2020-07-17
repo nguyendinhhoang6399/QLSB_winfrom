@@ -73,6 +73,16 @@ namespace TTCM_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _47ccc0738a4247a03863922199d5e257 {
+            get {
+                object obj = ResourceManager.GetObject("47ccc0738a4247a03863922199d5e257", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _71645d4afa6ff297eb32868d0010c6be {
             get {
                 object obj = ResourceManager.GetObject("71645d4afa6ff297eb32868d0010c6be", resourceCulture);

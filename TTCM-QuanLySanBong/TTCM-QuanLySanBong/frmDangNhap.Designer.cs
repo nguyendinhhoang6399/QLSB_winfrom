@@ -131,6 +131,7 @@
             this.llaQMK.TabIndex = 6;
             this.llaQMK.TabStop = true;
             this.llaQMK.Text = "Quên mật khẩu?";
+            this.llaQMK.VisitedLinkColor = System.Drawing.Color.Yellow;
             this.llaQMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llaQMK_LinkClicked);
             // 
             // llaDangKy
@@ -146,6 +147,7 @@
             this.llaDangKy.TabIndex = 6;
             this.llaDangKy.TabStop = true;
             this.llaDangKy.Text = "Đăng ký";
+            this.llaDangKy.VisitedLinkColor = System.Drawing.Color.Yellow;
             this.llaDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llaDangKy_LinkClicked);
             // 
             // picDangNhap
@@ -175,13 +177,14 @@
             this.llaThoat.TabIndex = 6;
             this.llaThoat.TabStop = true;
             this.llaThoat.Text = "Thoát";
+            this.llaThoat.VisitedLinkColor = System.Drawing.Color.Yellow;
             this.llaThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llaThoat_LinkClicked);
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.REACH_Header_Blue_Background;
+            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources._47ccc0738a4247a03863922199d5e257;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(396, 676);
             this.Controls.Add(this.picDangNhap);

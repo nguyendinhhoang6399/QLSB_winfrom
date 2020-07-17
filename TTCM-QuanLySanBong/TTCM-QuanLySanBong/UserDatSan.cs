@@ -19,7 +19,7 @@ namespace TTCM_QuanLySanBong
             LoadTs();
             LoadKh();
             LoadLichDS();
-            btnBoHuy.Enabled = false;
+            //btnBoHuy.Enabled = false;
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(btnThemSan, "Thêm");
@@ -128,34 +128,45 @@ namespace TTCM_QuanLySanBong
                 return;
             else
             {
-                lbMaDS.Text = dgvDatSan.Rows[numrow].Cells[0].Value.ToString();
+                tbMaDs.Text = dgvDatSan.Rows[numrow].Cells[0].Value.ToString();
             }
 
         }
 
         private void btnHuySan_Click(object sender, EventArgs e)
         {
-            
-            string querry = "update DatSan set trangthai =N'Đã Hủy' where madatsan = '" + lbMaDS.Text + "' ";
-            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-            LoadLichDS();
-            
+            if (tbMaDs.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn đặt sân muốn hủy", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string querry = "update DatSan set trangthai =N'Đã Hủy' where madatsan = '" + tbMaDs.Text + "' ";
+                DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                LoadLichDS();
+            }
         }
 
         private void btnBoHuy_Click(object sender, EventArgs e)
         {
-
-           
-            string querry = "update DatSan set trangthai =N'Đang Đặt' where madatsan = '" + lbMaDS.Text + "' ";
-            DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
-            LoadLichDS();
+            if (tbMaDs.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn đặt sân muốn bỏ hủy", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string querry = "update DatSan set trangthai =N'Đang Đặt' where madatsan = '" + tbMaDs.Text + "' ";
+                DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                LoadLichDS();
+            }
+            
            
 
         }
 
         private void btnXoaLich_Click(object sender, EventArgs e)
         {
-            string querry = "delete DatSan where madatsan = N'"+lbMaDS.Text+"'";
+            string querry = "delete DatSan where madatsan = N'"+tbMaDs.Text+"'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             MessageBox.Show("Xóa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadLichDS();

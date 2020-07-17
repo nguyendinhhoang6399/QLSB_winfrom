@@ -43,7 +43,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("UVN Bai Hoc", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 26);
+            this.label1.Location = new System.Drawing.Point(45, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 41);
             this.label1.TabIndex = 6;
@@ -54,7 +54,7 @@
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = global::TTCM_QuanLySanBong.Properties.Resources.WG8O;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(-98, 42);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(-91, 40);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(573, 227);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("UVN Thanh Pho", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(51, 253);
+            this.label2.Location = new System.Drawing.Point(60, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 10;
@@ -91,8 +91,8 @@
             this.btnThoat.AnimationHoverSpeed = 0.07F;
             this.btnThoat.AnimationSpeed = 0.03F;
             this.btnThoat.BackColor = System.Drawing.Color.Transparent;
-            this.btnThoat.BaseColor1 = System.Drawing.Color.Aqua;
-            this.btnThoat.BaseColor2 = System.Drawing.Color.DarkBlue;
+            this.btnThoat.BaseColor1 = System.Drawing.Color.Yellow;
+            this.btnThoat.BaseColor2 = System.Drawing.Color.Black;
             this.btnThoat.BorderColor = System.Drawing.Color.Black;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.FocusedColor = System.Drawing.Color.Empty;
@@ -118,8 +118,8 @@
             this.btnGui.AnimationHoverSpeed = 0.07F;
             this.btnGui.AnimationSpeed = 0.03F;
             this.btnGui.BackColor = System.Drawing.Color.Transparent;
-            this.btnGui.BaseColor1 = System.Drawing.Color.Aqua;
-            this.btnGui.BaseColor2 = System.Drawing.Color.DarkBlue;
+            this.btnGui.BaseColor1 = System.Drawing.Color.Yellow;
+            this.btnGui.BaseColor2 = System.Drawing.Color.Black;
             this.btnGui.BorderColor = System.Drawing.Color.Black;
             this.btnGui.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGui.FocusedColor = System.Drawing.Color.Empty;
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.REACH_Header_Blue_Background;
+            this.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources._47ccc0738a4247a03863922199d5e257;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(396, 452);
             this.Controls.Add(this.btnThoat);
