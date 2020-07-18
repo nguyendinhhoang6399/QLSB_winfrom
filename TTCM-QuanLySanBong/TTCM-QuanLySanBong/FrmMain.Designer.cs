@@ -29,21 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
-            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.lbTime = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.userNhanSu1 = new TTCM_QuanLySanBong.UserNhanSu();
-            this.userBaoCao1 = new TTCM_QuanLySanBong.UserBaoCao();
-            this.userHoaDon1 = new TTCM_QuanLySanBong.UserHoaDon();
-            this.userHangHoa1 = new TTCM_QuanLySanBong.UserHangHoa();
-            this.userDatSan1 = new TTCM_QuanLySanBong.UserDatSan();
-            this.userTinhTien1 = new TTCM_QuanLySanBong.UserTinhTien();
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.btnMain = new Guna.UI.WinForms.GunaImageButton();
             this.btnNhanSu = new Guna.UI.WinForms.GunaImageButton();
@@ -53,7 +46,16 @@
             this.btnHoaDon = new Guna.UI.WinForms.GunaImageButton();
             this.btnDatSan = new Guna.UI.WinForms.GunaImageButton();
             this.btnTinhTien = new Guna.UI.WinForms.GunaImageButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.userNhanSu1 = new TTCM_QuanLySanBong.UserNhanSu();
+            this.userBaoCao1 = new TTCM_QuanLySanBong.UserBaoCao();
+            this.userHoaDon1 = new TTCM_QuanLySanBong.UserHoaDon();
+            this.userHangHoa1 = new TTCM_QuanLySanBong.UserHangHoa();
+            this.userDatSan1 = new TTCM_QuanLySanBong.UserDatSan();
             this.userMain1 = new TTCM_QuanLySanBong.UserMain();
+            this.userTinhTien1 = new TTCM_QuanLySanBong.UserTinhTien();
             this.panel1.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
@@ -87,6 +89,7 @@
             // 
             this.gunaLinePanel2.BackColor = System.Drawing.Color.Black;
             this.gunaLinePanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaLinePanel2.Controls.Add(this.label1);
             this.gunaLinePanel2.Controls.Add(this.lbTime);
             this.gunaTransition1.SetDecoration(this.gunaLinePanel2, Guna.UI.Animation.DecorationType.None);
             this.gunaLinePanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -97,28 +100,6 @@
             this.gunaLinePanel2.Size = new System.Drawing.Size(1215, 64);
             this.gunaLinePanel2.TabIndex = 3;
             this.gunaLinePanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaLinePanel2_Paint);
-            // 
-            // gunaTransition1
-            // 
-            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlideAndRotate;
-            this.gunaTransition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(50);
-            animation2.RotateCoeff = 0.3F;
-            animation2.RotateLimit = 0.2F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation2;
-            this.gunaTransition1.Interval = 6;
             // 
             // lbTime
             // 
@@ -133,65 +114,27 @@
             this.lbTime.TabIndex = 0;
             this.lbTime.Text = "00:00:00";
             // 
-            // timer1
+            // gunaTransition1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // userNhanSu1
-            // 
-            this.userNhanSu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaTransition1.SetDecoration(this.userNhanSu1, Guna.UI.Animation.DecorationType.None);
-            this.userNhanSu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNhanSu1.Location = new System.Drawing.Point(0, 0);
-            this.userNhanSu1.Name = "userNhanSu1";
-            this.userNhanSu1.Size = new System.Drawing.Size(1217, 659);
-            this.userNhanSu1.TabIndex = 6;
-            this.userNhanSu1.Load += new System.EventHandler(this.userNhanSu1_Load);
-            // 
-            // userBaoCao1
-            // 
-            this.gunaTransition1.SetDecoration(this.userBaoCao1, Guna.UI.Animation.DecorationType.None);
-            this.userBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userBaoCao1.Location = new System.Drawing.Point(0, 0);
-            this.userBaoCao1.Name = "userBaoCao1";
-            this.userBaoCao1.Size = new System.Drawing.Size(1217, 659);
-            this.userBaoCao1.TabIndex = 5;
-            // 
-            // userHoaDon1
-            // 
-            this.gunaTransition1.SetDecoration(this.userHoaDon1, Guna.UI.Animation.DecorationType.None);
-            this.userHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userHoaDon1.Location = new System.Drawing.Point(0, 0);
-            this.userHoaDon1.Name = "userHoaDon1";
-            this.userHoaDon1.Size = new System.Drawing.Size(1217, 659);
-            this.userHoaDon1.TabIndex = 4;
-            // 
-            // userHangHoa1
-            // 
-            this.gunaTransition1.SetDecoration(this.userHangHoa1, Guna.UI.Animation.DecorationType.None);
-            this.userHangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userHangHoa1.Location = new System.Drawing.Point(0, 0);
-            this.userHangHoa1.Name = "userHangHoa1";
-            this.userHangHoa1.Size = new System.Drawing.Size(1217, 659);
-            this.userHangHoa1.TabIndex = 3;
-            // 
-            // userDatSan1
-            // 
-            this.gunaTransition1.SetDecoration(this.userDatSan1, Guna.UI.Animation.DecorationType.None);
-            this.userDatSan1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userDatSan1.Location = new System.Drawing.Point(0, 0);
-            this.userDatSan1.Name = "userDatSan1";
-            this.userDatSan1.Size = new System.Drawing.Size(1217, 659);
-            this.userDatSan1.TabIndex = 2;
-            // 
-            // userTinhTien1
-            // 
-            this.gunaTransition1.SetDecoration(this.userTinhTien1, Guna.UI.Animation.DecorationType.None);
-            this.userTinhTien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userTinhTien1.Location = new System.Drawing.Point(0, 0);
-            this.userTinhTien1.Name = "userTinhTien1";
-            this.userTinhTien1.Size = new System.Drawing.Size(1217, 659);
-            this.userTinhTien1.TabIndex = 0;
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlideAndRotate;
+            this.gunaTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(50);
+            animation1.RotateCoeff = 0.3F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation1;
+            this.gunaTransition1.Interval = 6;
             // 
             // gunaLinePanel1
             // 
@@ -350,6 +293,73 @@
             this.btnTinhTien.TabIndex = 2;
             this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // label1
+            // 
+            this.gunaTransition1.SetDecoration(this.label1, Guna.UI.Animation.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("UVN Thanh Pho", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(589, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(634, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SÂN BÓNG THE SPARTAN KÍNH CHÀO QUÝ KHÁCH";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // userNhanSu1
+            // 
+            this.userNhanSu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaTransition1.SetDecoration(this.userNhanSu1, Guna.UI.Animation.DecorationType.None);
+            this.userNhanSu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userNhanSu1.Location = new System.Drawing.Point(0, 0);
+            this.userNhanSu1.Name = "userNhanSu1";
+            this.userNhanSu1.Size = new System.Drawing.Size(1217, 659);
+            this.userNhanSu1.TabIndex = 6;
+            this.userNhanSu1.Load += new System.EventHandler(this.userNhanSu1_Load);
+            // 
+            // userBaoCao1
+            // 
+            this.gunaTransition1.SetDecoration(this.userBaoCao1, Guna.UI.Animation.DecorationType.None);
+            this.userBaoCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userBaoCao1.Location = new System.Drawing.Point(0, 0);
+            this.userBaoCao1.Name = "userBaoCao1";
+            this.userBaoCao1.Size = new System.Drawing.Size(1217, 659);
+            this.userBaoCao1.TabIndex = 5;
+            // 
+            // userHoaDon1
+            // 
+            this.gunaTransition1.SetDecoration(this.userHoaDon1, Guna.UI.Animation.DecorationType.None);
+            this.userHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userHoaDon1.Location = new System.Drawing.Point(0, 0);
+            this.userHoaDon1.Name = "userHoaDon1";
+            this.userHoaDon1.Size = new System.Drawing.Size(1217, 659);
+            this.userHoaDon1.TabIndex = 4;
+            // 
+            // userHangHoa1
+            // 
+            this.gunaTransition1.SetDecoration(this.userHangHoa1, Guna.UI.Animation.DecorationType.None);
+            this.userHangHoa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userHangHoa1.Location = new System.Drawing.Point(0, 0);
+            this.userHangHoa1.Name = "userHangHoa1";
+            this.userHangHoa1.Size = new System.Drawing.Size(1217, 659);
+            this.userHangHoa1.TabIndex = 3;
+            // 
+            // userDatSan1
+            // 
+            this.gunaTransition1.SetDecoration(this.userDatSan1, Guna.UI.Animation.DecorationType.None);
+            this.userDatSan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userDatSan1.Location = new System.Drawing.Point(0, 0);
+            this.userDatSan1.Name = "userDatSan1";
+            this.userDatSan1.Size = new System.Drawing.Size(1217, 659);
+            this.userDatSan1.TabIndex = 2;
+            // 
             // userMain1
             // 
             this.userMain1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userMain1.BackgroundImage")));
@@ -360,6 +370,15 @@
             this.userMain1.Name = "userMain1";
             this.userMain1.Size = new System.Drawing.Size(1217, 659);
             this.userMain1.TabIndex = 1;
+            // 
+            // userTinhTien1
+            // 
+            this.gunaTransition1.SetDecoration(this.userTinhTien1, Guna.UI.Animation.DecorationType.None);
+            this.userTinhTien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userTinhTien1.Location = new System.Drawing.Point(0, 0);
+            this.userTinhTien1.Name = "userTinhTien1";
+            this.userTinhTien1.Size = new System.Drawing.Size(1217, 659);
+            this.userTinhTien1.TabIndex = 0;
             // 
             // FrmMain
             // 
@@ -375,6 +394,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.gunaLinePanel2.ResumeLayout(false);
             this.gunaLinePanel2.PerformLayout();
@@ -408,5 +428,7 @@
         private Guna.UI.WinForms.GunaImageButton btnMain;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label1;
     }
 }

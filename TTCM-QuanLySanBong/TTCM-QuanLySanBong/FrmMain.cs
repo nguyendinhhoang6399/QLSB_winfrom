@@ -225,5 +225,38 @@ namespace TTCM_QuanLySanBong
                 time += second;
             lbTime.Text = time;
         }
+
+        int counter = 0;
+        int len = 0;
+        string txt;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            counter++;
+
+            if (counter > len)
+            {
+                counter = 0;
+                label1.Text = "";
+            }
+
+            else
+            {
+
+                label1.Text = txt.Substring(0, counter);
+
+                if (label1.ForeColor == Color.White)
+                    label1.ForeColor = Color.Red;
+                else
+                    label1.ForeColor = Color.White;
+            }
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            txt = label1.Text;
+            len = txt.Length;
+            label1.Text = "";
+            timer2.Start();
+        }
     }
 }
