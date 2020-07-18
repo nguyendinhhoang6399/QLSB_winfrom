@@ -983,11 +983,32 @@
       </ConnectionProperties>
       <rd:DataSourceID>fbbda5db-aaa6-4434-90a5-6dcc263b557c</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="DataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>2a41e0df-d5ef-4483-8ccc-c9e7a8498f9c</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DataSet2">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>8f10bd1a-b930-4949-8373-690ef4e3bdf9</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DataSet3">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>370552d1-65b5-4105-b9f5-0043ae577b12</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>QuanLySanBongDataSet1</DataSourceName>
+        <DataSourceName>DataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1017,8 +1038,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>QuanLySanBongDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\QuanLySanBongDataSet1.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:SchemaPath>F:\ThucTapChuyenMon\TTCM-QuanLySanBong\TTCM-QuanLySanBong\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>pr_HoaDon</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1027,7 +1048,7 @@
     </DataSet>
     <DataSet Name="DataSet2">
       <Query>
-        <DataSourceName>QuanLySanBongDataSet2</DataSourceName>
+        <DataSourceName>DataSet2</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1041,8 +1062,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>QuanLySanBongDataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\QuanLySanBongDataSet2.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet2</rd:DataSetName>
+        <rd:SchemaPath>F:\ThucTapChuyenMon\TTCM-QuanLySanBong\TTCM-QuanLySanBong\DataSet2.xsd</rd:SchemaPath>
         <rd:TableName>LayNgay</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1051,7 +1072,7 @@
     </DataSet>
     <DataSet Name="DataSet3">
       <Query>
-        <DataSourceName>QuanLySanBongDataSet7</DataSourceName>
+        <DataSourceName>DataSet3</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1061,8 +1082,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>QuanLySanBongDataSet7</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\QuanLySanBongDataSet7.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet3</rd:DataSetName>
+        <rd:SchemaPath>F:\ThucTapChuyenMon\TTCM-QuanLySanBong\TTCM-QuanLySanBong\DataSet3.xsd</rd:SchemaPath>
         <rd:TableName>getTien</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

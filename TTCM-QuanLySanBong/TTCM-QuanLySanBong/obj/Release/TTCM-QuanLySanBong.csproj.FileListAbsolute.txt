@@ -192,3 +192,7 @@ C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Release\TTCM-QuanLySanBong.csproj.CopyComplete
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Release\TTCM-QuanLySanBong.exe
 C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\obj\Release\TTCM-QuanLySanBong.pdb
+E:\TTCM-QuanLySanBong\TTCM-QuanLySanBong\bin\Release\DataQLSB.mdf
+E:\TTCM-QuanLySanBong\TTCM-QuanLySanBong\bin\Release\DataQLSB_log.ldf
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\bin\Release\DataQLSB1.mdf
+C:\Users\DINHHOANG99\Desktop\QLSB_winfrom\TTCM-QuanLySanBong\TTCM-QuanLySanBong\bin\Release\DataQLSB1_log.ldf

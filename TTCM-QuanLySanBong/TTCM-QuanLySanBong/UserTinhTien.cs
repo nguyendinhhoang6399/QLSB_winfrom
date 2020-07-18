@@ -27,7 +27,7 @@ namespace TTCM_QuanLySanBong
             toolTip1.SetToolTip(btnDoiSan, "Đổi sân");
             toolTip1.SetToolTip(btnHuySan, "Hủy sân");
             toolTip1.SetToolTip(btnIn, "In hóa đơn");
-            toolTip1.SetToolTip(btnThoat, "Thoát");
+            
             toolTip1.SetToolTip(btnLamMoi, "Làm mới");
             LoadDV();
             LoadSan5();
@@ -89,6 +89,20 @@ namespace TTCM_QuanLySanBong
                     bt.Name = item["tenSan"].ToString();
                     bt.Click += bt_clicksan5;
                     bt.Cursor = Cursors.Hand;
+
+                    //if (item["trangthai"].ToString() == "Đang hoạt động")
+                    //{
+
+                    //    bt.BackColor = Color.Red;
+                    //    bt.ForeColor = Color.White;
+                    //    //bt.Text += "(Đầy !)";
+                    //}
+                    //else
+                    //{
+
+                    //    bt.BackColor = Color.YellowGreen;
+                    //}
+
                     PanSan5.Controls.Add(bt);
                 }
             }catch
@@ -275,10 +289,7 @@ namespace TTCM_QuanLySanBong
             numUpSL.Value = 0;
             cboxDonGia.Text = "";
         }
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -380,6 +391,8 @@ namespace TTCM_QuanLySanBong
                 gbDv.Enabled = true;
                 string querry = "insert into HoaDon(giobatdau,gioketthuc,ngayxuat,tongtien,trangthai,manv,makh,masan) values('" + dtpGioVao.Text + ":00','" + dtpGioRa.Text + ":00','" + DateTime.Now + "','0',N'Chưa Thanh Toán','" + lbMaNv.Text + "','" + cbKhachHang.SelectedValue + "','" + lbMaSan.Text + "')";
                 DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                string querry1 = "update San set trangthai = N'Đang hoạt động' where masan = '" + lbMaSan.Text + "'";
+                DataTable data1 = KetNoi.Istance.ExcuteQuerry(querry1);
                 LoadMaHD();
                 loadTT();
                 loadTienSanAndichVu();
@@ -414,6 +427,8 @@ namespace TTCM_QuanLySanBong
                 
                 string querry = "update HoaDon set trangthai = N'Đã thanh toán', ngayxuat = '"+DateTime.Now+"' where mahd = N'" + cboxMaHd.Text + "'";
                 DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+                string querry1 = "update San set trangthai =N'Trống' where masan = '" + lbMaSan.Text + "' ";
+                DataTable data1 = KetNoi.Istance.ExcuteQuerry(querry1);
                 Loadnull();
                 loadNullHH();
                 panTinhTien.Enabled = false;
