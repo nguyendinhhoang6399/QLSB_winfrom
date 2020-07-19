@@ -312,9 +312,10 @@ namespace TTCM_QuanLySanBong
                 return true;
             return false;
         }
+        
         void loadTT()
         {
-            string sql = "Select PARSENAME(CONVERT(varchar, CAST(TongTien AS money), 1), 2) as TongTien from HoaDon where mahd='" + cboxMaHd.Text + "'";
+            string sql = "Select TongTien from HoaDon where mahd='" + cboxMaHd.Text + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(sql);
             foreach(DataRow row in data.Rows)
             {
@@ -323,7 +324,7 @@ namespace TTCM_QuanLySanBong
         }
         void loadTienSanAndichVu()
         {
-            string sql = "Select PARSENAME(CONVERT(varchar, CAST(ThanhTien AS money), 1), 2) as ThanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
+            string sql = "Select ThanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(sql);
             foreach(DataRow row in data.Rows)
             {
@@ -340,7 +341,7 @@ namespace TTCM_QuanLySanBong
                 tongTien = decimal.Parse(row["TongTien"].ToString());
             }
             decimal tienDv = 0;
-            string sql2 = "Select PARSENAME(CONVERT(varchar, CAST(sum(ThanhTien) AS money), 1), 2) as thanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
+            string sql2 = "Select sum(thanhtien) as thanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
             DataTable data2 = KetNoi.Istance.ExcuteQuerry(sql2);
             foreach (DataRow row in data2.Rows)
             {
@@ -397,7 +398,7 @@ namespace TTCM_QuanLySanBong
                 loadTT();
                 loadTienSanAndichVu();
             }
-            btnBatDau.Enabled = false;
+            //btnBatDau.Enabled = false;
             panTinhTien.Enabled = false;
            
         }

@@ -12,8 +12,8 @@ namespace TTCM_QuanLySanBong
     public class KetNoi
     {
         private static KetNoi inst;
-       // private string conStr = @"";
-        
+        private string conStr = @"Data Source=DESKTOP-PBM2SJ4\SQLEXPRESS;Initial Catalog=QuanLySanBong;Integrated Security=True";
+
         public static KetNoi Istance
         {
             get
@@ -30,15 +30,23 @@ namespace TTCM_QuanLySanBong
 
         public DataTable ExcuteQuerry(string querry)
         {
+            //DataTable data = new DataTable();
+            //SqlConnection connection = new SqlConnection();
+            //connection.ConnectionString = ConfigurationManager.ConnectionStrings["TTCM_QuanLySanBong"].ConnectionString;
+            //connection.Open();
+            //DataSet ds = new DataSet();
+            //SqlCommand command = new SqlCommand(querry, connection);
+            //SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //adapter.Fill(data);
+            //connection.Close();
+            //return data;
             DataTable data = new DataTable();
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = ConfigurationManager.ConnectionStrings["TTCM_QuanLySanBong"].ConnectionString;
-            connection.Open();
-            DataSet ds = new DataSet();
-            SqlCommand command = new SqlCommand(querry, connection);
+            SqlConnection connect = new SqlConnection(conStr);
+            connect.Open();
+            SqlCommand command = new SqlCommand(querry, connect);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);
-            connection.Close();
+            connect.Close();
             return data;
         }
     }
