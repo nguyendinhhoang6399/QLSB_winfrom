@@ -12,6 +12,7 @@ namespace TTCM_QuanLySanBong
     public class KetNoi
     {
         private static KetNoi inst;
+       
         private string conStr = @"Data Source=DESKTOP-PBM2SJ4\SQLEXPRESS;Initial Catalog=QuanLySanBong;Integrated Security=True";
 
         public static KetNoi Istance

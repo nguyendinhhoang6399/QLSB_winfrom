@@ -300,7 +300,7 @@ namespace TTCM_QuanLySanBong
         }
         void Loadgv()
         {
-            string querry1 = "select HH.tenhh,CT.soluongban,PARSENAME(CONVERT(varchar, CAST(CT.dongia AS money), 1), 2) as dongia,PARSENAME(CONVERT(varchar, CAST(CT.thanhtien AS money), 1), 2) as thanhtien from HangHoa HH,CTHoaDon CT where HH.mahh = CT.mahh and CT.mahd = N'" + cboxMaHd.Text + "'";
+            string querry1 = "select HH.tenhh,CT.soluongban,CT.dongia,CT.thanhtien from HangHoa HH,CTHoaDon CT where HH.mahh = CT.mahh and CT.mahd = N'" + cboxMaHd.Text + "'";
             DataTable data1 = KetNoi.Istance.ExcuteQuerry(querry1);
             dgvTinhTien.DataSource = data1;
         }
@@ -321,18 +321,33 @@ namespace TTCM_QuanLySanBong
             {
                 txtTongTien.Text = row["TongTien"].ToString();
             }
+           
         }
         void loadTienSanAndichVu()
         {
-            string sql = "Select ThanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
+            string sql = "Select sum(thanhtien) as thanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(sql);
-            foreach(DataRow row in data.Rows)
+            if (data.Rows.Count == 0)
             {
-                if (row["thanhTien"].ToString() == "")
-                    txtTienDichVu.Text = "0";
-                else
-                    txtTienDichVu.Text = row["thanhTien"].ToString();
+                txtTienDichVu.Text = "0";
             }
+            else
+            {
+                foreach (DataRow row in data.Rows)
+                {
+                    if (row["thanhTien"].ToString() == "")
+                    {
+
+                        txtTienDichVu.Text = "0";
+                    }
+                    else
+                    {
+
+                        txtTienDichVu.Text = row["thanhTien"].ToString();
+                    }
+                }
+            }
+           
             string sql1 = "Select * from HoaDon where mahd='" + cboxMaHd.Text + "'";
             DataTable data1 = KetNoi.Istance.ExcuteQuerry(sql1);
             decimal tongTien = 0;
@@ -340,16 +355,22 @@ namespace TTCM_QuanLySanBong
             {
                 tongTien = decimal.Parse(row["TongTien"].ToString());
             }
+
             decimal tienDv = 0;
             string sql2 = "Select sum(thanhtien) as thanhTien from CTHoaDon where maHd='" + cboxMaHd.Text + "'";
             DataTable data2 = KetNoi.Istance.ExcuteQuerry(sql2);
             foreach (DataRow row in data2.Rows)
             {
                 if (row["thanhTien"].ToString() == "")
+                {
                     tienDv = 0;
+                    
+                }
+
                 else
                     tienDv = decimal.Parse(row["thanhTien"].ToString());
             }
+          
             txtTienSan.Text = (tongTien - tienDv).ToString();
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -390,8 +411,11 @@ namespace TTCM_QuanLySanBong
             else
             {
                 gbDv.Enabled = true;
-                string querry = "insert into HoaDon(giobatdau,gioketthuc,ngayxuat,tongtien,trangthai,manv,makh,masan) values('" + dtpGioVao.Text + ":00','" + dtpGioRa.Text + ":00','" + DateTime.Now + "','0',N'Chưa Thanh Toán','" + lbMaNv.Text + "','" + cbKhachHang.SelectedValue + "','" + lbMaSan.Text + "')";
-                DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+
+                string querry = "insert into HoaDon(giobatdau,gioketthuc,ngayxuat,tongtien,trangthai,manv,makh,masan) values('"+dtpGioVao.Text+":00','"+dtpGioRa.Text+":00','"+DateTime.Now+"','"+label1.Text+"',N'Chưa Thanh Toán','"+lbMaNv.Text+"','"+cbKhachHang.SelectedValue+"','"+lbMaSan.Text+"')";
+             
+               DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
+              
                 string querry1 = "update San set trangthai = N'Đang hoạt động' where masan = '" + lbMaSan.Text + "'";
                 DataTable data1 = KetNoi.Istance.ExcuteQuerry(querry1);
                 LoadMaHD();

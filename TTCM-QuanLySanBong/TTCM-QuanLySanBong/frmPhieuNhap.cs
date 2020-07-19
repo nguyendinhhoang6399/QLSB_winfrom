@@ -280,7 +280,7 @@ namespace TTCM_QuanLySanBong
         
         void LoadThanhTien()
         {
-            string querry = "select PARSENAME(CONVERT(varchar, CAST(ThanhTien AS money), 1), 2) as ThanhTien from PhieuNhap where maphieu = N'" + cboxMaPhieu.Text + "'";
+            string querry = "select thanhtien from PhieuNhap where maphieu = N'" + cboxMaPhieu.Text + "'";
             DataTable data = KetNoi.Istance.ExcuteQuerry(querry);
             cboxThanhTien.DataSource = data;
             cboxThanhTien.DisplayMember = "ThanhTien";
@@ -291,11 +291,13 @@ namespace TTCM_QuanLySanBong
             LoadThanhTien();
             if (cboxMaPhieu.Text == "")
             {
-                MessageBox.Show("Chưa có dữ liệu để in");
+                
+                MessageBox.Show("Chưa có dữ liệu để in", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
+                
                 exportExel();
             }
         }
@@ -349,7 +351,7 @@ namespace TTCM_QuanLySanBong
                     obj.Cells[5, 2] = "Đơn Vị Tính ";
                     obj.Cells[5, 3] = "Số Lượng Nhập ";
                     obj.Cells[5, 4] = "Giá Nhập ";
-                    obj.Cells[5, 1] = "Tên Nhà Cung Cấp ";
+                    obj.Cells[5, 5] = "Tên Nhà Cung Cấp ";
 
                     obj.Cells[6, 1] = cboxTenHang.Text;
                     obj.Cells[6, 2] = cboxDVT.Text;

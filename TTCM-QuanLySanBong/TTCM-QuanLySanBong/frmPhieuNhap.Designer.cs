@@ -53,6 +53,7 @@
             this.txtGiaNhap = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.gbPhieuNhap = new System.Windows.Forms.GroupBox();
+            this.btnLamMoi = new Guna.UI.WinForms.GunaImageButton();
             this.cboxMaPhieu = new System.Windows.Forms.ComboBox();
             this.cboxDVT = new System.Windows.Forms.ComboBox();
             this.cboxTenHang = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,6 @@
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
             this.btnIn = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnLamMoi = new Guna.UI.WinForms.GunaImageButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).BeginInit();
@@ -374,6 +374,21 @@
             this.gbPhieuNhap.TabStop = false;
             this.gbPhieuNhap.Text = "Thông tin phiếu nhập";
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_1002;
+            this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamMoi.Image = null;
+            this.btnLamMoi.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLamMoi.Location = new System.Drawing.Point(371, 278);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.OnHoverImage = null;
+            this.btnLamMoi.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLamMoi.Size = new System.Drawing.Size(31, 34);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // cboxMaPhieu
             // 
             this.cboxMaPhieu.FormattingEnabled = true;
@@ -404,9 +419,9 @@
             // cboxThanhTien
             // 
             this.cboxThanhTien.FormattingEnabled = true;
-            this.cboxThanhTien.Location = new System.Drawing.Point(21, 278);
+            this.cboxThanhTien.Location = new System.Drawing.Point(21, 297);
             this.cboxThanhTien.Name = "cboxThanhTien";
-            this.cboxThanhTien.Size = new System.Drawing.Size(39, 33);
+            this.cboxThanhTien.Size = new System.Drawing.Size(135, 33);
             this.cboxThanhTien.TabIndex = 17;
             this.cboxThanhTien.Visible = false;
             // 
@@ -606,21 +621,6 @@
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 23;
             this.gunaPictureBox1.TabStop = false;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackgroundImage = global::TTCM_QuanLySanBong.Properties.Resources.icons8_available_updates_1002;
-            this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamMoi.Image = null;
-            this.btnLamMoi.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLamMoi.Location = new System.Drawing.Point(371, 278);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.OnHoverImage = null;
-            this.btnLamMoi.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnLamMoi.Size = new System.Drawing.Size(31, 34);
-            this.btnLamMoi.TabIndex = 18;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // frmPhieuNhap
             // 
