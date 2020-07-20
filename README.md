@@ -37,5 +37,7 @@ Lớp: CNTT-K58
 - Dùng tài khoản và mật khẩu để đăng nhập vào phần mềm (admin - 123)
 - Sử dụng phần mềm với các chức năng tùy chọn
 - Chọn thoát để đăng xuất khỏi phần mềm
+- Vì file nén của em bị lỗi chỉ có thể readonly database nên thầy không tác vụ được ạ. 
+Em tìm mãi mà không fix được.
 
 Xin cám ơn!
